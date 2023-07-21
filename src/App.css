@@ -8,7 +8,25 @@ body {
   margin: 0;
   height: 100vh;
   width: 100vw;
+  background-image: url("../public/stacked-peaks-haikei.svg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-color: #24AF7C;
+  font-family: 'Reem Kufi Ink', sans-serif;
+}
+
+#error-page {
+  padding: 0;
+  margin: 0;
+  height: 100vh;
+  width: 100vw;
   background-color: orange;
+  font-family: 'Reem Kufi Ink', sans-serif;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
 }
 
 .App {
@@ -18,28 +36,100 @@ body {
   align-items: center;
   padding: 0;
   margin: 0;
-  height: 80vh;
+  height: 100vh;
   width: 100vw;
 }
 
-.home-title {
-
+.home {
+  height: 80vh;
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  color: white;
 }
 
 .home-hero {
-  width: 50vw;
-  height: 50vh;
+  width: 20vw;
+  height: 20vw;
   object-fit: cover;
-  opacity: 0.5;
+  border-radius: 50%;
+}
+
+.home-title {
+  font-family: 'Noto Serif Khitan Small Script', sans-serif;
+}
+
+.home-call {
+  font-family: 'Lunasima', sans-serif;
 }
 
 .home-call-link {
+  color: white;
   text-decoration: none;
+}
+
+.home-call-link:hover {
+  color: #24AF7C;
+  transform: scale(1.1);
+  transition-duration: 500ms;
+}
+
+.about {
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.about-upper {
+  width: 80vw;
+  height: 40vh;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+.about-lower {
+  width: 80vw;
+  height: 40vh;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+.about-hero {
+  width: 10vw;
+  height: 10vw;
+  object-fit: cover;
+  border-radius: 50%;
+  border: solid 0.75vw #D8715A;
+}
+
+.about-title {
+  font-size: 4vw;
+  font-family: 'Noto Serif Khitan Small Script', sans-serif;
+}
+
+.about-text {
+  line-height: 4vw;
+  text-align: left;
+  font-family: 'Lunasima', sans-serif;
 }
 
 .contact {
   display: flex;
   flex-direction: column;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  width: 100vw;
+  padding: 0;
+  margin: 0;
 }
 
 .header {
@@ -52,6 +142,7 @@ body {
 
 .header-links {
   width: 100vw;
+  padding: 0;
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -60,7 +151,43 @@ body {
 }
 
 .header-links-link {
+  color: white;
+}
+
+.header-links-link:visited {
+  color: white;
+}
+
+.header-links-link:hover {
+  color: #D8715A;
+  transform: scale(1.1);
+  transition-duration: 500ms ease-in-out;
+}
+
+.header-links-link:active {
+  color: yellow;
+}
+
+.header-links-link {
   text-decoration: none;
+}
+
+.content {
+  width: 100vw;
+  height: 80vh;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.content-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  column-gap: 1vw;
+  row-gap: 2vw;
 }
 
 .footer {
@@ -72,5 +199,18 @@ body {
 }
 
 .footer-text {
-  color: red;
+  color: white;
+  font-family: 'Reem Kufi Ink', sans-serif;
+  font-size: 1.2vw;
+  font-weight: 400;
+}
+
+.skills-grid {
+  font-family: 'Lunasima', sans-serif;
+}
+
+.progress-bar {
+  height: 50px;
+  width: 20vw;
+  color: #D8715A;
 }

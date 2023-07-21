@@ -1,4 +1,5 @@
 import { Link } from "react-router-dom";
+import { useSpring, animated } from '@react-spring/web'
 
 export const Home = () => {
 
@@ -10,17 +11,22 @@ export const Home = () => {
         }
     ]
 
+    const springs = useSpring({
+        from: { opacity: 0, scale: 0.1 },
+        to: { opacity: 1, scale: 1 },
+    })
+
     return (
-        <section id="home" className="home">
+        <animated.div id="home" className="home" style={{...springs}}>
             {
                 Benjamin.map(b => (
-                    <article>
+                    <article className="content">
                         <h2 className="home-title">{b.title}</h2>
                         <img className="home-hero" src={b.image} alt="whoops" />
                         <Link className="home-call-link" to="contact"><h3 className="home-call">{b.call}</h3></Link>
                     </article>
                 ))
             }
-        </section>
+        </animated.div>
     );
 }

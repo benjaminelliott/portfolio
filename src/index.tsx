@@ -5,8 +5,10 @@ import {
   RouterProvider,
 } from "react-router-dom";
 import { Root } from './routes/Root'
+import { ErrorPage } from "./components/ErrorPage"
 import { Home } from "./routes/Home"
 import { About } from "./routes/About"
+import { Skills } from "./routes/Skills"
 import { Portfolio } from "./routes/Portfolio"
 import { Contact } from "./routes/Contact"
 import './index.css';
@@ -15,21 +17,26 @@ const router = createBrowserRouter([
   {
     path: "/",
     element: <Root />,
+    errorElement: <ErrorPage />,
     children: [
       {
         path: "home/homeId",
         element: <Home />
       },
       {
-        path: "contacts/:aboutId",
+        path: "about",
         element: <About />
       },
       {
-        path: "contacts/:portfolioId",
+        path: "skills",
+        element: <Skills />
+      },
+      {
+        path: "portfolio",
         element: <Portfolio />
       },
       {
-        path: "contacts/:contactId",
+        path: "contact",
         element: <Contact />
       }
     ],
