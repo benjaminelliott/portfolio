@@ -23,6 +23,42 @@ const links = [
     }
 ]
 
+const logos = [
+    {
+        name: "threads",
+        logo: "threads-seeklogo.com-2.svg"
+    },
+    {
+        name: "codewars",
+        logo: "codewars-svgrepo-com.svg"
+    },
+    {
+        name: "linkedin",
+        logo: "linkedin-round-svgrepo-com.svg"
+    },
+    {
+        name: "instagram",
+        logo: "instagram-round-svgrepo-com.svg"
+    },
+    {
+        name: "codepen",
+        logo: "codepen-02-svgrepo-com.svg"
+    },
+    {
+        name: "freecodecamp",
+        logo: "freecodecamp-svgrepo-com.svg"
+    },
+    {
+        name: "codecademy",
+        logo: "codecademy-svgrepo-com.svg"
+    },
+    {
+        name: "github",
+        logo: "github-142-svgrepo-com.svg",
+        link: "https://github.com/benjaminelliott"
+    },
+]
+
 export const Layout = () => {
     return (
         <section className="container">
@@ -37,7 +73,8 @@ export const Layout = () => {
                 <Outlet />
             </article>
             <article className="footer">
-                    <h3 className="footer-text">Benjamin Elliott ©2023</h3>
+                {logos.map(logo => (<img src={logo.logo} className="footer-logo" alt={logo.name} />))}
+                    <h3 className="footer-text">© 2023</h3>
             </article>
         </section>
     );

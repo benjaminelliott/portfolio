@@ -119,8 +119,51 @@ body {
 }
 
 .contact {
+  height: 80vh;
+  width: 100vw;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+
+.contact-half {
+  height: 80vh;
+  width: 40vw;
   display: flex;
   flex-direction: column;
+  align-items: stretch;
+  justify-content: center;
+  text-align: left;
+}
+
+.contact-line {
+  display: flex;
+  align-items: center;
+  justify-content: start;
+}
+
+.contact-title {
+  color: white;
+  padding: 0;
+  margin: 0;
+}
+
+.contact-icon {
+  height: 4vh;
+  width: 4vw;
+  padding: 0;
+  margin: 0;
+}
+
+.contact-link {
+  text-decoration: none;
+  color:#D8715A;
+}
+
+.contact-text {
+  text-align: left;
+  color: white;
 }
 
 .container {
@@ -151,11 +194,11 @@ body {
 }
 
 .header-links-link {
-  color: white;
+  color: black;
 }
 
 .header-links-link:visited {
-  color: white;
+  color: black;
 }
 
 .header-links-link:hover {
@@ -195,7 +238,7 @@ body {
   height: 10vh;
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: space-evenly;
 }
 
 .footer-text {
@@ -203,6 +246,12 @@ body {
   font-family: 'Reem Kufi Ink', sans-serif;
   font-size: 1.2vw;
   font-weight: 400;
+}
+
+.footer-logo {
+  height: 5vh;
+  width: 5vw;
+  color: white;
 }
 
 .skills-grid {

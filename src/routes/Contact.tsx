@@ -8,20 +8,26 @@ export const Contact = () => {
   })
 
   const contact = {
-    first: "Benjamin",
-    last: "Elliott",
+    name: "Benjamin Elliott",
+    text: "Originally from London, UK, I currently live in New Jersey with my wife, toddler and cats. You can reach me by email or phone to discuss any projects or job opportunities. I look forward to hearing from you!",
     email: "benjamin.elliott.be@gmail.com",
     phone: "(973) 289-3674",
-    gitHub: "https://github.com/benjaminelliott",
   };
 
   return (
     <animated.section id="contact" className="contact" style={{...springs}}>
-        <h1>{contact.first}</h1>
-        <h2>{contact.last}</h2>
-        <a target="_blank" rel="noreferrer" href={contact.gitHub}>gitHub</a>
-        <a target="_blank" rel="noreferrer" href={contact.email}>email</a>
-        <a target="_blank" rel="noreferrer" href={contact.phone}>phone</a>
+      <article className="contact-half">
+        <h2 className='contact-title'>{contact.name}</h2>
+        <div className='contact-line'>
+          <img src="email-8-svgrepo-com.svg" alt="email" className="contact-icon" /><a target="_blank" rel="noreferrer" href={contact.email} className="contact-link">{contact.email}</a>
+        </div>
+        <div className='contact-line'>
+          <img src="phone-svgrepo-com.svg" alt="phone" className="contact-icon" /><a target="_blank" rel="noreferrer" href={contact.phone} className="contact-link">{contact.phone}</a>
+        </div>
+      </article>
+      <article className="contact-half">
+        <p className="contact-text">{contact.text}</p>
+      </article>
     </animated.section>
   );
 }
