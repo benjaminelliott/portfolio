@@ -12,6 +12,7 @@ export const Contact = () => {
     text: "Originally from London, UK, I currently live in New Jersey with my wife, toddler and cats. You can reach me by email or phone to discuss any projects or job opportunities. I look forward to hearing from you!",
     email: "benjamin.elliott.be@gmail.com",
     phone: "(973) 289-3674",
+    discord: "discordapp.com/users/belli#8101"
   };
 
   return (
@@ -23,6 +24,9 @@ export const Contact = () => {
         </div>
         <div className='contact-line'>
           <img src="phone-svgrepo-com.svg" alt="phone" className="contact-icon" /><a target="_blank" rel="noreferrer" href={contact.phone} className="contact-link">{contact.phone}</a>
+        </div>
+        <div className='contact-line'>
+          <img src="discord-svgrepo-com.svg" alt="discord" className="contact-icon" /><a target="_blank" rel="noreferrer" href={contact.discord} className="contact-link">belli#8101</a>
         </div>
       </article>
       <article className="contact-half">
