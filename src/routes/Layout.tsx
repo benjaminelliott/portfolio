@@ -1,4 +1,4 @@
-import { Outlet, Link } from "react-router-dom";
+import { Outlet, Link, NavLink } from "react-router-dom";
 
 const links = [
     {
@@ -23,49 +23,27 @@ const links = [
     }
 ]
 
-const logos = [
-    {
-        name: "threads",
-        logo: "threads-seeklogo.com-2.svg"
-    },
-    {
-        name: "codewars",
-        logo: "codewars-svgrepo-com.svg"
-    },
-    {
-        name: "linkedin",
-        logo: "linkedin-round-svgrepo-com.svg"
-    },
-    {
-        name: "instagram",
-        logo: "instagram-round-svgrepo-com.svg"
-    },
-    {
-        name: "codepen",
-        logo: "codepen-02-svgrepo-com.svg"
-    },
-    {
-        name: "freecodecamp",
-        logo: "freecodecamp-svgrepo-com.svg"
-    },
-    {
-        name: "codecademy",
-        logo: "codecademy-svgrepo-com.svg"
-    },
-    {
-        name: "github",
-        logo: "github-142-svgrepo-com.svg",
-        link: "https://github.com/benjaminelliott"
-    },
-]
-
 export const Layout = () => {
     return (
         <section className="container">
             <article className="header">
                 <ul className="header-links">
                     {
-                        links.map(link => <Link className="header-links-link" to={link.route}>{link.title}</Link>)
+                        links.map(link =>
+                            <NavLink
+                                className="header-links-link"
+                                to={link.route}
+                                style={({ isActive }) => {
+                                    return {
+                                    fontWeight: isActive ? "" : "",
+                                    color: isActive ? "white" : "",
+                                    //borderBottom: isActive ? "2px solid #d53a9d" : "",
+                                    borderImageSource: isActive ? "linear-gradient(to left, #743ad5, #d53a9d)" : "",
+                                    transform: isActive ? "scale(1.2" : "",
+                                    transitionDuration: isActive ? "500ms ease-in-out" : ""
+                                    };
+                                }}
+                            >{link.title}</NavLink>)
                     }
                 </ul>
             </article>
@@ -73,8 +51,7 @@ export const Layout = () => {
                 <Outlet />
             </article>
             <article className="footer">
-                {logos.map(logo => (<img src={logo.logo} className="footer-logo" alt={logo.name} />))}
-                    <h3 className="footer-text">© 2023</h3>
+                <h3 className="footer-text">© Benjamin Elliott 2023</h3>
             </article>
         </section>
     );

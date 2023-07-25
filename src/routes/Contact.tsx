@@ -9,29 +9,53 @@ export const Contact = () => {
 
   const contact = {
     name: "Benjamin Elliott",
-    text: "Originally from London, UK, I currently live in New Jersey with my wife, toddler and cats. You can reach me by email or phone to discuss any projects or job opportunities. I look forward to hearing from you!",
-    email: "benjamin.elliott.be@gmail.com",
-    phone: "(973) 289-3674",
-    discord: "discordapp.com/users/belli#8101"
+    text: "Originally from London, UK, I currently live in New Jersey with my wife, toddler and cats. I look forward to hearing from you! 👊🏽",
+    email: "",
+    phone: "",
+    discord: "",
+    contacts: [
+      {
+        name: "email",
+        link: "mailto:benjamin.elliott.be@gmail.com",
+        icon: "email-svgrepo-com.svg"
+      },
+      {
+        name: "phone",
+        link: "tel:973-289-3674",
+        icon: "phone-svgrepo-com.svg"
+      },
+      {
+        name: "linkedin",
+        link: "https://www.linkedin.com/in/benjamin-elliott-163280280/",
+        icon: "linkedin-svgrepo-com.svg"
+      },
+      {
+        name: "instagram",
+        link: "https://www.instagram.com/therealbenjaminelliott/",
+        icon: "instagram-color-svgrepo-com.svg"
+      }
+    ]
   };
 
   return (
     <animated.section id="contact" className="contact" style={{...springs}}>
-      <article className="contact-half">
-        <h2 className='contact-title'>{contact.name}</h2>
-        <div className='contact-line'>
-          <img src="email-8-svgrepo-com.svg" alt="email" className="contact-icon" /><a target="_blank" rel="noreferrer" href={contact.email} className="contact-link">{contact.email}</a>
+      <div className='contact-half'>
+        <div>
+          <h2 className='contact-title'>{contact.name}</h2>
         </div>
-        <div className='contact-line'>
-          <img src="phone-svgrepo-com.svg" alt="phone" className="contact-icon" /><a target="_blank" rel="noreferrer" href={contact.phone} className="contact-link">{contact.phone}</a>
+        <div>
+        <div className='contact-links'>
+          {contact.contacts.map(cont => (
+            <div className='contact-line'>
+              <a target="_blank" rel="noreferrer" href={cont.link} className="contact-link"><img src={cont.icon} alt={cont.name} className="contact-icon" /></a>
+            </div>
+          ))}
+      </div>
         </div>
-        <div className='contact-line'>
-          <img src="discord-svgrepo-com.svg" alt="discord" className="contact-icon" /><a target="_blank" rel="noreferrer" href={contact.discord} className="contact-link">belli#8101</a>
-        </div>
-      </article>
-      <article className="contact-half">
+      </div>
+      <div className='contact-half'>
         <p className="contact-text">{contact.text}</p>
-      </article>
+      </div>
     </animated.section>
   );
 }

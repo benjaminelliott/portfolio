@@ -5,9 +5,9 @@ export const Home = () => {
 
     const Benjamin = [
         {
-            title: "Junior web developer with a passion for making cool pages",
             image: "benjamin.jpg",
-            call: "Let me build something dynamic and responsive for you, today!"
+            intro: "👋🏽, I'm Benjamin. I have a passion for building responsive pages with ",
+            call: "Let me build you something"
         }
     ]
 
@@ -21,9 +21,23 @@ export const Home = () => {
             {
                 Benjamin.map(b => (
                     <article className="content">
-                        <h2 className="home-title">{b.title}</h2>
-                        <img className="home-hero" src={b.image} alt="whoops" />
-                        <Link className="home-call-link" to="contact"><h3 className="home-call">{b.call}</h3></Link>
+                        <div className="home-upper">
+                            <div className="home-title-wrapper">
+                                <h2 className="home-title">Junior</h2>
+                                <h2 className="home-title">Web</h2>
+                                <h2 className="home-title">Developer</h2>
+                            </div>
+                            <img className="home-hero" src={b.image} alt="whoops" />
+                        </div>
+                        <div className="home-lower">
+                            <div className="home-intro">
+                                <h3>{b.intro}</h3>
+                                <img className="home-logo"src="react-svgrepo-com.svg" alt="React.JS" />
+                                <h3>or</h3>
+                                <img className="home-logo" src="vue-svgrepo-com.svg" alt="Vue.JS"/>
+                            </div>
+                            <Link className="home-call-link" to="contact"><button className="home-call">{b.call}</button></Link>
+                        </div>
                     </article>
                 ))
             }

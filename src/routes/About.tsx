@@ -7,18 +7,44 @@ export const About = () => {
         to: { opacity: 1, scale: 1 },
     })
 
-    const text = "I have two years experience working as a freelancer while studying UX/UI design, HTML5, CSS3 and Javascript libraries. I prefer to work in React or Vue.js, and I'm always looking to add to my skill set. Web development will be a new chapter in my career after 15 years in education and youth sports."
-    const title = "Hey, I'm Benjamin."
+    const hobbies =[
+        {
+            name: "PC Building",
+            icon: "🧑🏽‍🏭️"
+        },
+        {
+            name: "Mechanical keyboards",
+            icon: "⌨️"
+        },
+        {
+            name: "Indoor cycling",
+            icon: "🚵🏽"
+        }
+    ]
+    const history = [
+        { item: "Extensive communication and leadership skills."},
+        { item: "Passion for learning new things"},
+        { item: "Ability to work remotely"}
+    ]
 
     return (
         <animated.section id="about" className="about" style={{...springs}}>
             <article className="content">
                 <div className="about-upper">
-                    <img src="benjamin.jpg" className="about-hero" alt="Benjamin"/>
-                    <h3 className="about-title">{title}</h3>
+                    <img src="Ben&Colby.jpg" className="about-hero" alt="Benjamin"/>
                 </div>
                 <div className="about-lower">
-                    <p className="about-text">{text}</p>
+                    <div className="about-lower-half">
+                        {hobbies.map(hobby => (<div className='hobby-wrapper'>
+                            <p className="hobbies-image">{hobby.icon}</p>
+                            <p className='hobbies-text'>{hobby.name}</p>
+                        </div>))}
+                    </div>
+                    <div className="about-lower-half">
+                        <ul className="history-ul">
+                            {history.map((item) =>( <li className='history-li'>{item.item}</li>))}
+                        </ul>
+                    </div>
                 </div>
             </article>
         </animated.section>

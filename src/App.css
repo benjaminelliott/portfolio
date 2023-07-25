@@ -12,7 +12,7 @@ body {
   background-repeat: no-repeat;
   background-size: cover;
   background-color: #24AF7C;
-  font-family: 'Reem Kufi Ink', sans-serif;
+  --text-shadow: 1vw 0.5vw #d53a9d, 2vw 1vw #743ad5;
 }
 
 #error-page {
@@ -50,6 +50,23 @@ body {
   color: white;
 }
 
+.home-upper {
+  width: 80vw;
+  height: 50vh;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+.home-lower {
+  width: 80vw;
+  height: 50vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
 .home-hero {
   width: 20vw;
   height: 20vw;
@@ -60,12 +77,37 @@ body {
   border-image-source: linear-gradient(to left, #743ad5, #d53a9d);
 }
 
+.home-title-wrapper {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  align-items: start;
+}
+
 .home-title {
-  font-family: 'Noto Serif Khitan Small Script', sans-serif;
+  padding: 0;
+  margin: 0;
+  font-size: 5vw;
+  text-shadow: var(--text-shadow);
+}
+
+.home-intro {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-evenly;
+  font-family: 'Lunasima', sans-serif;
 }
 
 .home-call {
+  padding: 10px;
+  margin: 0;
   font-family: 'Lunasima', sans-serif;
+  color: white;
+  border: none;
+  border-radius: 16px;
+  background-image: linear-gradient(to left, #743ad5, #d53a9d);
+  font-weight: bold;
 }
 
 .home-call-link {
@@ -77,6 +119,11 @@ body {
   color: #24AF7C;
   transform: scale(1.1);
   transition-duration: 500ms;
+}
+
+.home-logo {
+  height: 50px;
+  width: 50px;
 }
 
 .about {
@@ -98,13 +145,23 @@ body {
   width: 80vw;
   height: 40vh;
   display: flex;
+  flex-direction: row;
   align-items: center;
   justify-content: space-evenly;
 }
 
+.about-lower-half {
+  width: 40vw;
+  height: 40vh;
+  display: flex;
+  align-items:center;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+}
+
 .about-hero {
-  width: 10vw;
-  height: 10vw;
+  max-width: 100%;
+  max-height: 100%;
   object-fit: cover;
   border: 10px solid;
   border-image-slice: 1;
@@ -112,27 +169,45 @@ body {
   border-image-source: linear-gradient(to left, #743ad5, #d53a9d);
 }
 
-.about-title {
-  font-size: 4vw;
-  font-family: 'Noto Serif Khitan Small Script', sans-serif;
-  background: -webkit-linear-gradient(#743ad5, #d53a9d);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
+.hobby-wrapper {
+  display: flex;
+  flex-direction:column;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+  margin: 0;
 }
 
-.about-text {
+.hobbies-image {
+  font-size: 50px;
+  padding: 0;
+  margin: 0;
+}
+
+.hobbies-text {
+  flex-wrap: nowrap;
+  padding: 0;
+  margin: 0;
+}
+
+.history-ul {
   line-height: 4vw;
   text-align: left;
   font-family: 'Lunasima', sans-serif;
+  list-style: symbols(cyclic "✅"); 
+}
+
+.history-li {
+  list-style-type:symbols();
 }
 
 .contact {
   height: 80vh;
-  width: 100vw;
+  width: 80vw;
   display: flex;
   flex-direction: row;
   align-items: center;
-  justify-content: center;
+  justify-content: space-evenly;
 }
 
 .contact-half {
@@ -145,28 +220,40 @@ body {
   text-align: left;
 }
 
+.contact-links {
+  width: 25vw;
+  display: flex;
+  flex-direction: row;
+  justify-content: end;
+  align-items: center;
+  
+}
+
 .contact-line {
   display: flex;
   align-items: center;
-  justify-content: start;
+  justify-content: center;
+  flex-grow: 1;
 }
 
 .contact-title {
   color: white;
+  font-size: 3vw;
   padding: 0;
   margin: 0;
+  text-shadow: var(--text-shadow)
 }
 
 .contact-icon {
-  height: 4vh;
-  width: 4vw;
+  height: 5vh;
+  width: 5vw;
   padding: 0;
   margin: 0;
 }
 
 .contact-link {
   text-decoration: none;
-  color:#D8715A;
+  color:#d53a9d;
 }
 
 .contact-text {
@@ -199,10 +286,12 @@ body {
   align-items: center;
   justify-content: space-evenly;
   list-style: none;
+  font-family: 'Reem Kufi Ink', sans-serif;
 }
 
 .header-links-link {
   color: black;
+  text-decoration: none;
 }
 
 .header-links-link:visited {
@@ -210,17 +299,11 @@ body {
 }
 
 .header-links-link:hover {
-  color: #D8715A;
-  transform: scale(1.1);
-  transition-duration: 500ms ease-in-out;
+  color: #d53a9d;
 }
 
 .header-links-link:active {
-  color: yellow;
-}
-
-.header-links-link {
-  text-decoration: none;
+  color: #D8715A;
 }
 
 .content {
@@ -235,10 +318,124 @@ body {
 }
 
 .content-grid {
+  height: 80vh;
+  width: 80vw;
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
   column-gap: 1vw;
   row-gap: 2vw;
+}
+
+
+
+.skills {
+  font-family: 'Lunasima', sans-serif;
+}
+
+.skills-half {
+  width: 80vw;
+  height: 40vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+.social-skills {
+  width: 80vw;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+}
+
+.technical-skills {
+  width: 80vw;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+.skills-wrapper {
+  display: flex;
+  flex-direction: column;
+}
+
+.skills-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.skill-title {
+  color: white;
+  text-shadow: var(--text-shadow);
+  padding: 0;
+  margin: 0;
+  text-transform: uppercase;
+}
+
+.skill-image {
+  height: 50px;
+  width: 50px;
+}
+
+.skill-emoji {
+  font-size: 50px;
+  padding: 0;
+  margin: 0;
+}
+
+.skill-text {
+  color: white;
+  font-size: 1.3vw;
+}
+
+.portfolio {
+  height: 80vh;
+  width: 80vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  flex-wrap: nowrap;
+}
+
+.portfolio-section {
+  width: 80vw;
+  display: row;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.section-title {
+  color: white;
+  text-shadow: var(--text-shadow);
+  text-align: left;
+  text-transform: uppercase;
+}
+
+.site {
+  width: 80vw;
+  display: grid;
+  grid-template-columns: 0.25fr 0.5fr 2fr;
+  justify-items: start;
+  align-items: center;
+}
+
+.site-name {
+  color: white;
+  font-weight: 500;
+}
+
+.site-logo {
+  height: 50px;
+  width: 50px;
+}
+
+.site-description {
+  color: white;
 }
 
 .footer {
@@ -250,24 +447,12 @@ body {
 }
 
 .footer-text {
+  text-decoration: none;
   color: white;
-  font-family: 'Reem Kufi Ink', sans-serif;
-  font-size: 1.2vw;
-  font-weight: 400;
 }
 
 .footer-logo {
   height: 5vh;
   width: 5vw;
   color: white;
-}
-
-.skills-grid {
-  font-family: 'Lunasima', sans-serif;
-}
-
-.progress-bar {
-  height: 50px;
-  width: 20vw;
-  color: #D8715A;
 }

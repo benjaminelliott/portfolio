@@ -8,27 +8,52 @@ export const Skills = () => {
         to: { opacity: 1, scale: 1 },
     })
 
-    const skills = [
-        { name: "Communication", level: 10 }, { name: "Working remotely", level: 10 }, { name: "Teamwork", level: 10 },
-        { name: "Attention to detail", level: 9 }, { name: "Problem solving", level: 9 }, { name: "Self-learning", level: 9 },
-        { name: "HTML5", level: 8 }, { name: "CSS3", level: 8 }, { name: "JS ES6", level: 8 },
-        { name: "React.JS", level: 6 }, { name: "Vue.JS", level: 6 }, { name: "gitHub", level: 6 }
+    const social = [
+        { name: "Working remotely", image: "🧑🏽‍💻️" },
+        { name: "Attention to detail", image: "🔎" },
+        { name: "Problem solving", image: "🎓" },
+        { name: "Self-learning", image: "🧑🏽‍🎓️" },
+        { name: "Communication", image: "💬" },
+        { name: "Teamwork", image: "🤝🏽" },
+        { name: "Leadership", image: "🧑🏽‍💼️" }
+  ]
+
+    const technical = [
+      { name: "HTML5", image: "html-5-svgrepo-com.svg" },
+      { name: "CSS3", image: "css-3-svgrepo-com.svg" },
+      { name: "JS ES6", image: "js-svgrepo-com.svg" },
+      { name: "React.JS", image: "react-svgrepo-com.svg" },
+      { name: "Vue.JS", image: "vue-svgrepo-com.svg" },
+      { name: "VSCode", image: "vscode-svgrepo-com.svg" },
+      { name: "gitHub", image: "github-142-svgrepo-com.svg" },
+      { name: "Figma", image: "figma-svgrepo-com.svg" }
     ]
 
     return (
       <animated.section id="about" className="skills" style={{ ...springs }}>
-        <article className="content-grid skills-grid">
-          {skills.map((skill) => (
-            <ProgressBar
-              className="progress-bar"
-              completed={skill.level}
-              customLabel={skill.name}
-              maxCompleted={10}
-              bgColor="#D8715A"
-              labelAlignment='left'
-              borderRadius='50px'
-            />
-          ))}
+        <article className="content">
+          <div className='skills-half'>
+          <h2 className='skill-title'>Social</h2>
+            <div className="social-skills">
+              {social.map((skill) => (
+                <div className='skills-wrapper'>
+                  <p className='skill-emoji'>{skill.image}</p>
+                  <p className='skill-text'>{skill.name}</p>
+                </div>
+              ))}
+            </div>
+          </div>
+          <div className='skills-half'>
+          <h2 className='skill-title'>Technical</h2>
+            <div className="technical-skills">
+              {technical.map((skill) => (
+                <div className='skills-wrapper'>
+                  <img className='skill-image' src={skill.image}/>
+                  <p className='skill-text'>{skill.name}</p>
+                </div>
+              ))}
+            </div>
+          </div>
         </article>
       </animated.section>
     );
