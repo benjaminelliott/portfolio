@@ -5,7 +5,7 @@ export const Home = () => {
 
     const Benjamin = [
         {
-            image: "benjamin.jpg",
+            image: "images/benjamin.jpg",
             intro1: "👋🏽, I'm Benjamin",
             intro2: "I have a passion for building responsive pages with ",
             call: "Let me build you something"
@@ -21,7 +21,7 @@ export const Home = () => {
         <animated.div id="home" className="home" style={{...springs}}>
             {
                 Benjamin.map(b => (
-                    <article className="content">
+                    <article className="content-home">
                         <div className="home-upper">
                             <div className="home-title-wrapper">
                                 <h2 className="home-title">Junior</h2>
@@ -32,11 +32,13 @@ export const Home = () => {
                         </div>
                         <div className="home-lower">
                             <div className="home-intro">
-                                <h2 className="home-intro-top">{b.intro1}</h2>
-                                <h3>{b.intro2}</h3>
-                                <img className="home-logo"src="react-svgrepo-com.svg" alt="React.JS" />
-                                <h3>or</h3>
-                                <img className="home-logo" src="vue-svgrepo-com.svg" alt="Vue.JS"/>
+                                <h2 className="intro-first">{b.intro1}</h2>
+                                <h3 className="intro-second">{b.intro2}</h3>
+                                <div className="intro-bottom">
+                                    <img className="home-logo"src="logos/react.svg" alt="React.JS" />
+                                    <h3>or</h3>
+                                    <img className="home-logo" src="logos/vue.svg" alt="Vue.JS"/>
+                                </div>
                             </div>
                             <Link className="home-call-link" to="contact"><button className="home-call">{b.call}</button></Link>
                         </div>

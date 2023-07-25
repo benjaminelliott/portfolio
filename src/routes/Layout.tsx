@@ -1,4 +1,4 @@
-import { Outlet, Link, NavLink } from "react-router-dom";
+import { Outlet, NavLink } from "react-router-dom";
 
 const links = [
     {
@@ -37,8 +37,6 @@ export const Layout = () => {
                                     return {
                                     fontWeight: isActive ? "" : "",
                                     color: isActive ? "white" : "",
-                                    //borderBottom: isActive ? "2px solid #d53a9d" : "",
-                                    borderImageSource: isActive ? "linear-gradient(to left, #743ad5, #d53a9d)" : "",
                                     transform: isActive ? "scale(1.2" : "",
                                     transitionDuration: isActive ? "500ms ease-in-out" : ""
                                     };
