@@ -8,11 +8,14 @@ body {
   margin: 0;
   height: 100vh;
   width: 100vw;
-  background-image: url("../public/stacked-peaks-haikei.svg");
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-color: #24AF7C;
-  --text-shadow: 1vw 0.5vw #d53a9d, 2vw 1vw #743ad5;
+  
+  background: linear-gradient(var(--two), var(--one));
+  --text-shadow: 1vw 0.5vw var(--five), 2vw 1vw var(--four);
+  --one: #ccd5ae;
+  --two: #e9edc9;
+  --three: #fefae0;
+  --four: #faedcd;
+  --five: #d4a373;
 }
 
 #error-page {
@@ -20,7 +23,7 @@ body {
   margin: 0;
   height: 100vh;
   width: 100vw;
-  background-color: orange;
+  background-color: var(--four);
   font-family: 'Reem Kufi Ink', sans-serif;
   display: flex;
   flex-direction: column;
@@ -74,7 +77,7 @@ body {
   border: 10px solid;
   border-image-slice: 1;
   border-width: 5px;
-  border-image-source: linear-gradient(to left, #743ad5, #d53a9d);
+  border-image-source: linear-gradient(to left, var(--four), var(--five));
 }
 
 .home-title-wrapper {
@@ -99,6 +102,10 @@ body {
   font-family: 'Lunasima', sans-serif;
 }
 
+.home-intro-top {
+  color: var(--four);
+}
+
 .home-call {
   padding: 10px;
   margin: 0;
@@ -106,7 +113,7 @@ body {
   color: white;
   border: none;
   border-radius: 16px;
-  background-image: linear-gradient(to left, #743ad5, #d53a9d);
+  background-image: linear-gradient(to left, var(--four), var(--five));
   font-weight: bold;
 }
 
@@ -116,7 +123,7 @@ body {
 }
 
 .home-call-link:hover {
-  color: #24AF7C;
+  color: var(--two);
   transform: scale(1.1);
   transition-duration: 500ms;
 }
@@ -166,7 +173,7 @@ body {
   border: 10px solid;
   border-image-slice: 1;
   border-width: 5px;
-  border-image-source: linear-gradient(to left, #743ad5, #d53a9d);
+  border-image-source: linear-gradient(to left, var(--four), var(--five));
 }
 
 .hobby-wrapper {
@@ -253,7 +260,7 @@ body {
 
 .contact-link {
   text-decoration: none;
-  color:#d53a9d;
+  color: var(--two);
 }
 
 .contact-text {
@@ -290,20 +297,16 @@ body {
 }
 
 .header-links-link {
-  color: black;
+  color: var(--four);
   text-decoration: none;
 }
 
-.header-links-link:visited {
-  color: black;
-}
-
 .header-links-link:hover {
-  color: #d53a9d;
+  color: var(--three);
 }
 
 .header-links-link:active {
-  color: #D8715A;
+  color: var(--four);
 }
 
 .content {
@@ -326,8 +329,6 @@ body {
   column-gap: 1vw;
   row-gap: 2vw;
 }
-
-
 
 .skills {
   font-family: 'Lunasima', sans-serif;
@@ -425,7 +426,7 @@ body {
 }
 
 .site-name {
-  color: white;
+  color: var(--four);
   font-weight: 500;
 }
 

@@ -6,7 +6,8 @@ export const Home = () => {
     const Benjamin = [
         {
             image: "benjamin.jpg",
-            intro: "👋🏽, I'm Benjamin. I have a passion for building responsive pages with ",
+            intro1: "👋🏽, I'm Benjamin",
+            intro2: "I have a passion for building responsive pages with ",
             call: "Let me build you something"
         }
     ]
@@ -31,7 +32,8 @@ export const Home = () => {
                         </div>
                         <div className="home-lower">
                             <div className="home-intro">
-                                <h3>{b.intro}</h3>
+                                <h2 className="home-intro-top">{b.intro1}</h2>
+                                <h3>{b.intro2}</h3>
                                 <img className="home-logo"src="react-svgrepo-com.svg" alt="React.JS" />
                                 <h3>or</h3>
                                 <img className="home-logo" src="vue-svgrepo-com.svg" alt="Vue.JS"/>
