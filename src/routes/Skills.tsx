@@ -47,7 +47,7 @@ export const Skills = () => {
             <div className="technical-skills">
               {technical.map((skill) => (
                 <div className='skills-wrapper'>
-                  <a href={skill.link} target='_blank' rel="noreferrer"><img className='skill-image' src={skill.image} alt="skill-image"/></a>
+                  <a href={skill.link} target='_blank' rel="noreferrer"><img className='skill-image' src={skill.image} alt="skill"/></a>
                   <p className='skill-text'>{skill.name}</p>
                 </div>
               ))}
