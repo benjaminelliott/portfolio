@@ -10,7 +10,7 @@ body {
   margin: 0;
   overflow: scroll;
   background: linear-gradient(to top, var(--two), var(--one));
-  --text-shadow: 1vw 0.5vw var(--four), 2vw 1vw var(--five);
+  --text-shadow: 7px 7px var(--four), 14px 14px var(--five);
   --one: #264653;
   --two: #2a9d8f;
   --three: #e9c46a;
