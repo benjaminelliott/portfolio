@@ -411,7 +411,7 @@ body {
 .site-name {
   color: var(--five);
   font-weight: bold;
-  font-size: var(--h3);
+  font-size: var(--text);
 }
 
 .site-logo {
@@ -549,9 +549,9 @@ body {
   }
   .site {
     justify-self: center;
-    padding: 0 10vw 0 10vw;
+    padding: 0 5vw 0 5vw;
     display: grid;
-    grid-template-columns: 10% 20% 70%;
+    grid-template-columns: 8% 18% 74%;
     justify-items: start;
     align-items: center;
     text-align: left;
