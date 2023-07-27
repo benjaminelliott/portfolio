@@ -549,9 +549,9 @@ body {
   }
   .site {
     justify-self: center;
-    padding: 0 15vw 0 15vw;
+    padding: 0 10vw 0 10vw;
     display: grid;
-    grid-template-columns: 10% 15% 75%;
+    grid-template-columns: 10% 20% 70%;
     justify-items: start;
     align-items: center;
     text-align: left;

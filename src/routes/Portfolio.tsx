@@ -7,7 +7,14 @@ export const Portfolio = () => {
         to: { opacity: 1, scale: 1 },
     })
     const portfolio = {
-        completed: [],
+        completed: [
+            {
+                name: "benjaminelliott.dev",
+                logo: "icons/code.svg",
+                description: "My personal portfolio page",
+                link: "https://benjaminelliott.dev"
+            }
+        ],
         projects: [
             {
                 name: "gitHub",
@@ -48,6 +55,16 @@ export const Portfolio = () => {
 
     return (
         <animated.section id="portfolio" className="portfolio" style={{...springs}}>
+            <article className="portfolio-section">
+                <h2 className='section-title'>Websites built</h2>
+                {portfolio.completed.map(site => (
+                    <div className='site'>
+                        <a href={site.link} className='site-link'><img className="site-logo" src={site.logo} alt={site.name}/></a>
+                        <h3 className='site-name'>{site.name}</h3>
+                        <p className='site-description'>{site.description}</p>
+                    </div>
+                ))}
+            </article>
             <article className="portfolio-section">
                 <h2 className='section-title'>Projects</h2>
                 {portfolio.projects.map(site => (
