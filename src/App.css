@@ -225,7 +225,6 @@ body {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  flex-grow: 1;
 }
 
 .about-left {
@@ -253,7 +252,6 @@ body {
 }
 
 .about-history {
-  padding: 0 5vw;
   display: flex;
   align-items: center;
   flex-direction: column;
@@ -262,7 +260,7 @@ body {
 }
 
 .about-hero {
-  width: clamp(200px, 30vw, 1000px);
+  width: clamp(200px, 30vw, 600px);
   object-fit: cover;
   border: 10px solid;
   border-image-slice: 1;
@@ -314,11 +312,11 @@ body {
 
 .skills {
   font-family: 'Lunasima', sans-serif;
+  width: 100%;
 }
 
 .skills-content {
   height: 80vh;
-  width: 100vw;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -516,18 +514,25 @@ body {
 @media (min-width: 700px) {
   .content {
     height: 80vh;
+    width: 70vw;
+    padding: 0 15vw 0 15vw;
   }
   .home-upper, .about-content, .contact-upper {
     flex-direction: row;
+  }
+  .about-content {
+    width: 100%;
   }
   .about-left, .about-right {
     width: 50%;
     height: 80vh;
   }
+  .skills {
+    width: 70vw;
+  }
   .portfolio {
     padding: 0;
     margin: 0;
-
     display: flex;
     flex-direction: column;
   }
@@ -543,8 +548,10 @@ body {
     width: var(--icon-l);
   }
   .site {
+    justify-self: center;
+    padding: 0 15vw 0 15vw;
     display: grid;
-    grid-template-columns: 20% 20% 60%;
+    grid-template-columns: 10% 15% 75%;
     justify-items: start;
     align-items: center;
     text-align: left;
