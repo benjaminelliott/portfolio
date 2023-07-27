@@ -11,7 +11,7 @@ export const Portfolio = () => {
             {
                 name: "benjaminelliott.dev",
                 logo: "icons/code.svg",
-                description: "My personal portfolio page",
+                description: "My personal portfolio page, built with React & Typescript, deployed from gitHub with Netlify",
                 link: "https://benjaminelliott.dev"
             }
         ],
@@ -19,7 +19,7 @@ export const Portfolio = () => {
             {
                 name: "gitHub",
                 logo: "logos/github.svg",
-                description: "My repo for all the projects I'm working on",
+                description: "My repo for all the projects I'm working on. I'm always looking for new ideas and opportunities to learn",
                 link: "https://github.com/benjaminelliott"
             }
         ],
@@ -27,13 +27,13 @@ export const Portfolio = () => {
             {
                 name: "Coursera",
                 logo: "logos/coursera.svg",
-                description: "Currently completing the Meta Front-End Developer Professional Certificate",
+                description: "Currently completing the Meta Front-End Developer Professional Certificate, specializing in React",
                 link: "https://www.coursera.org/user/9358bbdffd3525aa3dac8ce4684bad87"
             },
             {
                 name: "freecodecamp",
                 logo: "logos/freecodecamp.svg",
-                description: "Completed Responsive Web Design certification",
+                description: "Completed Responsive Web Design certification, specializing in HTML, CSS and Javascipt",
                 link: "https://www.freecodecamp.org/benjaminelliott"
             }
         ],
@@ -41,7 +41,7 @@ export const Portfolio = () => {
             {
                 name: "Codewars",
                 logo: "logos/codewars.svg",
-                description: "4th Kyu in JavaScript",
+                description: "4th Kyu in JavaScript, completing challenges of increasing difficulty in Javascript",
                 link: "https://www.codewars.com/users/benjineer"
             },
             {
