@@ -23,6 +23,7 @@ export const Skills = () => {
       { name: "JS ES6", image: "logos/js.svg", link: "https://www.ecma-international.org/publications-and-standards/standards/ecma-262/" },
       { name: "React.JS", image: "logos/react.svg", link: "https://react.dev/" },
       { name: "Vue.JS", image: "logos/vue.svg", link: "https://vuejs.org/" },
+      { name: "Typescript", image: "logos/typescript.svg", link: "https://vuejs.org/" },
       { name: "VSCode", image: "logos/vscode.svg", link: "https://code.visualstudio.com/" },
       { name: "gitHub", image: "logos/github.svg", link: "https://github.com/benjaminelliott" },
       { name: "Figma", image: "logos/figma.svg", link: "https://www.figma.com" }
