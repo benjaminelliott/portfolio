@@ -6,6 +6,7 @@ import { Skills } from "./routes/Skills"
 import { Portfolio } from "./routes/Portfolio"
 import { Contact } from "./routes/Contact"
 import './App.css';
+import '../public/index.html'
 
 export const App = () => {
   return (
@@ -17,7 +18,7 @@ export const App = () => {
           <Route path="skills" element={<Skills />} />
           <Route path="portfolio" element={<Portfolio />} />
           <Route path="contact" element={<Contact />} />
-          <Route path="*" element={<Navigate to="index.html" />} />
+          <Route path="*" element={<Navigate to="../public/index.html" />} />
         </Route>
       </Routes>
     </div>
