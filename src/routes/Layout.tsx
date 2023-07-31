@@ -33,7 +33,6 @@ export const Layout = () => {
                             <NavLink
                                 className="header-links-link"
                                 to={link.route}
-                                reloadDocument
                                 style={({ isActive }) => {
                                     return {
                                     fontWeight: isActive ? "" : "",
