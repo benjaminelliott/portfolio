@@ -1,4 +1,5 @@
 import { useSpring, animated } from '@react-spring/web'
+import { LazyLoadImage } from "react-lazy-load-image-component";
 
 export const About = () => {
 
@@ -32,7 +33,7 @@ export const About = () => {
         <animated.section id="about" className="about" style={{...springs}}>
             <article className="about-content">
                 <div className="about-left">
-                    <img src="images/Ben&Colby.jpg" className="about-hero" alt="Benjamin"/>
+                    <LazyLoadImage src="images/Ben&Colby.jpg" className="about-hero" alt="Ben & Colby" />
                     <div className="about-hobbies">
                         <h2 className="hobbies-title">HOBBIES</h2>
                         <div className='hobbies-wrapper'>

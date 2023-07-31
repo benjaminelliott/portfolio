@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
 import { useSpring, animated } from '@react-spring/web'
+import { LazyLoadImage } from "react-lazy-load-image-component";
 
 export const Home = () => {
 
@@ -35,7 +36,7 @@ export const Home = () => {
                                 <h2 className="intro-first">{b.intro1}</h2>
                                 <h3 className="intro-second">{b.intro2}</h3>
                                 <div className="intro-bottom">
-                                    <img className="home-logo"src="logos/react.svg" alt="React.JS" />
+                                    <LazyLoadImage className="home-logo"src="logos/react.svg" alt="React.JS" />
                                     <h3>or</h3>
                                     <img className="home-logo" src="logos/vue.svg" alt="Vue.JS"/>
                                 </div>
