@@ -6,7 +6,6 @@ import { Skills } from "./routes/Skills"
 import { Portfolio } from "./routes/Portfolio"
 import { Contact } from "./routes/Contact"
 import './App.css';
-import '../public/index.html'
 
 export const App = () => {
   return (
