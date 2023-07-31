@@ -7,19 +7,19 @@ const links = [
     },
     {
         title: "About",
-        route: "about"
+        route: "/about"
     },
     {
         title: "Skills",
-        route: "skills"
+        route: "/skills"
     },
     {
         title: "Portfolio",
-        route: "portfolio"
+        route: "/portfolio"
     },
     {
         title: "Contact",
-        route: "contact"
+        route: "/contact"
     }
 ]
 
