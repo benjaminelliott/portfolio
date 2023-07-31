@@ -37,7 +37,7 @@ const router = createBrowserRouter([
         element: <Contact />
       },
       {
-        path: "/*",
+        path: "*",
         element: <Navigate to="/" />
       },
     ],
