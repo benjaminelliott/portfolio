@@ -1,6 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-import { createBrowserRouter, RouterProvider } from "react-router-dom";
+import { createBrowserRouter, RouterProvider, Navigate } from "react-router-dom";
 import { Root } from './routes/Root'
 import { ErrorPage } from "./components/ErrorPage"
 import { Home } from "./routes/Home"
@@ -35,7 +35,11 @@ const router = createBrowserRouter([
       {
         path: "contact",
         element: <Contact />
-      }
+      },
+      {
+        path: "/*",
+        element: <Navigate to="/" />
+      },
     ],
   },
 ]);
