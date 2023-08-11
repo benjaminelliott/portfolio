@@ -416,6 +416,15 @@ body {
   font-size: var(--text);
 }
 
+.site-link {
+  text-decoration: none;
+  transition: all 0.5s;
+}
+
+.site-link:hover {
+  scale: 1.1;
+}
+
 .site-logo {
   height: 50px;
   width: 50px;

@@ -1,4 +1,5 @@
 import { useSpring, animated } from '@react-spring/web'
+import { Link } from "react-router-dom";
 
 export const Portfolio = () => {
 
@@ -13,6 +14,12 @@ export const Portfolio = () => {
                 logo: "icons/code.svg",
                 description: "My personal portfolio page, built with React & Typescript, deployed from gitHub with Netlify",
                 link: "https://benjaminelliott.dev"
+            },
+            {
+                name: "littlelemon.biz",
+                logo: "logos/littlelemon.svg",
+                description: "The capstone project for the Meta Front-End Developer Professional Certificate on Coursera. A real website for the fictional Little Lemon restaurant, built with React & Typescript, deployed from Github with Netlify",
+                link: "https://littlelemon.biz"
             }
         ],
         projects: [
@@ -59,8 +66,8 @@ export const Portfolio = () => {
                 <h2 className='section-title'>Websites built</h2>
                 {portfolio.completed.map(site => (
                     <div className='site'>
-                        <a href={site.link} className='site-link'><img className="site-logo" src={site.logo} alt={site.name}/></a>
-                        <h3 className='site-name'>{site.name}</h3>
+                        <Link to={site.link} target="_blank" rel="noopener noreferrer" className='site-link'><img className="site-logo" src={site.logo} alt={site.name}/></Link>
+                        <Link to={site.link} target="_blank" rel="noopener noreferrer" className='site-link'><h3 className='site-name'>{site.name}</h3></Link>
                         <p className='site-description'>{site.description}</p>
                     </div>
                 ))}
@@ -69,8 +76,8 @@ export const Portfolio = () => {
                 <h2 className='section-title'>Projects</h2>
                 {portfolio.projects.map(site => (
                     <div className='site'>
-                        <a href={site.link} className='site-link'><img className="site-logo" src={site.logo} alt={site.name}/></a>
-                        <h3 className='site-name'>{site.name}</h3>
+                        <Link to={site.link} target="_blank" rel="noopener noreferrer" className='site-link'><img className="site-logo" src={site.logo} alt={site.name}/></Link>
+                        <Link to={site.link} target="_blank" rel="noopener noreferrer" className='site-link'><h3 className='site-name'>{site.name}</h3></Link>
                         <p className='site-description'>{site.description}</p>
                     </div>
                 ))}
@@ -79,8 +86,8 @@ export const Portfolio = () => {
                 <h2 className='section-title'>Certifications</h2>
                 {portfolio.certifications.map(site => (
                     <div className='site'>
-                        <a href={site.link} className='site-link'><img className="site-logo" src={site.logo} alt={site.name}/></a>
-                        <h3 className='site-name'>{site.name}</h3>
+                        <Link to={site.link} target="_blank" rel="noopener noreferrer" className='site-link'><img className="site-logo" src={site.logo} alt={site.name}/></Link>
+                        <Link to={site.link} target="_blank" rel="noopener noreferrer" className='site-link'><h3 className='site-name'>{site.name}</h3></Link>
                         <p className='site-description'>{site.description}</p>
                     </div>
                 ))}
@@ -89,8 +96,8 @@ export const Portfolio = () => {
                 <h2 className='section-title'>Practice</h2>
                 {portfolio.practice.map(site => (
                     <div className='site'>
-                        <a href={site.link} className='site-link'><img className="site-logo" src={site.logo} alt={site.name}/></a>
-                        <h3 className='site-name'>{site.name}</h3>
+                        <Link to={site.link} target="_blank" rel="noopener noreferrer" className='site-link'><img className="site-logo" src={site.logo} alt={site.name}/></Link>
+                        <Link to={site.link} target="_blank" rel="noopener noreferrer" className='site-link'><h3 className='site-name'>{site.name}</h3></Link>
                         <p className='site-description'>{site.description}</p>
                     </div>
                 ))}
