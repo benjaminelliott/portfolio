@@ -1,4 +1,5 @@
 import { useSpring, animated } from '@react-spring/web'
+import { Link } from 'react-router-dom'
 
 export const Skills = () => {
 
@@ -48,7 +49,7 @@ export const Skills = () => {
             <div className="technical-skills">
               {technical.map((skill) => (
                 <div className='skills-wrapper'>
-                  <a href={skill.link} target='_blank' rel="noreferrer"><img className='skill-image' src={skill.image} alt="skill"/></a>
+                  <Link to={skill.link} target='_blank' rel="noreferrer"><img className='skill-image' src={skill.image} alt="skill"/></Link>
                   <p className='skill-text'>{skill.name}</p>
                 </div>
               ))}
