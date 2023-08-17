@@ -1,4 +1,5 @@
 import { useSpring, animated } from '@react-spring/web'
+import { LazyLoadImage } from 'react-lazy-load-image-component';
 import { Link } from "react-router-dom";
 
 export const Portfolio = () => {
@@ -33,15 +34,17 @@ export const Portfolio = () => {
         certifications: [
             {
                 name: "Coursera",
+                image: "images/Meta Front End Certificate.png",
                 logo: "logos/coursera.svg",
-                description: "Currently completing the Meta Front-End Developer Professional Certificate, specializing in React",
-                link: "https://www.coursera.org/user/9358bbdffd3525aa3dac8ce4684bad87"
+                description: "Completed the Meta Front-End Developer professional certification on Coursera, confirming my capabilities as a front-end developer",
+                link: "https://coursera.org/verify/professional-cert/5GMTVUAPTVM2"
             },
             {
                 name: "freecodecamp",
+                image: "images/freecodecamp Certificate.png",
                 logo: "logos/freecodecamp.svg",
                 description: "Completed Responsive Web Design certification, specializing in HTML, CSS and Javascipt",
-                link: "https://www.freecodecamp.org/benjaminelliott"
+                link: "https://www.freecodecamp.org/certification/benjaminelliott/responsive-web-design"
             }
         ],
         practice: [
@@ -63,6 +66,17 @@ export const Portfolio = () => {
     return (
         <animated.section id="portfolio" className="portfolio" style={{...springs}}>
             <article className="portfolio-section">
+                <h2 className='section-title'>Certifications</h2>
+                <div className='certs'>
+                    {portfolio.certifications.map(cert => (
+                        <div className='cert'>
+                            <Link to={cert.link} target="_blank" rel="noopener noreferrer" className='site-link'><LazyLoadImage src={cert.image} className='cert-image'/></Link>
+                            <p className='site-description'>{cert.description}</p>
+                        </div>
+                    ))}
+                </div>
+            </article>
+            <article className="portfolio-section">
                 <h2 className='section-title'>Websites built</h2>
                 {portfolio.completed.map(site => (
                     <div className='site'>
@@ -75,16 +89,6 @@ export const Portfolio = () => {
             <article className="portfolio-section">
                 <h2 className='section-title'>Projects</h2>
                 {portfolio.projects.map(site => (
-                    <div className='site'>
-                        <Link to={site.link} target="_blank" rel="noopener noreferrer" className='site-link'><img className="site-logo" src={site.logo} alt={site.name}/></Link>
-                        <Link to={site.link} target="_blank" rel="noopener noreferrer" className='site-link'><h3 className='site-name'>{site.name}</h3></Link>
-                        <p className='site-description'>{site.description}</p>
-                    </div>
-                ))}
-            </article>
-            <article className="portfolio-section">
-                <h2 className='section-title'>Certifications</h2>
-                {portfolio.certifications.map(site => (
                     <div className='site'>
                         <Link to={site.link} target="_blank" rel="noopener noreferrer" className='site-link'><img className="site-logo" src={site.logo} alt={site.name}/></Link>
                         <Link to={site.link} target="_blank" rel="noopener noreferrer" className='site-link'><h3 className='site-name'>{site.name}</h3></Link>
