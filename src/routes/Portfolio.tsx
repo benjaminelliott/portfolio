@@ -9,28 +9,6 @@ export const Portfolio = () => {
         to: { opacity: 1, scale: 1 },
     })
     const portfolio = {
-        completed: [
-            {
-                name: "benjaminelliott.dev",
-                logo: "icons/code.svg",
-                description: "My personal portfolio page, built with React & Typescript, deployed from gitHub with Netlify",
-                link: "https://benjaminelliott.dev"
-            },
-            {
-                name: "littlelemon.biz",
-                logo: "logos/littlelemon.svg",
-                description: "The capstone project for the Meta Front-End Developer Professional Certificate on Coursera. A real website for the fictional Little Lemon restaurant, built with React & Typescript, deployed from Github with Netlify",
-                link: "https://littlelemon.biz"
-            }
-        ],
-        projects: [
-            {
-                name: "gitHub",
-                logo: "logos/github.svg",
-                description: "My repo for all the projects I'm working on. I'm always looking for new ideas and opportunities to learn",
-                link: "https://github.com/benjaminelliott"
-            }
-        ],
         certifications: [
             {
                 name: "Coursera",
@@ -45,6 +23,34 @@ export const Portfolio = () => {
                 logo: "logos/freecodecamp.svg",
                 description: "Completed Responsive Web Design certification, specializing in HTML, CSS and Javascipt",
                 link: "https://www.freecodecamp.org/certification/benjaminelliott/responsive-web-design"
+            }
+        ],
+        completed: [
+            {
+                name: "benjaminelliott.dev",
+                logo: "icons/code.svg",
+                description: "My personal portfolio page, built with React & Typescript, deployed from gitHub with Netlify",
+                link: "https://benjaminelliott.dev"
+            },
+            {
+                name: "littlelemon.biz",
+                logo: "logos/littlelemon.svg",
+                description: "The capstone project for the Meta Front-End Developer Professional Certificate on Coursera. A real website for the fictional Little Lemon restaurant, built with React & Typescript, deployed from Github with Netlify",
+                link: "https://littlelemon.biz"
+            },
+            {
+                name: "Epictweetus",
+                logo: "logos/epictweetus.png",
+                description: "A single page app with philosophical quotes and pictures of statues. Built with React and Typescript, making use of hooks and API calls to get the job done. Classical wisdom for the digital age!",
+                link: "https://sensational-bonbon-a021d7.netlify.app/"
+            }
+        ],
+        projects: [
+            {
+                name: "gitHub",
+                logo: "logos/github.svg",
+                description: "My repo for all the projects I'm working on. I'm always looking for new ideas and opportunities to learn. I aim to make commits daily, if not multiple days per week",
+                link: "https://github.com/benjaminelliott"
             }
         ],
         practice: [
