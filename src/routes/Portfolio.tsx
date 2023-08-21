@@ -11,6 +11,13 @@ export const Portfolio = () => {
     const portfolio = {
         certifications: [
             {
+                name: "freecodecamp",
+                image: "images/freecodecamp Certificate.png",
+                logo: "logos/freecodecamp.svg",
+                description: "Completed Responsive Web Design certification, specializing in creating responsive pages with HTML, CSS and Javascipt",
+                link: "https://www.freecodecamp.org/certification/benjaminelliott/responsive-web-design"
+            },
+            {
                 name: "Coursera",
                 image: "images/Meta Front End Certificate.png",
                 logo: "logos/coursera.svg",
@@ -19,10 +26,10 @@ export const Portfolio = () => {
             },
             {
                 name: "freecodecamp",
-                image: "images/freecodecamp Certificate.png",
+                image: "images/freecodecamp Certificate 2.png",
                 logo: "logos/freecodecamp.svg",
-                description: "Completed Responsive Web Design certification, specializing in HTML, CSS and Javascipt",
-                link: "https://www.freecodecamp.org/certification/benjaminelliott/responsive-web-design"
+                description: "Completed Javascript algorithms and data sctuctures, specializing in using different data types and structures in Javascript ES6",
+                link: "https://freecodecamp.org/certification/benjaminelliott/javascript-algorithms-and-data-structures"
             }
         ],
         completed: [
