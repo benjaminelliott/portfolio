@@ -436,6 +436,10 @@ body {
   font-size: var(--text);
 }
 
+.certs {
+  width: 100%;
+}
+
 .cert {
   width: 100%;
   display: flex;
@@ -444,10 +448,82 @@ body {
   align-items: center;
 }
 
+.cert-link {
+  text-decoration: none;
+  transition: all 0.5s;
+  opacity: 0.5;
+}
+
+.cert-link:hover {
+  scale: 1.1;
+  opacity: 1;
+}
+
 .cert-image {
-  height: 200px;
+  height: 100%;
   width: auto;
   object-fit: cover;
+}
+
+.cert-image:hover {
+  opacity: 1;
+}
+
+.carousel {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  
+}
+
+.control-dots {
+  width: 50%;
+  margin-top: 20px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.control-dot {
+  font-size: 20pt;
+}
+
+.control-dot::marker {
+  content: ''
+}
+
+.control-dot-button {
+  height: 50px;
+  background: none;
+  border: none;
+  font-size: 10pt;
+  transition: all 0.5s;
+}
+
+.control-dot-button:hover {
+  scale: 1.5;
+}
+
+.selected-dot {
+  scale: 1.5;
+}
+
+.carousel-button {
+  height: 200px;
+  background: none;
+  border: none;
+  font-size: 25pt;
+  transition: all 0.5s;
+  visibility: visible;
+}
+
+.carousel-button-hidden {
+  visibility: hidden;
+}
+
+.carousel-button:hover {
+  scale: 1.5;
 }
 
 .contact {
@@ -608,13 +684,9 @@ body {
     width: 50%;
   }
 
-  @media (min-width: 1400px) {
-    .certs {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 50px;
-      justify-content: center;
-      align-items: center;
+  @media (min-width: 1000px) {
+    .cert {
+      width: 100%;
     }
   }
 }

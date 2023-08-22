@@ -91,12 +91,36 @@ export const Portfolio = () => {
         <animated.section id="portfolio" className="portfolio" style={{...springs}}>
             <article className="portfolio-section">
                 <h2 className='section-title'>Certifications</h2>
-                <Carousel className='certs' showThumbs={false}>
+                <Carousel
+                    className='certs'
+                    showThumbs={false}
+                    infiniteLoop={false}
+                    renderArrowPrev={(clickHandler, hasPrev) => {
+                        return (
+                            <button className={ hasPrev ? "carousel-button" : "carousel-button-hidden" } onClick={clickHandler}>👈🏽</button>
+                        )
+                    }}
+                    renderArrowNext={(clickHandler, hasNext) => {
+                        return (
+                            <button className={ hasNext ? "carousel-button" : "carousel-button-hidden" } onClick={clickHandler}>👉🏽</button>
+                        )
+                    }}
+                    renderIndicator={(clickHandler, isSelected, index) => {
+                        return (
+                                    <li
+                                        key={index}
+                                        className={ isSelected ? "selected-dot control-dot" : "control-dot"}
+                                        onClick={clickHandler}
+                                    >
+                                        <button className='control-dot-button'>{isSelected ? "⚪" : "⚫"}</button>
+                                    </li>
+                        )
+                    }}
+                >
                     {
                         portfolio.certifications.map(cert => (
                             <div key={cert.key} className='cert'>
-                                <Link to={cert.link} target="_blank" rel="noopener noreferrer" className='site-link'><LazyLoadImage src={cert.image} className='cert-image'/></Link>
-                                <p className='site-description'>{cert.description}</p>
+                                <Link to={cert.link} target="_blank" rel="noopener noreferrer" className='cert-link'><LazyLoadImage src={cert.image} className='cert-image'/></Link>
                             </div>
                         ))
                     }
