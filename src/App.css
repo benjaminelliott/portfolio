@@ -59,7 +59,6 @@ body {
 .content {
   margin: 0;
   width: 100%;
-  height: auto;
   overflow: scroll;
 }
 
