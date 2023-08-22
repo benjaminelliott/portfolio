@@ -25,7 +25,7 @@ const links = [
 
 export const Layout = () => {
     return (
-        <section className="container">
+        <section className="layout">
             <article className="header">
                 <ul className="header-links">
                     {
