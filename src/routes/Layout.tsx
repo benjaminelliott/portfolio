@@ -31,6 +31,7 @@ export const Layout = () => {
                     {
                         links.map(link =>
                             <NavLink
+                                key={link.title}
                                 className="header-links-link"
                                 to={link.route}
                                 style={({ isActive }) => {

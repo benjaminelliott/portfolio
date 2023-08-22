@@ -13,21 +13,25 @@ export const Contact = () => {
     emoji: "👊🏽",
     contacts: [
       {
+        key: 0,
         name: "email",
         link: "mailto:benjamin.elliott.be@gmail.com",
         icon: "icons/email.svg"
       },
       {
+        key: 1,
         name: "phone",
         link: "tel:973-289-3674",
         icon: "icons/phone.svg"
       },
       {
+        key: 2,
         name: "linkedin",
         link: "https://www.linkedin.com/in/benjamin-elliott-163280280/",
         icon: "logos/linkedin.svg"
       },
       {
+        key: 3,
         name: "instagram",
         link: "https://www.instagram.com/therealbenjaminelliott/",
         icon: "logos/instagram.svg"
@@ -40,11 +44,13 @@ export const Contact = () => {
       <div className='contact-upper'>
         <h2 className='contact-title'>{contact.name}</h2>
         <div className='contact-links'>
-          {contact.contacts.map(cont => (
-            <div className='contact-line'>
-              <a target="_blank" rel="noreferrer" href={cont.link} className="contact-link"><img src={cont.icon} alt={cont.name} className="contact-icon" /></a>
-            </div>
-          ))}
+          {
+            contact.contacts.map(cont => (
+              <div key={cont.key} className='contact-line'>
+                <a target="_blank" rel="noreferrer" href={cont.link} className="contact-link"><img src={cont.icon} alt={cont.name} className="contact-icon" /></a>
+              </div>
+            ))
+          }
         </div>
       </div>
       <div className='contact-lower'>
