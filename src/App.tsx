@@ -3,7 +3,6 @@ import { Layout } from "./routes/Layout"
 import { Home } from "./routes/Home"
 import { About } from "./routes/About"
 import { Portfolio } from "./routes/Portfolio"
-import { Contact } from "./routes/Contact"
 import './App.css';
 
 const Benjamin = {
@@ -200,7 +199,21 @@ coachingSkills: [
       image: "logos/github.svg",
       link: "https://github.com/benjaminelliott"
     },
-  ]
+  ],
+  links: [
+    {
+        title: "Home",
+        route: "/"
+    },
+    {
+        title: "About",
+        route: "/about"
+    },
+    {
+        title: "Portfolio",
+        route: "/portfolio"
+    }
+]
 }
 
 export const App = () => {
@@ -208,11 +221,10 @@ export const App = () => {
   return (
     <div className="App">
       <Routes>
-        <Route path="*" element={<Layout />}>
+        <Route path="*" element={<Layout links={Benjamin.links} socials={Benjamin.socials} contacts={Benjamin.contacts}/>}>
           <Route index element={<Home name={Benjamin.name} image={Benjamin.images.hero} techStack={Benjamin.techStack} tools={Benjamin.tools} learning={Benjamin.learning} contacts={Benjamin.contacts} socials={Benjamin.socials}/>} />
           <Route path="about" element={<About coachingImage={Benjamin.images.coaching} codingImage={Benjamin.images.coding} coachingSkills={Benjamin.coachingSkills} codingSkills={Benjamin.codingSkills} hobbies={Benjamin.hobbies} />} />
           <Route path="portfolio" element={<Portfolio />} />
-          <Route path="contact" element={<Contact />} />
           <Route path="*" element={<Navigate to="../public/index.html" />} />
         </Route>
       </Routes>

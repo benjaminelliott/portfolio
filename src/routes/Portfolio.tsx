@@ -7,9 +7,10 @@ import { Carousel } from 'react-responsive-carousel';
 export const Portfolio = () => {
 
     const springs = useSpring({
-        from: { opacity: 0, scale: 0.1 },
+        from: { opacity: 0, scale: 0.75 },
         to: { opacity: 1, scale: 1 },
     })
+
     const portfolio = {
         certifications: [
             {

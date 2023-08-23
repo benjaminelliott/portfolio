@@ -5,13 +5,13 @@ import { LazyLoadImage } from "react-lazy-load-image-component";
 export const About = (props: any) => {
 
     const springs = useSpring({
-        from: { opacity: 0, scale: 0.1 },
+        from: { opacity: 0, scale: 0.75 },
         to: { opacity: 1, scale: 1 },
     })
 
     return (
         <animated.section id="about" className="about" style={{...springs}}>
-            <h2 className='section-title'>From coaching...</h2>
+            <h4 className='section-title'>From coaching...</h4>
             <article className="about-coaching">
                 <div className='coaching-image'>
                     <LazyLoadImage src={props.coachingImage} className="hero-image" alt="Ben & Colby" />
@@ -30,7 +30,7 @@ export const About = (props: any) => {
                     }
                 </div>
             </article>
-            <h2 className='section-title'>...to coding.</h2>
+            <h4 className='section-title'>...to coding.</h4>
             <article className="about-coding">
                 <div className='coaching-skills'>
                     {
@@ -50,11 +50,11 @@ export const About = (props: any) => {
                 </div>
             </article>
             <article className='about-benjamin'>
-                <h2 className='section-title'>Soft skills meet hard work</h2>
+                <h4 className='section-title'>Soft skills meet hard work</h4>
                 <p>As a Front-End wed developer, I've acquired all the skills required to build responsive, scalable pages and apps for a variety of uses. As a person, I've lived a life of challenges and learned the meaning of hard work, dedication and sacrifice. Every hat I wore along the way, has made me who I am today.</p>
             </article>
             <article className='about-hobbies'>
-                <h2 className="section-title">Hobbies</h2>
+                <h4 className="section-title">Other passions</h4>
                 <div className='hobbies-wrapper'>
                     {
                         props.hobbies.map((hobby: { key: Key | null | undefined; icon: string | number | boolean | ReactElement<any, string | JSXElementConstructor<any>> | Iterable<ReactNode> | ReactPortal | null | undefined; name: string | number | boolean | ReactElement<any, string | JSXElementConstructor<any>> | Iterable<ReactNode> | ReactPortal | null | undefined; }) => (

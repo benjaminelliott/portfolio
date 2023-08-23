@@ -91,7 +91,7 @@ body {
 }
 
 .header-title {
-  color: var(--six);
+  color: var(--one);
 }
 
 .header-links {
@@ -692,9 +692,14 @@ body {
   min-height: 10dvh;
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: space-evenly;
   flex-grow: 0;
   flex-shrink: 0;
+}
+
+.footer-links {
+  display: flex;
+  gap: 2rem;
 }
 
 .footer-text {

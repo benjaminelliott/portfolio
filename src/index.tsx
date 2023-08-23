@@ -5,9 +5,7 @@ import { Root } from './routes/Root'
 import { ErrorPage } from "./components/ErrorPage"
 import { Home } from "./routes/Home"
 import { About } from "./routes/About"
-import { Skills } from "./routes/Skills"
 import { Portfolio } from "./routes/Portfolio"
-import { Contact } from "./routes/Contact"
 import './index.css';
 
 const router = createBrowserRouter([
@@ -25,16 +23,8 @@ const router = createBrowserRouter([
         element: <About />
       },
       {
-        path: "/skills",
-        element: <Skills />
-      },
-      {
         path: "/portfolio",
         element: <Portfolio />
-      },
-      {
-        path: "/contact",
-        element: <Contact />
       },
       {
         path: "*",
