@@ -1,4 +1,5 @@
-body {
+html, body {
+  overflow: hidden;
   padding: 0;
   margin: 0;
 }
@@ -6,7 +7,6 @@ body {
 .root {
   padding: 0;
   margin: 0;
-  overflow: scroll;
   background: var(--three);
   --text-shadow: 7px 7px #57DDF8, 14px 14px #8FE8FA;
   --one: #ffffff;
@@ -40,6 +40,7 @@ body {
   text-align: center;
   max-width: 90dvw;
   margin: 0 auto;
+  padding: 0;
 }
 
 .layout {
@@ -49,19 +50,28 @@ body {
 }
 
 .content {
+  min-height: 100%;
   margin: 0;
-  overflow: scroll;
 }
 
 .header {
   height: 10vh;
+  top: 0;
+  padding: 0;
+  margin: 0;
   display: flex;
+  flex-direction: column;
   align-items: center;
-  justify-content: center;
+  justify-content: space-between;
+  margin-bottom: 30px;
+}
+
+.header-title {
+  color: var(--six);
 }
 
 .header-links {
-  width: 100vw;
+  gap: 3rem;
   padding: 0;
   display: flex;
   flex-direction: row;
@@ -666,7 +676,10 @@ body {
 }
 
 .footer {
+  position: relative;
   padding: 0;
+  bottom: 0;
+  height: 10dvh;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -680,6 +693,10 @@ body {
 @media (min-width: 700px) {
   .App {
     max-width: 80dvw;
+  }
+
+  .header {
+    flex-direction: row;
   }
   .content {
     height: 80dvh;
@@ -753,7 +770,7 @@ body {
 
   @media (min-width: 1200px) {
     .App {
-      max-width: 50dvw;
+      max-width: 40dvw;
     }
 
   }

@@ -10,6 +10,48 @@ import './App.css';
 const Benjamin = {
   name: "Benjamin",
   image: "images/benjamin.jpg",
+  softSkills: [
+    {
+      key: 0,
+      name: "Working remotely",
+      image: "🧑🏽‍💻️"
+    },
+    {
+      key: 1,
+      name: "Attention to detail",
+      image: "🔎"
+    },
+    {
+      key: 2,
+      name: "Problem solving",
+      image: "🎓"
+    },
+    {
+      key: 3,
+      name: "Self-learning",
+      image: "🧑🏽‍🎓️"
+    },
+    {
+      key: 4,
+      name: "Communication",
+      image: "💬"
+    },
+    {
+      key: 5,
+      name: "Teamwork",
+      image: "🤝🏽"
+    },
+    {
+      key: 6,
+      name: "Leadership",
+      image: "🧑🏽‍💼️"
+    },
+    {
+      key: 7,
+      name: "Resilience",
+      image: "☮️"
+    }
+  ],
   techStack: [
     {
       key: 0,
@@ -131,7 +173,6 @@ export const App = () => {
         <Route path="*" element={<Layout />}>
           <Route index element={<Home name={Benjamin.name} image={Benjamin.image} techStack={Benjamin.techStack} tools={Benjamin.tools} learning={Benjamin.learning} contacts={Benjamin.contacts} socials={Benjamin.socials}/>} />
           <Route path="about" element={<About />} />
-          <Route path="skills" element={<Skills />} />
           <Route path="portfolio" element={<Portfolio />} />
           <Route path="contact" element={<Contact />} />
           <Route path="*" element={<Navigate to="../public/index.html" />} />

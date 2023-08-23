@@ -10,10 +10,6 @@ const links = [
         route: "/about"
     },
     {
-        title: "Skills",
-        route: "/skills"
-    },
-    {
         title: "Portfolio",
         route: "/portfolio"
     },
@@ -27,6 +23,7 @@ export const Layout = () => {
     return (
         <section className="layout">
             <article className="header">
+                <h1 className="header-title">benjaminelliott.dev</h1>
                 <ul className="header-links">
                     {
                         links.map(link =>
