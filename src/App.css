@@ -99,7 +99,7 @@ body {
 }
 
 .header-links-link:hover {
-  color: var(--five);
+  color: var(--one);
 }
 
 .header-links-link:active {
@@ -119,17 +119,24 @@ body {
   display: flex;
   align-items: center;
   flex-direction: column;
-  justify-content: space-evenly;
+  justify-content: space-between;
   gap: 3rem;
 }
 
 .home-lower {
   display: flex;
-  
+  text-align: ;
   flex-direction: column;
-  align-items: center;
+  align-items: flex-start;
   justify-content: space-evenly;
   gap: 3rem;
+}
+
+
+.home-lower-lower {
+  display: grid;
+  width: 100%;
+  grid-template-columns: repeat(2, 1fr);
 }
 
 @keyframes rotate {
@@ -153,7 +160,7 @@ body {
   border-radius: 16px;
   object-fit: cover;
   border: 10px solid var(--six);
-  
+  filter: drop-shadow(0px 0px 10px var(--six))
 }
 
 .home-title-wrapper {
@@ -194,29 +201,53 @@ body {
   color: var(--one);
   text-decoration: none;
   font-weight: 400;
+  text-align: left;
+  line-height: 1.75;
+}
+
+.intro::before {
+  content: '👋🏽 \A';
+  font-size: 50px;
+  white-space: pre;
 }
 
 .react {
-  color: var(--four)
+  color: var(--four);
+  font-size: x-large;
 }
 
-.vue {
-  color: var(--six)
+.benjamin {
+  color: var(--six);
+  font-size: x-large;
 }
 
 .tech-stack {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+.tech-logos {
   display: flex;
   width: 100%;
   flex-direction: row;
-  justify-content: center;
-
+  justify-content: flex-start;
   font-size: var(--h3);
   gap: 4rem;
 }
 
-.tech-stack-text {
-  color: var(--four);
+.tech-stack-title {
+  color: var(--six);
+  text-align: left;
+}
 
+.tech-stack-text {
+  color: var(--one);
+}
+
+.tech-stack-text:link {
+  text-decoration: none;
 }
 
 .tech-stack-logo {
@@ -227,17 +258,34 @@ body {
 
 .tech-stack-logo:hover, .tech-stack-logo:focus {
   scale: 2;
+  filter: drop-shadow(0px 0px 10px var(--six));
+}
+
+.home-buttons {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  gap: 50px;
 }
 
 .home-call {
   padding: clamp(2px, 10px, 20px);
+  width: 150px;
   font-family: 'Lunasima', sans-serif;
-  color: white;
+  color: var(--five);
   border: none;
   border-radius: 16px;
-  background-image: linear-gradient(to left, var(--four), var(--five));
-  font-weight: bold;
+  background-color: var(--four);
   font-size: var(--h3);
+  transition: all 0.5s;
+}
+
+.home-call:hover {
+  background-color: var(--six);
+  color: var(--five);
+  filter: drop-shadow(0px 0px 10px var(--one));
+  font-weight: bold;
 }
 
 .home-call-link {
@@ -323,7 +371,7 @@ body {
 }
 
 .hobbies-title {
-  color: var(--four);
+  color: var(--six);
 }
 
 .hobbies-emoji {
@@ -338,14 +386,14 @@ body {
 }
 
 .history-title {
-  color: var(--four);
+  color: var(--six);
 }
 
 .history-ul {
   line-height: 3vw;
   text-align: left;
   font-family: 'Lunasima', sans-serif;
-  list-style: symbols(cyclic "✅"); 
+  list-style: symbols(cyclic "✅");
 }
 
 .history-li {
@@ -402,7 +450,7 @@ body {
 }
 
 .skill-title {
-  color: var(--four);
+  color: var(--six);
   padding: 0;
   margin: 0;
   font-size: var(--h2);
@@ -437,7 +485,7 @@ body {
 }
 
 .section-title {
-  color: var(--four);
+  color: var(--six);
   text-transform: uppercase;
   font-size: var(--h2);
 }
@@ -451,13 +499,15 @@ body {
 }
 
 .site-name {
-  color: var(--five);
+  color: var(--four);
   font-weight: bold;
   font-size: var(--text);
+  align-self: flex-start;
 }
 
 .site-link {
   text-decoration: none;
+  text-align: left;
   transition: all 0.5s;
 }
 
@@ -586,7 +636,7 @@ body {
 .contact-title {
   align-self: center;
   justify-self: center;
-  color: var(--four);
+  color: var(--six);
   font-size: var(--h2)
 }
 
@@ -639,7 +689,6 @@ body {
 }
 
 .footer {
-
   padding: 0;
   display: flex;
   align-items: center;
@@ -647,7 +696,7 @@ body {
 }
 
 .footer-text {
-  color: var(--four);
+  color: var(--six);
   font-size: var(--text);
 }
 

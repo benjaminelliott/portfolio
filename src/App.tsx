@@ -33,22 +33,28 @@ const Benjamin = {
       key: 3,
       name: "Typescript",
       image: "logos/typescript.svg",
-      link: "https://vuejs.org/"
+      link: "https://www.typescriptlang.org/"
     },
     {
       key: 4,
-      name: "React.JS",
+      name: "React",
       image: "logos/react.svg",
       link: "https://react.dev/"
     },
     {
       key: 5,
-      name: "Vue.JS",
-      image: "logos/vue.svg",
-      link: "https://vuejs.org/"
+      name: "TailwindCSS",
+      image: "logos/tailwind.svg",
+      link: "https://tailwindcss.com/"
+    },
+    {
+      key: 6,
+      name: "SASS",
+      image: "logos/sass.svg",
+      link: "https://sass-lang.com/"
     }
   ],
-  programs: [
+  tools: [
     {
       key: 0,
       name: "VSCode",
@@ -57,16 +63,64 @@ const Benjamin = {
     },
     {
       key: 1,
+      name: "Figma",
+      image: "logos/figma.svg",
+      link: "https://www.figma.com"
+    },
+    {
+      key: 2,
+      name: "Stack Overflow",
+      image: "logos/stackoverflow.svg",
+      link: "https://stackoverflow.com/"
+    }
+  ],
+  learning: [
+    {
+      key: 0,
+      name: "Vue.JS",
+      image: "logos/vue.svg",
+      link: "https://vuejs.org/"
+    },
+    {
+      key: 1,
+      name: "Angular",
+      image: "logos/angular.svg",
+      link: "https://angular.io/"
+    },
+    {
+      key: 2,
+      name: "Python",
+      image: "logos/python.svg",
+      link: "https://www.python.org/"
+    },
+  ],
+  contacts: [
+    {
+      key: 0,
+      name: "email",
+      link: "mailto:benjamin.elliott.be@gmail.com",
+      icon: "icons/email.svg"
+    },
+    {
+      key: 1,
+      name: "phone",
+      link: "tel:973-289-3674",
+      icon: "icons/phone.svg"
+    }
+  ],
+  socials: [
+    {
+      key: 0,
+      name: "linkedin",
+      image: "logos/linkedin.svg",
+      link: "https://www.linkedin.com/in/benjamin-elliott-163280280/"
+    },
+    {
+      key: 1,
       name: "gitHub",
       image: "logos/github.svg",
       link: "https://github.com/benjaminelliott"
     },
-    {
-      key: 2,
-      name: "Figma",
-      image: "logos/figma.svg",
-      link: "https://www.figma.com"
-    }
   ]
 }
 
@@ -75,7 +129,7 @@ export const App = () => {
     <div className="App">
       <Routes>
         <Route path="*" element={<Layout />}>
-          <Route index element={<Home name={Benjamin.name} image={Benjamin.image} techStack={Benjamin.techStack} programs={Benjamin.programs}/>} />
+          <Route index element={<Home name={Benjamin.name} image={Benjamin.image} techStack={Benjamin.techStack} tools={Benjamin.tools} learning={Benjamin.learning} contacts={Benjamin.contacts} socials={Benjamin.socials}/>} />
           <Route path="about" element={<About />} />
           <Route path="skills" element={<Skills />} />
           <Route path="portfolio" element={<Portfolio />} />
