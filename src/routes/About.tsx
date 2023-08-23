@@ -9,25 +9,6 @@ export const About = (props: any) => {
         to: { opacity: 1, scale: 1 },
     })
 
-    const history = [
-        {
-            key: 0,
-            item: "Self-taught web developer with passion for completing courses and learning new things"
-        },
-        {
-            key: 1,
-            item: "Experienced in both vanilla Javascript ES5 & ES6, as well as frameworks such as React & Vue"
-        },
-        {
-            key: 2,
-            item: "Proven communication and leadership skills through 15 year career as a teacher and soccer coach."
-        },
-        {
-            key: 3,
-            item: "Ability to work both on location and remotely, with experience of working across time zones"
-        }
-    ]
-
     return (
         <animated.section id="about" className="about" style={{...springs}}>
             <h2 className='section-title'>From coaching...</h2>

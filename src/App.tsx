@@ -5,7 +5,6 @@ import { About } from "./routes/About"
 import { Portfolio } from "./routes/Portfolio"
 import { Contact } from "./routes/Contact"
 import './App.css';
-import { useSpring } from "@react-spring/web";
 
 const Benjamin = {
   name: "Benjamin",
