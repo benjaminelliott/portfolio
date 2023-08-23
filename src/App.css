@@ -7,13 +7,14 @@ body {
   padding: 0;
   margin: 0;
   overflow: scroll;
-  background: linear-gradient(to top, var(--two), var(--one));
-  --text-shadow: 7px 7px var(--four), 14px 14px var(--five);
-  --one: #264653;
-  --two: #2a9d8f;
-  --three: #e9c46a;
-  --four: #f4a261;
-  --five: #e76f51;
+  background: var(--three);
+  --text-shadow: 7px 7px #57DDF8, 14px 14px #8FE8FA;
+  --one: #ffffff;
+  --two: #808080;
+  --three: #031926;
+  --four: #8FE8FA;
+  --five: #171717;
+  --six: #2BF38B;
   --h1: clamp(1rem, 4vw + 1rem, 4rem);
   --h2: clamp(0.5rem, 1.5vw + 0.75rem, 2.5rem);
   --h3: clamp(0.5rem, 1vw + 0.5rem, rem);
@@ -98,50 +99,61 @@ body {
 }
 
 .header-links-link:hover {
-  color: var(--three);
+  color: var(--five);
 }
 
 .header-links-link:active {
-  color: var(--four);
+  color: var(--five);
 }
 
 .home {
   width: 100%;
-}
-
-.content-home {
-  color: white;
-  height: 80vh;
+  height: 100%;
   display: flex;
   flex-direction: column;
-  align-items: stretch;
-  justify-content: space-evenly;
+  justify-content: center;
+  gap: 6rem;
 }
 
 .home-upper {
-  height: 50%;
   display: flex;
   align-items: center;
   flex-direction: column;
   justify-content: space-evenly;
+  gap: 3rem;
 }
 
 .home-lower {
-  height: 50%;
   display: flex;
+  
   flex-direction: column;
   align-items: center;
   justify-content: space-evenly;
+  gap: 3rem;
+}
+
+@keyframes rotate {
+  100% {
+    transform: rotate(1turn);
+  }
+}
+
+@keyframes wave {
+  0% {
+    transform: rotate(0deg)
+  }
+  100% {
+    transform: rotate(40deg)
+  }
 }
 
 .home-hero {
   width: 20vw;
   height: 20vw;
+  border-radius: 16px;
   object-fit: cover;
-  border: 10px solid;
-  border-image-slice: 1;
-  border-width: 5px;
-  border-image-source: linear-gradient(to left, var(--four), var(--five));
+  border: 10px solid var(--six);
+  
 }
 
 .home-title-wrapper {
@@ -156,7 +168,8 @@ body {
   padding: 0;
   margin: 0;
   font-size: var(--h1);
-  text-shadow: var(--text-shadow);
+  color: var(--six);
+
 }
 
 .home-intro {
@@ -168,24 +181,52 @@ body {
   font-family: 'Lunasima', sans-serif;
 }
 
-.intro-first {
+.wave {
+  font-size: 4rem;
+  padding: 0;
   margin: 0;
-  color: var(--three);
-  font-size: var(--h2);
+  animation: wave 1s linear infinite alternate;
 }
 
-.intro-second {
+.intro {
   margin: 0;
-  font-size: var(--h3);
+  font-size: var(--text);
+  color: var(--one);
+  text-decoration: none;
+  font-weight: 400;
 }
 
-.intro-bottom {
-  width: 100%;
+.react {
+  color: var(--four)
+}
+
+.vue {
+  color: var(--six)
+}
+
+.tech-stack {
   display: flex;
+  width: 100%;
   flex-direction: row;
-  justify-content: space-evenly;
-  align-items: center;
+  justify-content: center;
+
   font-size: var(--h3);
+  gap: 4rem;
+}
+
+.tech-stack-text {
+  color: var(--four);
+
+}
+
+.tech-stack-logo {
+  height: var(--icon-s);
+  width: var(--icon-s);
+  transition: all 0.5s;
+}
+
+.tech-stack-logo:hover, .tech-stack-logo:focus {
+  scale: 2;
 }
 
 .home-call {
@@ -209,9 +250,8 @@ body {
   transition-duration: 500ms;
 }
 
-.home-logo {
-  height: var(--icon-s);
-  width: var(--icon-s);
+.react-logo {
+  animation: rotate 10s linear infinite;
 }
 
 .about {
@@ -474,7 +514,6 @@ body {
   flex-direction: row;
   justify-content: center;
   align-items: center;
-  
 }
 
 .control-dots {
