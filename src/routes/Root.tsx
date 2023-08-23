@@ -2,8 +2,8 @@ import { App } from '../App';
 
 export const Root = () => {
     return (
-      <section className="root">
+      <div className="root">
         <App />
-      </section>
+      </div>
     );
   }
