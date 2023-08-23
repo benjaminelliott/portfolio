@@ -29,7 +29,22 @@ const Benjamin = {
         key: 2,
         name: "Indoor cycling",
         icon: "🚵🏽"
-    }
+    },
+    {
+      key: 4,
+      name: "Football",
+      icon: "⚽"
+  },
+  {
+      key: 5,
+      name: "Formula 1",
+      icon: "🏎️"
+  },
+  {
+      key: 6,
+      name: "Travel",
+      icon: "🌍"
+  }
 ],
 coachingSkills: [
   {

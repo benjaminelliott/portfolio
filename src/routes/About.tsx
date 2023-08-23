@@ -69,9 +69,12 @@ export const About = (props: any) => {
                         <LazyLoadImage src={props.codingImage} className="hero-image" alt="Ben & Colby" />
                     </div>
                 </div>
-                <h4>Every hat I wore each day, has made me who I am today.</h4>
-            </article>
-            <article className='about-hobbies'>
+                <div className='about-benjamin'>
+                    <h2 className='section-title'>Soft skills meet hard work</h2>
+                    <p>As a Front-End wed developer, I've acquired all the skills required to build responsive, scalable pages and apps for a variety of uses. As a person, I've lived a life of challenges and learned the meaning of hard work, dedication and sacrifice. Every hat I wore along the way, has made me who I am today.</p>
+                </div>
+            
+            <div className='about-hobbies'>
                 <h2 className="section-title">Hobbies</h2>
                 <div className='hobbies-wrapper'>
                     {
@@ -83,6 +86,7 @@ export const About = (props: any) => {
                         )
                     )}
                 </div>
+            </div>
             </article>
         </animated.section>
     );
