@@ -1,7 +1,7 @@
 import { Link, To } from "react-router-dom";
 import { useSpring, animated } from '@react-spring/web'
 import { LazyLoadImage } from "react-lazy-load-image-component";
-import { Key, useState } from "react";
+import { Key } from "react";
 
 export const Home = (props: any) => {
 
@@ -30,12 +30,12 @@ export const Home = (props: any) => {
                                     to={social.link}
                                     target='_blank'
                                     rel="noreferrer"
+                                    key={social.key}
                                 >
                                     <LazyLoadImage
                                                 className="tech-stack-logo"
                                                 src={social.image}
                                                 alt={social.name}
-                                                key={social.key}
                                             />
                                     </Link>
                             )
@@ -48,20 +48,18 @@ export const Home = (props: any) => {
                         {
                             props.techStack.map((tech: { image: string, key: number, name: string, link: string}) => {
                                 return (
-                                    <div>
-                                        <Link
-                                            to={tech.link}
-                                            target='_blank'
-                                            rel="noreferrer"
-                                        >
-                                            <LazyLoadImage
-                                                className="tech-stack-logo"
-                                                src={tech.image}
-                                                alt={tech.name}
-                                                key={tech.key}
-                                            />
-                                        </Link>
-                                        </div>
+                                    <Link
+                                        to={tech.link}
+                                        target='_blank'
+                                        rel="noreferrer"
+                                        key={tech.key}
+                                    >
+                                        <LazyLoadImage
+                                            className="tech-stack-logo"
+                                            src={tech.image}
+                                            alt={tech.name}
+                                        />
+                                    </Link>
                                 )
                             })
                         }
@@ -78,12 +76,12 @@ export const Home = (props: any) => {
                                             to={tech.link}
                                             target='_blank'
                                             rel="noreferrer"
+                                            key={tech.key}
                                         >
                                             <LazyLoadImage
                                                 className="tech-stack-logo"
                                                 src={tech.image}
                                                 alt={tech.name}
-                                                key={tech.key}
                                             />
                                         </Link>
                                     )
@@ -101,12 +99,12 @@ export const Home = (props: any) => {
                                             to={tech.link}
                                             target='_blank'
                                             rel="noreferrer"
+                                            key={tech.key}
                                         >
                                             <LazyLoadImage
                                                 className="tech-stack-logo"
                                                 src={tech.image}
                                                 alt={tech.name}
-                                                key={tech.key}
                                             />
                                         </Link>
                                     )
