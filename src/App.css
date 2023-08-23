@@ -234,7 +234,7 @@ body {
   flex-direction: row;
   justify-content: flex-start;
   font-size: var(--h3);
-  gap: 4rem;
+  gap: 2rem;
 }
 
 .tech-stack-title {
