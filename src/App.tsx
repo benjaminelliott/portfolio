@@ -2,7 +2,6 @@ import { Routes, Route, Navigate } from "react-router-dom";
 import { Layout } from "./routes/Layout"
 import { Home } from "./routes/Home"
 import { About } from "./routes/About"
-import { Skills } from "./routes/Skills"
 import { Portfolio } from "./routes/Portfolio"
 import { Contact } from "./routes/Contact"
 import './App.css';
