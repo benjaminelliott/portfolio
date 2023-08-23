@@ -50,7 +50,7 @@ export const About = () => {
                 <div className="about-left">
                     <LazyLoadImage src="images/Ben&Colby.jpg" className="about-hero" alt="Ben & Colby" />
                     <div className="about-hobbies">
-                        <h2 className="hobbies-title">HOBBIES</h2>
+                        <h2 className="section-title">Hobbies</h2>
                         <div className='hobbies-wrapper'>
                             {
                                 hobbies.map(hobby => (
@@ -65,7 +65,7 @@ export const About = () => {
                 </div>
                 <div className="about-right">
                     <div className="about-history">
-                        <h2 className='history-title'>HISTORY</h2>
+                        <h2 className='section-title'>History</h2>
                         <ul className="history-ul">
                             {
                                 history.map((item) => (

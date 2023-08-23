@@ -1,11 +1,24 @@
-html, body {
-  overflow: hidden;
+* { 
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  max-height: 100%;
+  padding: 0;
+  margin: 0;
+
+}
+
+body {
   padding: 0;
   margin: 0;
 }
 
 .root {
   padding: 0;
+  min-height: 100dvh;
   margin: 0;
   background: var(--three);
   --text-shadow: 7px 7px #57DDF8, 14px 14px #8FE8FA;
@@ -15,12 +28,13 @@ html, body {
   --four: #8FE8FA;
   --five: #171717;
   --six: #2BF38B;
-  --h1: clamp(1rem, 4vw + 1rem, 4rem);
-  --h2: clamp(0.5rem, 1.5vw + 0.75rem, 2.5rem);
-  --h3: clamp(0.5rem, 1vw + 0.5rem, rem);
+  --h1: clamp(1.25rem, 4vw + 1rem, 3rem);
+  --h2: clamp(1rem, 1.5vw + 0.75rem, 2rem);
+  --h3: clamp(0.75rem, 1vw + 0.5rem, 1.25rem);
   --text: clamp(0.5rem, 1vw + 0.25rem, 1rem);
   --icon-l: 50px;
   --icon-s: 30px;
+  --hero: clamp(150px, 250px, 300px)
 }
 
 #error-page {
@@ -37,6 +51,7 @@ html, body {
 }
 
 .App {
+  min-height: 100dvh;
   text-align: center;
   max-width: 90dvw;
   margin: 0 auto;
@@ -45,26 +60,32 @@ html, body {
 
 .layout {
   min-height: 100dvh;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
   padding: 0;
   margin: 0;
-}
-
-.content {
-  min-height: 100%;
-  overflow: scroll;
-  margin: 0;
+  gap: 5dvh;
 }
 
 .header {
-  height: 10vh;
-  top: 0;
+  min-height: 5dvh;
   padding: 0;
   margin: 0;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: space-between;
-  margin-bottom: 30px;
+  flex-grow: 0;
+  flex-shrink: 0;
+}
+
+.content {
+  height: 75dvh;
+  overflow: scroll;
+  flex-grow: 1;
+  display: flex;
 }
 
 .header-title {
@@ -143,8 +164,8 @@ html, body {
 }
 
 .home-hero {
-  height: 300px;
-  width: 300px;
+  height: var(--hero);
+  width: var(--hero);
   border-radius: 16px;
   object-fit: cover;
   border: 10px solid var(--six);
@@ -153,16 +174,16 @@ html, body {
 
 .home-title-wrapper {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   flex-wrap: nowrap;
   align-items: flex-start;
-  padding: 0px 0px 30px 0px;
+  gap: 2rem;
 }
 
 .home-title {
   padding: 0;
   margin: 0;
-  font-size: var(--h1);
+  font-size: var(--h2);
   color: var(--six);
 
 }
@@ -209,11 +230,16 @@ html, body {
   font-size: x-large;
 }
 
+.strong {
+  font-size: var(--h3);
+}
+
 .tech-stack {
   width: 100%;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
+  gap: 1rem;
 }
 
 .tech-logos {
@@ -463,25 +489,34 @@ html, body {
 }
 
 .portfolio {
-  padding: 0;
-  margin: 0;
+  display: flex;
+  flex-direction: column;
+
+  gap: 5rem;
 }
 
 .portfolio-section {
-  padding: 0;
-  margin: 0;
+  display:flex;
+  flex-direction: column;
+  gap: 2.5rem;
 }
 
 .section-title {
   color: var(--six);
-  text-transform: uppercase;
-  font-size: var(--h2);
+  text-align: left;
 }
 
 .site {
-  width: 100%;
   display: flex;
   flex-direction: column;
+  justify-content: space-evenly;
+  align-items: stretch;
+  gap: 2rem;
+}
+
+.site-images {
+  display: flex;
+  flex-direction: row;
   justify-content: space-evenly;
   align-items: center;
 }
@@ -491,6 +526,20 @@ html, body {
   font-weight: bold;
   font-size: var(--text);
   align-self: flex-start;
+  transition: all 0.5s;
+}
+
+.site-name:hover {
+  scale: 1.1;
+  color: var(--six)
+}
+
+.site-links {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  gap: 2rem;
+  align-items: center;
 }
 
 .site-link {
@@ -499,19 +548,42 @@ html, body {
   transition: all 0.5s;
 }
 
-.site-link:hover {
-  scale: 1.1;
-}
 
 .site-logo {
-  height: 50px;
-  width: 50px;
+  height: var(--icon-l);
+  width: var(--icon-l);
+  background: white;
+  border-radius: 16px;
+  padding: 10px;
+  transition: all 0.5s;
+}
+
+.site-logo:hover {
+  scale: 1.1;
+  filter: drop-shadow(0px 0px 10px var(--six))
+}
+
+.site-image {
+  height: clamp(150px, 200px, 250px);
+  width: clamp(150px, 200px, 250px);
+  object-fit: cover;
+  border-radius: 16px;
+  transition: all 0.5s;
+}
+
+.site-image:hover {
+  scale: 1.5;
 }
 
 .site-description {
   color: white;
-  width: 80%;
   font-size: var(--text);
+  text-align: left;
+}
+
+.break {
+  color: var(--six);
+  width: 500px;
 }
 
 .certs {
@@ -604,7 +676,6 @@ html, body {
 }
 
 .contact {
-  height: 80vh;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -612,7 +683,6 @@ html, body {
 }
 
 .contact-upper {
-  width: 80%;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -630,6 +700,7 @@ html, body {
 
 .contact-links {
   width: 100%;
+  gap: 2rem;
   display: flex;
   flex-direction: row;
   justify-content: center;
@@ -677,13 +748,12 @@ html, body {
 }
 
 .footer {
-  position: relative;
-  padding: 0;
-  bottom: 0;
-  height: 10dvh;
+  min-height: 10dvh;
   display: flex;
   align-items: center;
   justify-content: center;
+  flex-grow: 0;
+  flex-shrink: 0;
 }
 
 .footer-text {
@@ -695,23 +765,24 @@ html, body {
   .App {
     max-width: 80dvw;
   }
-
   .header {
     flex-direction: row;
   }
-  .content {
-    height: 80dvh;
-    width: 100%;
-  }
   .home-upper, .about-content, .contact-upper {
     flex-direction: row;
+  }
+  .home-title-wrapper {
+    flex-direction: column;
+  }
+  .home-title {
+    font-size: var(--h1);
   }
   .about-content {
     width: 100%;
   }
   .about-left, .about-right {
     width: 50%;
-    height: 80vh;
+
   }
   .about-history {
     padding: 0;
@@ -720,14 +791,8 @@ html, body {
     width: 70vw;
   }
   .portfolio {
-    padding: 0;
-    margin: 0;
     display: flex;
     flex-direction: column;
-  }
-  .portfolio-section {
-    padding: 0;
-    margin: 0;
   }
   .hobbies-emoji, .skill-emoji {
     font-size: var(--icon-l)
@@ -737,13 +802,7 @@ html, body {
     width: var(--icon-l);
   }
   .site {
-    justify-self: center;
-    display: grid;
-    grid-template-columns: 10% 23% 67%;
-    justify-items: start;
-    align-items: center;
-    text-align: left;
-    width: 100%;
+    
   }
   .site-logo {
     height: 50px;
@@ -769,7 +828,14 @@ html, body {
     width: 50%;
   }
 
-  @media (min-width: 1200px) {
+  @media (min-width: 1400px) {
+    .App {
+      max-width: 60dvw;
+    }
+
+  }
+
+  @media (min-width: 1700px) {
     .App {
       max-width: 40dvw;
     }

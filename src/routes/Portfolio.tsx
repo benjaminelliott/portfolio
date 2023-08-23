@@ -37,52 +37,31 @@ export const Portfolio = () => {
                 link: "https://freecodecamp.org/certification/benjaminelliott/javascript-algorithms-and-data-structures"
             }
         ],
-        completed: [
+        projects: [
             {
                 key: 0,
-                name: "benjaminelliott.dev",
-                logo: "icons/code.svg",
-                description: "My personal portfolio page, built with React & Typescript, deployed from gitHub with Netlify",
-                link: "https://benjaminelliott.dev"
+                name: "littlelemon.biz",
+                logo: "logos/littlelemon.svg",
+                description: "Little Lemon is a mediterranean in the heart of the Windy City. After opening to tremendous acclaim, the restaurant struggled to organize and fulfil online orders and table bookings, until I implemented a solution for them.",
+                link: "https://littlelemon.biz",
+                image: "images/littlelemon.png"
             },
             {
                 key: 1,
-                name: "littlelemon.biz",
-                logo: "logos/littlelemon.svg",
-                description: "The capstone project for the Meta Front-End Developer Professional Certificate on Coursera. A real website for the fictional Little Lemon restaurant, built with React & Typescript, deployed from Github with Netlify",
-                link: "https://littlelemon.biz"
-            },
-            {
-                key: 2,
                 name: "Epictweetus",
                 logo: "logos/epictweetus.png",
-                description: "A single page app with philosophical quotes and pictures of statues. Built with React and Typescript, making use of hooks and API calls to get the job done. Classical wisdom for the digital age!",
-                link: "https://sensational-bonbon-a021d7.netlify.app/"
+                description: "A single page app with philosophical quotes and pictures of statues. A respite for weary developers. Classical wisdom for the digital age.",
+                link: "https://sensational-bonbon-a021d7.netlify.app/",
+                image: "images/epictweetus.png"
             }
         ],
-        projects: [
+        platforms: [
             {
                 key: 0,
                 name: "gitHub",
                 logo: "logos/github.svg",
                 description: "My repo for all the projects I'm working on. I'm always looking for new ideas and opportunities to learn. I aim to make commits daily, if not multiple days per week",
                 link: "https://github.com/benjaminelliott"
-            }
-        ],
-        practice: [
-            {
-                key: 0,
-                name: "Codewars",
-                logo: "logos/codewars.svg",
-                description: "4th Kyu in JavaScript, completing challenges of increasing difficulty in Javascript",
-                link: "https://www.codewars.com/users/benjineer"
-            },
-            {
-                key: 1,
-                name: "Codepen",
-                logo: "logos/codepen.svg",
-                description: "Check out my practice for components, pages and apps in my spare time",
-                link: "https://codepen.io/benjaminelliott"
             }
         ]
     }
@@ -127,33 +106,16 @@ export const Portfolio = () => {
                 </Carousel>
             </article>
             <article className="portfolio-section">
-                <h2 className='section-title'>Websites built</h2>
-                {   portfolio.completed.map(site => (
-                        <div key={site.key} className='site'>
-                            <Link to={site.link} target="_blank" rel="noopener noreferrer" className='site-link'><img className="site-logo" src={site.logo} alt={site.name}/></Link>
-                            <Link to={site.link} target="_blank" rel="noopener noreferrer" className='site-link'><h3 className='site-name'>{site.name}</h3></Link>
-                            <p className='site-description'>{site.description}</p>
-                        </div>
-                    ))
-                }
-            </article>
-            <article className="portfolio-section">
                 <h2 className='section-title'>Projects</h2>
                 {   portfolio.projects.map(site => (
                         <div key={site.key} className='site'>
-                            <Link to={site.link} target="_blank" rel="noopener noreferrer" className='site-link'><img className="site-logo" src={site.logo} alt={site.name}/></Link>
-                            <Link to={site.link} target="_blank" rel="noopener noreferrer" className='site-link'><h3 className='site-name'>{site.name}</h3></Link>
-                            <p className='site-description'>{site.description}</p>
-                        </div>
-                    ))
-                }
-            </article>
-            <article className="portfolio-section">
-                <h2 className='section-title'>Practice</h2>
-                {   portfolio.practice.map(site => (
-                        <div key={site.key} className='site'>
-                            <Link to={site.link} target="_blank" rel="noopener noreferrer" className='site-link'><img className="site-logo" src={site.logo} alt={site.name}/></Link>
-                            <Link to={site.link} target="_blank" rel="noopener noreferrer" className='site-link'><h3 className='site-name'>{site.name}</h3></Link>
+                            <div className='site-images'>
+                                <div className='site-links'>
+                                    <Link to={site.link} target="_blank" rel="noopener noreferrer" className='site-link'><img className="site-logo" src={site.logo} alt={site.name}/></Link>
+                                    <Link to={site.link} target="_blank" rel="noopener noreferrer" className='site-link'><h3 className='site-name'>{site.name}</h3></Link>
+                                </div>
+                                <Link to={site.link} target="_blank" rel="noopener noreferrer" className='site-link'><LazyLoadImage className="site-image" src={site.image} alt={site.name} /></Link>
+                            </div>
                             <p className='site-description'>{site.description}</p>
                         </div>
                     ))

@@ -21,7 +21,7 @@ export const Home = (props: any) => {
                 <img className="home-hero" src={props.image} alt="whoops" />
             </article>
             <article className="home-lower">
-                <p className="intro">I'm <strong className="benjamin">{props.name}</strong>. I have a passion for creating beautiful and practical things with <strong className="react">React</strong>. I'm always building, committing, learning, and continuing the grind.</p>
+                <p className="intro">I'm <strong className="benjamin strong">{props.name}</strong>. I have a passion for creating beautiful and practical things with <strong className="react strong">React</strong>. I'm always building, committing, learning, and continuing the grind.</p>
                 <div className="tech-logos">
                     {
                         props.socials.map((social: { link: To; image: string | undefined; name: string | undefined; key: Key | null | undefined; }) => {
@@ -43,7 +43,7 @@ export const Home = (props: any) => {
                     }
                 </div>
                 <div className="tech-stack">
-                    <h4 className="tech-stack-title">Tech Stack</h4>
+                    <h4 className="section-title">Tech Stack</h4>
                     <div className="tech-logos">
                         {
                             props.techStack.map((tech: { image: string, key: number, name: string, link: string}) => {
@@ -67,7 +67,7 @@ export const Home = (props: any) => {
                 </div>
                 <div className="home-lower-lower">
                     <div className="tech-stack">
-                        <h4 className="tech-stack-title">Tools</h4>
+                        <h4 className="section-title">Tools</h4>
                         <div className="tech-logos">
                             {
                                 props.tools.map((tech: { image: string | undefined, key: number, name: string, link: string}) => {
@@ -90,7 +90,7 @@ export const Home = (props: any) => {
                         </div>
                     </div>
                     <div className="tech-stack">
-                        <h4 className="tech-stack-title">Actively learning</h4>
+                        <h4 className="section-title">Actively learning</h4>
                         <div className="tech-logos">
                             {
                                 props.learning.map((tech: { image: string | undefined, key: number, name: string, link: string}) => {
