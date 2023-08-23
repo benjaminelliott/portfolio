@@ -69,7 +69,7 @@ export const Portfolio = () => {
     return (
         <animated.section id="portfolio" className="portfolio" style={{...springs}}>
             <article className="portfolio-section">
-                <h2 className='section-title'>Certifications</h2>
+                <h4 className='section-title'>Certifications</h4>
                 <Carousel
                     className='certs'
                     showThumbs={false}
@@ -106,7 +106,7 @@ export const Portfolio = () => {
                 </Carousel>
             </article>
             <article className="portfolio-section">
-                <h2 className='section-title'>Projects</h2>
+                <h4 className='section-title'>Projects</h4>
                 {   portfolio.projects.map(site => (
                         <div key={site.key} className='site'>
                             <div className='site-images'>

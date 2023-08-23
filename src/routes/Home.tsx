@@ -6,7 +6,7 @@ import { Key } from "react";
 export const Home = (props: any) => {
 
     const springs = useSpring({
-        from: { opacity: 0, scale: 0.1 },
+        from: { opacity: 0, scale: 0.75 },
         to: { opacity: 1, scale: 1 },
     })
 
@@ -18,7 +18,7 @@ export const Home = (props: any) => {
                     <h2 className="home-title">Web</h2>
                     <h2 className="home-title">Developer</h2>
                 </div>
-                <img className="home-hero" src={props.image} alt="whoops" />
+                <img className="hero-image" src={props.image} alt="whoops" />
             </article>
             <article className="home-lower">
                 <p className="intro">I'm <strong className="benjamin strong">{props.name}</strong>. I have a passion for creating beautiful and practical things with <strong className="react strong">React</strong>. I'm always building, committing, learning, and continuing the grind.</p>
@@ -33,11 +33,11 @@ export const Home = (props: any) => {
                                     key={social.key}
                                 >
                                     <LazyLoadImage
-                                                className="tech-stack-logo"
-                                                src={social.image}
-                                                alt={social.name}
-                                            />
-                                    </Link>
+                                        className="tech-stack-logo"
+                                        src={social.image}
+                                        alt={social.name}
+                                    />
+                                </Link>
                             )
                         })
                     }

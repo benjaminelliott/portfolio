@@ -5,11 +5,55 @@ import { About } from "./routes/About"
 import { Portfolio } from "./routes/Portfolio"
 import { Contact } from "./routes/Contact"
 import './App.css';
+import { useSpring } from "@react-spring/web";
 
 const Benjamin = {
   name: "Benjamin",
-  image: "images/benjamin.jpg",
-  softSkills: [
+  images: {
+      hero:"images/benjamin.jpg",
+      coding:"images/Ben&Colby.jpg",
+      coaching:"images/coachBen.jpg"
+  },
+  hobbies: [
+    {
+        key: 0,
+        name: "PC Building",
+        icon: "🧑🏽‍🏭️"
+    },
+    {
+        key: 1,
+        name: "Mechanical keyboards",
+        icon: "⌨️"
+    },
+    {
+        key: 2,
+        name: "Indoor cycling",
+        icon: "🚵🏽"
+    }
+],
+coachingSkills: [
+  {
+    key: 0,
+    name: "Communication",
+    image: "💬"
+  },
+  {
+    key: 1,
+    name: "Teamwork",
+    image: "🤝🏽"
+  },
+  {
+    key: 2,
+    name: "Leadership",
+    image: "🧑🏽‍💼️"
+  },
+  {
+    key: 3,
+    name: "Resilience",
+    image: "☮️"
+  }
+],
+  codingSkills: [
     {
       key: 0,
       name: "Working remotely",
@@ -29,26 +73,6 @@ const Benjamin = {
       key: 3,
       name: "Self-learning",
       image: "🧑🏽‍🎓️"
-    },
-    {
-      key: 4,
-      name: "Communication",
-      image: "💬"
-    },
-    {
-      key: 5,
-      name: "Teamwork",
-      image: "🤝🏽"
-    },
-    {
-      key: 6,
-      name: "Leadership",
-      image: "🧑🏽‍💼️"
-    },
-    {
-      key: 7,
-      name: "Resilience",
-      image: "☮️"
     }
   ],
   techStack: [
@@ -166,12 +190,13 @@ const Benjamin = {
 }
 
 export const App = () => {
+
   return (
     <div className="App">
       <Routes>
         <Route path="*" element={<Layout />}>
-          <Route index element={<Home name={Benjamin.name} image={Benjamin.image} techStack={Benjamin.techStack} tools={Benjamin.tools} learning={Benjamin.learning} contacts={Benjamin.contacts} socials={Benjamin.socials}/>} />
-          <Route path="about" element={<About />} />
+          <Route index element={<Home name={Benjamin.name} image={Benjamin.images.hero} techStack={Benjamin.techStack} tools={Benjamin.tools} learning={Benjamin.learning} contacts={Benjamin.contacts} socials={Benjamin.socials}/>} />
+          <Route path="about" element={<About coachingImage={Benjamin.images.coaching} codingImage={Benjamin.images.coding} coachingSkills={Benjamin.coachingSkills} codingSkills={Benjamin.codingSkills} hobbies={Benjamin.hobbies} />} />
           <Route path="portfolio" element={<Portfolio />} />
           <Route path="contact" element={<Contact />} />
           <Route path="*" element={<Navigate to="../public/index.html" />} />
