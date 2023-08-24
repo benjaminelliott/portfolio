@@ -1,6 +1,6 @@
 import { useSpring, animated } from '@react-spring/web'
 import { LazyLoadImage } from 'react-lazy-load-image-component';
-import { Link, To } from "react-router-dom";
+import { Link } from "react-router-dom";
 import "react-responsive-carousel/lib/styles/carousel.min.css";
 import { Carousel } from 'react-responsive-carousel';
 

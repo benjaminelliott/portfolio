@@ -1,6 +1,5 @@
 import { useSpring, animated } from '@react-spring/web'
 import { Key, ReactElement, JSXElementConstructor, ReactNode, ReactPortal } from 'react';
-import { LazyLoadImage } from "react-lazy-load-image-component";
 
 export const About = (props: any) => {
 

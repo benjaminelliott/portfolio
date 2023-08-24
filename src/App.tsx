@@ -8,9 +8,7 @@ import './App.css';
 const Benjamin = {
   name: "Benjamin",
   images: {
-      hero:"images/benjaminGrey.jpg",
-      coding:"images/Ben&ColbyGrey.jpg",
-      coaching:"images/coachBenGrey.jpg"
+      hero:"images/benjaminGrey.jpg"
   },
   hobbies: [
     {
@@ -279,7 +277,7 @@ export const App = () => {
       <Routes>
         <Route path="*" element={<Layout links={Benjamin.links} socials={Benjamin.socials} contacts={Benjamin.contacts}/>}>
           <Route index element={<Home name={Benjamin.name} image={Benjamin.images.hero} techStack={Benjamin.techStack} tools={Benjamin.tools} learning={Benjamin.learning} contacts={Benjamin.contacts} socials={Benjamin.socials}/>} />
-          <Route path="about" element={<About coachingImage={Benjamin.images.coaching} codingImage={Benjamin.images.coding} coachingSkills={Benjamin.coachingSkills} codingSkills={Benjamin.codingSkills} hobbies={Benjamin.hobbies} />} />
+          <Route path="about" element={<About coachingSkills={Benjamin.coachingSkills} codingSkills={Benjamin.codingSkills} hobbies={Benjamin.hobbies} />} />
           <Route path="portfolio" element={<Portfolio certifications={Benjamin.certifications} projects={Benjamin.projects}/>} />
           <Route path="*" element={<Navigate to="../public/index.html" />} />
         </Route>

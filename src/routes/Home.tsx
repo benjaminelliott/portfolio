@@ -1,4 +1,4 @@
-import { Link, To } from "react-router-dom";
+import { Link } from "react-router-dom";
 import { useSpring, animated } from '@react-spring/web'
 import { LazyLoadImage } from "react-lazy-load-image-component";
 
