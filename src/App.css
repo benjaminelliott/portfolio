@@ -28,7 +28,7 @@ body {
   --four: #8FE8FA;
   --five: #171717;
   --six: #2BF38B;
-  --h1: clamp(1.25rem, 4vw + 1rem, 3rem);
+  --h1: clamp(1.25rem, 3vw + 1rem, 3rem);
   --h2: clamp(1rem, 1.5vw + 0.75rem, 2rem);
   --h3: clamp(0.75rem, 1vw + 0.5rem, 1.25rem);
   --text: clamp(0.75rem, 1vw + 0.25rem, 1rem);
@@ -173,7 +173,7 @@ body {
   border-radius: 16px;
   object-fit: cover;
   border: 10px solid var(--six);
-  filter: drop-shadow(0px 0px 10px var(--six))
+  filter: drop-shadow(0px 0px 10px var(--six));
 }
 
 .home-title-wrapper {
@@ -730,6 +730,9 @@ body {
   }
   .home-title {
     font-size: var(--h1);
+  }
+  .hero-image {
+    margin-right: 1rem;
   }
   .hobbies-emoji, .skill-emoji {
     font-size: var(--icon-l)
