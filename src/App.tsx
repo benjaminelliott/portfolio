@@ -135,21 +135,33 @@ coachingSkills: [
   tools: [
     {
       key: 0,
-      name: "VSCode",
-      image: "logos/vscode.svg",
-      link: "https://code.visualstudio.com/"
-    },
-    {
-      key: 1,
       name: "Figma",
       image: "logos/figma.svg",
       link: "https://www.figma.com"
     },
     {
-      key: 2,
+      key: 1,
+      name: "VSCode",
+      image: "logos/vscode.svg",
+      link: "https://code.visualstudio.com/"
+    },
+    {
+      key: 3,
       name: "Stack Overflow",
       image: "logos/stackoverflow.svg",
       link: "https://stackoverflow.com/"
+    },
+    {
+      key: 4,
+      name: "gitHub",
+      image: "logos/github.svg",
+      link: "https://github.com/benjaminelliott"
+    },
+    {
+      key: 5,
+      name: "netlify",
+      image: "logos/netlify.png",
+      link: "https://www.netlify.com/"
     }
   ],
   learning: [
@@ -198,7 +210,7 @@ coachingSkills: [
       name: "gitHub",
       image: "logos/github.svg",
       link: "https://github.com/benjaminelliott"
-    },
+    }
   ],
   links: [
     {
