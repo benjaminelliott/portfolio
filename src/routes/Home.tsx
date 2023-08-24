@@ -1,7 +1,6 @@
 import { Link, To } from "react-router-dom";
 import { useSpring, animated } from '@react-spring/web'
 import { LazyLoadImage } from "react-lazy-load-image-component";
-import { Key } from "react";
 
 export const Home = (props: any) => {
 
@@ -21,27 +20,7 @@ export const Home = (props: any) => {
                 <img className="hero-image" src={props.image} alt="whoops" />
             </article>
             <article className="home-lower">
-                <p className="intro">I'm <strong className="benjamin strong">{props.name}</strong>. I have a passion for creating beautiful and practical things with <strong className="react strong">React</strong>. I'm always building, committing, learning, and continuing the grind.</p>
-                <div className="tech-logos">
-                    {
-                        props.socials.map((social: { link: To; image: string | undefined; name: string | undefined; key: Key | null | undefined; }) => {
-                            return (
-                                <Link
-                                    to={social.link}
-                                    target='_blank'
-                                    rel="noreferrer"
-                                    key={social.key}
-                                >
-                                    <LazyLoadImage
-                                        className="tech-stack-logo"
-                                        src={social.image}
-                                        alt={social.name}
-                                    />
-                                </Link>
-                            )
-                        })
-                    }
-                </div>
+                <p className="text intro">I'm <strong className="benjamin strong">{props.name}</strong>. I have a passion for creating beautiful and practical things with <strong className="react strong">React</strong>. I'm always building, committing, learning, and continuing the grind.</p>
                 <div className="tech-stack">
                     <h4 className="section-title">Tech Stack</h4>
                     <div className="tech-logos">
