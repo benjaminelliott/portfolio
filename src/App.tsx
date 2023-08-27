@@ -119,16 +119,24 @@ coachingSkills: [
     },
     {
       key: 5,
-      name: "TailwindCSS",
-      image: "logos/tailwind.svg",
-      link: "https://tailwindcss.com/"
-    },
-    {
-      key: 6,
       name: "SASS",
       image: "logos/sass.svg",
       link: "https://sass-lang.com/"
+    },
+    {
+      key: 6,
+      name: "Chakra UI",
+      image: "logos/chakra.svg",
+      link: "https://chakra-ui.com"
+    },
+    {
+      key: 7,
+      name: "TailwindCSS",
+      image: "logos/tailwind.svg",
+      link: "https://tailwindcss.com/"
     }
+    
+    
   ],
   tools: [
     {
