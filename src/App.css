@@ -84,7 +84,7 @@ body {
 
 .content {
   height: 75dvh;
-  overflow: scroll;
+  overflow: auto;
   flex-grow: 1;
   display: flex;
   scrollbar-color: var(--six) var(--five);
