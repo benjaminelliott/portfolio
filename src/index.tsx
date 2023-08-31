@@ -10,7 +10,7 @@ import './index.css';
 
 const router = createBrowserRouter([
   {
-    path: "/",
+    path: "*",
     element: <Root />,
     errorElement: <ErrorPage />,
     children: [
@@ -19,11 +19,11 @@ const router = createBrowserRouter([
         element: <Home />
       },
       {
-        path: "/about",
+        path: "*about",
         element: <About />
       },
       {
-        path: "/portfolio",
+        path: "*portfolio",
         element: <Portfolio />
       },
       {

@@ -169,7 +169,7 @@ body {
 .hero-image {
   height: var(--hero);
   width: var(--hero);
-  border-radius: 16px;
+  border-radius: 50%;
   object-fit: cover;
   border: 10px solid var(--six);
   filter: drop-shadow(0px 0px 10px var(--six));
