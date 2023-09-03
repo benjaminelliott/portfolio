@@ -135,8 +135,6 @@ coachingSkills: [
       image: "logos/tailwind.svg",
       link: "https://tailwindcss.com/"
     }
-    
-    
   ],
   tools: [
     {
@@ -167,6 +165,12 @@ coachingSkills: [
       key: 5,
       name: "netlify",
       image: "logos/netlify.png",
+      link: "https://www.netlify.com/"
+    },
+    {
+      key: 6,
+      name: "Wordpress",
+      image: "logos/wordpress.png",
       link: "https://www.netlify.com/"
     }
   ],
