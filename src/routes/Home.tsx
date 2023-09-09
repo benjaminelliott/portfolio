@@ -44,52 +44,50 @@ export const Home = (props: any) => {
                         }
                     </div>
                 </div>
-                <div className="home-lower-lower">
-                    <div className="tech-stack">
-                        <h4 className="section-title">Tools</h4>
-                        <div className="tech-logos">
-                            {
-                                props.tools.map((tech: { image: string | undefined, key: number, name: string, link: string}) => {
-                                    return (
-                                        <Link
-                                            to={tech.link}
-                                            target='_blank'
-                                            rel="noreferrer"
-                                            key={tech.key}
-                                        >
-                                            <LazyLoadImage
-                                                className="tech-stack-logo"
-                                                src={tech.image}
-                                                alt={tech.name}
-                                            />
-                                        </Link>
-                                    )
-                                })
-                            }
-                        </div>
+                <div className="tech-stack">
+                    <h4 className="section-title">Tools</h4>
+                    <div className="tech-logos">
+                        {
+                            props.tools.map((tech: { image: string | undefined, key: number, name: string, link: string}) => {
+                                return (
+                                    <Link
+                                        to={tech.link}
+                                        target='_blank'
+                                        rel="noreferrer"
+                                        key={tech.key}
+                                    >
+                                        <LazyLoadImage
+                                            className="tech-stack-logo"
+                                            src={tech.image}
+                                            alt={tech.name}
+                                        />
+                                    </Link>
+                                )
+                            })
+                        }
                     </div>
-                    <div className="tech-stack">
-                        <h4 className="section-title">Actively learning</h4>
-                        <div className="tech-logos">
-                            {
-                                props.learning.map((tech: { image: string | undefined, key: number, name: string, link: string}) => {
-                                    return (
-                                        <Link
-                                            to={tech.link}
-                                            target='_blank'
-                                            rel="noreferrer"
-                                            key={tech.key}
-                                        >
-                                            <LazyLoadImage
-                                                className="tech-stack-logo"
-                                                src={tech.image}
-                                                alt={tech.name}
-                                            />
-                                        </Link>
-                                    )
-                                })
-                            }
-                        </div>
+                </div>
+                <div className="tech-stack">
+                    <h4 className="section-title">Actively learning</h4>
+                    <div className="tech-logos">
+                        {
+                            props.learning.map((tech: { image: string | undefined, key: number, name: string, link: string}) => {
+                                return (
+                                    <Link
+                                        to={tech.link}
+                                        target='_blank'
+                                        rel="noreferrer"
+                                        key={tech.key}
+                                    >
+                                        <LazyLoadImage
+                                            className="tech-stack-logo"
+                                            src={tech.image}
+                                            alt={tech.name}
+                                        />
+                                    </Link>
+                                )
+                            })
+                        }
                     </div>
                 </div>
             </article>

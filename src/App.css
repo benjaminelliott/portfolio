@@ -144,13 +144,6 @@ body {
   gap: 3rem;
 }
 
-
-.home-lower-lower {
-  display: grid;
-  width: 100%;
-  grid-template-columns: repeat(2, 1fr);
-}
-
 @keyframes rotate {
   100% {
     transform: rotate(1turn);
