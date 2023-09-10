@@ -262,13 +262,12 @@ body {
 
 .tech-stack-logo {
   height: var(--icon-s);
-  width: var(--icon-s);
+  width: auto;
   transition: all 0.5s;
 }
 
 .tech-stack-logo:hover, .tech-stack-logo:focus {
-  scale: 2;
-  filter: drop-shadow(0px 0px 10px var(--six));
+  filter: drop-shadow(0px 0px 10px var(--four));
 }
 
 .home-buttons {

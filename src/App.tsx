@@ -172,6 +172,12 @@ coachingSkills: [
       name: "Wordpress",
       image: "logos/wordpress.png",
       link: "https://www.netlify.com/"
+    },
+    {
+      key: 7,
+      name: "Stripe",
+      image: "logos/stripe.png",
+      link: "https://www.stripe.com/"
     }
   ],
   learning: [
@@ -193,6 +199,18 @@ coachingSkills: [
       image: "logos/python.svg",
       link: "https://www.python.org/"
     },
+    {
+      key: 3,
+      name: "Next.js",
+      image: "logos/nextjs.svg",
+      link: "https://nextjs.org/"
+    },
+    {
+      key: 4,
+      name: "MongoDB",
+      image: "logos/mongodb.png",
+      link: "https://www.mongodb.com/"
+    }
   ],
   contacts: [
     {

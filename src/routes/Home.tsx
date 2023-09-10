@@ -68,7 +68,7 @@ export const Home = (props: any) => {
                     </div>
                 </div>
                 <div className="tech-stack">
-                    <h4 className="section-title">Actively learning</h4>
+                    <h4 className="section-title">Learning</h4>
                     <div className="tech-logos">
                         {
                             props.learning.map((tech: { image: string | undefined, key: number, name: string, link: string}) => {
