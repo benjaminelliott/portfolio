@@ -487,7 +487,6 @@ body {
   transition: all 0.5s;
 }
 
-
 .site-logo {
   height: var(--icon-l);
   width: var(--icon-l);
@@ -505,7 +504,7 @@ body {
 .site-image {
   height: clamp(100px, 125px, 200px);
   width: clamp(150px, 200px, 250px);
-  object-fit: cover;
+  object-fit: contain;
   border-radius: 16px;
   transition: all 0.5s;
 }
@@ -518,6 +517,16 @@ body {
   color: white;
   font-size: var(--text);
   text-align: left;
+}
+
+.site-iframe {
+  zoom: 0.75;
+        -moz-transform: scale(0.75);
+        -moz-transform-origin: 0 0;
+        -o-transform: scale(0.75);
+        -o-transform-origin: 0 0;
+        -webkit-transform: scale(0.75);
+        -webkit-transform-origin: 0 0;
 }
 
 .break {
