@@ -101,7 +101,7 @@ coachingSkills: [
     },
     {
       key: 2,
-      name: "JS ES6",
+      name: "Javascript",
       image: "logos/js.svg",
       link: "https://www.ecma-international.org/publications-and-standards/standards/ecma-262/"
     },
@@ -286,6 +286,9 @@ projects: [
       name: "littlelemon.biz",
       logo: "logos/littlelemon.svg",
       description: "Little Lemon is a mediterranean restaurant in the heart of the Windy City. After opening to tremendous acclaim, the restaurant struggled to organize and fulfil online orders and table bookings, until I implemented a solution for them.",
+      techStack: [
+        "HTML5", "CSS3", "Javascript", "Typescript", "React", "Chakra UI"
+      ],
       link: "https://littlelemon.biz",
       image: "images/littlelemon.png"
   },
@@ -294,6 +297,9 @@ projects: [
       name: "Epictweetus",
       logo: "logos/epictweetus.png",
       description: "A single page app with philosophical quotes and pictures of statues. A respite for weary developers. Classical wisdom for the digital age.",
+      techStack: [
+        "HTML5", "CSS3", "Javascript", "Typescript", "React", "Chakra UI"
+      ],
       link: "https://sensational-bonbon-a021d7.netlify.app/",
       image: "images/epictweetus.png"
   }
@@ -308,7 +314,7 @@ export const App = () => {
         <Route path="*" element={<Layout links={Benjamin.links} socials={Benjamin.socials} contacts={Benjamin.contacts}/>}>
           <Route index element={<Home name={Benjamin.name} image={Benjamin.images.hero} techStack={Benjamin.techStack} tools={Benjamin.tools} learning={Benjamin.learning} contacts={Benjamin.contacts} socials={Benjamin.socials}/>} />
           <Route path="about" element={<About coachingSkills={Benjamin.coachingSkills} codingSkills={Benjamin.codingSkills} hobbies={Benjamin.hobbies} />} />
-          <Route path="portfolio" element={<Portfolio certifications={Benjamin.certifications} projects={Benjamin.projects}/>} />
+          <Route path="portfolio" element={<Portfolio techStack={Benjamin.techStack} certifications={Benjamin.certifications} projects={Benjamin.projects}/>} />
           <Route path="*" element={<Navigate to="../public/index.html" />} />
         </Route>
       </Routes>

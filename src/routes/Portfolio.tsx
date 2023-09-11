@@ -62,6 +62,7 @@ export const Portfolio = (props: any) => {
                                 <Link to={site.link} target="_blank" rel="noopener noreferrer" className='site-link'><LazyLoadImage className="site-image" src={site.image} alt={site.name} /></Link>
                             </div>
                             <p className='text'>{site.description}</p>
+                            <ul className='tech'></ul>
                         </div>
                     ))
                 }
