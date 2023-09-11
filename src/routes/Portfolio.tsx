@@ -67,7 +67,6 @@ export const Portfolio = (props: any) => {
                                             site.techStack.map((tech:any) => {
                                                 return props.techStack.map((t: any) => {
                                                     if (t.name === tech) {
-                                                        console.log("success");
                                                         return (
                                                             <Link
                                                             to={t.link}

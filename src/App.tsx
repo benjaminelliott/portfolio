@@ -283,17 +283,28 @@ certifications: [
 projects: [
   {
       key: 0,
-      name: "littlelemon.biz",
-      logo: "logos/littlelemon.svg",
-      description: "Little Lemon is a mediterranean restaurant in the heart of the Windy City. After opening to tremendous acclaim, the restaurant struggled to organize and fulfil online orders and table bookings, until I implemented a solution for them.",
+      name: "benjaminelliott.dev",
+      logo: "images/BenjaminLowC.jpg",
+      description: "My portfolio page, completed after all my online courses. Built to industry best practices using Typescript and React. Always adding new projects as they're built.",
       techStack: [
-        "HTML5", "CSS3", "Javascript", "Typescript", "React", "Chakra UI"
+        "HTML5", "CSS3", "Javascript", "Typescript", "React", "SASS"
       ],
-      link: "https://littlelemon.biz",
-      image: "images/littlelemon.png"
+      link: "https://benjaminelliott.dev",
+      image: "images/portfolio.png"
   },
   {
-      key: 1,
+    key: 1,
+    name: "littlelemon.biz",
+    logo: "logos/littlelemon.svg",
+    description: "The capstone project for my Meta Front-End Developer course. I met all the criteria, then went overboard adding further design changes and functionality. UseState hook used extensively to hold and update data. User, menu and cart data shared globally using the useContext and custom useShoppingCart hooks. Reservation data updated with the useReducer hook. Chakra UI useColorMode hook used to toggle light and dark theme. User data held in browser local storage across page visits. Stripe cart integration if user meets the required criteria for delivery or collection.",
+    techStack: [
+      "HTML5", "CSS3", "Javascript", "Typescript", "React", "Chakra UI"
+    ],
+    link: "https://littlelemon.biz",
+    image: "images/littlelemon.png"
+},
+  {
+      key: 2,
       name: "Epictweetus",
       logo: "logos/epictweetus.png",
       description: "A single page app with philosophical quotes and pictures of statues. A respite for weary developers. Classical wisdom for the digital age.",
