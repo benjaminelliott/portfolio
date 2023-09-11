@@ -389,7 +389,7 @@ body {
 }
 
 .coaching-skills {
-  width: 100%;
+  width: 90%;
   height: 200px;
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -399,7 +399,10 @@ body {
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-  border-radius: 16px;;
+  border-radius: 16px;
+  box-shadow: 0px 0px 20px black;
+  overflow: visible;
+  align-self: center;
 }
 
 .skill-icon {
@@ -501,9 +504,9 @@ body {
 
 .site-info {
   width: 100%;
-  display: grid;
-  grid-template-columns: 20% 80%;
-  justify-content: flex-start;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
   gap: 2rem;
   align-items: center;
 }
@@ -540,9 +543,9 @@ body {
   width: 90%;
   height: 200px;
   overflow: auto;
-  border: 5px solid var(--six);
+
   border-radius: 16px;
-  box-shadow: 0px 0px 20px black;
+  box-shadow: 0px 0px 30px black;
 }
 
 .site-image {
@@ -569,16 +572,6 @@ body {
   justify-content: flex-start;
   flex-direction: row;
   width: 100%;
-}
-
-.site-iframe {
-  zoom: 0.75;
-        -moz-transform: scale(0.75);
-        -moz-transform-origin: 0 0;
-        -o-transform: scale(0.75);
-        -o-transform-origin: 0 0;
-        -webkit-transform: scale(0.75);
-        -webkit-transform-origin: 0 0;
 }
 
 .site-tech-stack {
@@ -612,6 +605,7 @@ body {
   text-decoration: none;
   transition: all 0.5s;
   opacity: 0.5;
+  
 }
 
 .cert-link:hover {
@@ -623,6 +617,7 @@ body {
   height: 100%;
   width: auto;
   object-fit: cover;
+
 }
 
 .cert-image:hover {
