@@ -119,18 +119,30 @@ coachingSkills: [
     },
     {
       key: 5,
+      name: "Wordpress",
+      image: "logos/wordpress.png",
+      link: "https://www.netlify.com/"
+    },
+    {
+      key: 6,
+      name: "Stripe",
+      image: "logos/stripe.png",
+      link: "https://www.stripe.com/"
+    },
+    {
+      key: 7,
       name: "SASS",
       image: "logos/sass.svg",
       link: "https://sass-lang.com/"
     },
     {
-      key: 6,
+      key: 8,
       name: "Chakra UI",
       image: "logos/chakra.svg",
       link: "https://chakra-ui.com"
     },
     {
-      key: 7,
+      key: 9,
       name: "TailwindCSS",
       image: "logos/tailwind.svg",
       link: "https://tailwindcss.com/"
@@ -166,18 +178,6 @@ coachingSkills: [
       name: "netlify",
       image: "logos/netlify.png",
       link: "https://www.netlify.com/"
-    },
-    {
-      key: 6,
-      name: "Wordpress",
-      image: "logos/wordpress.png",
-      link: "https://www.netlify.com/"
-    },
-    {
-      key: 7,
-      name: "Stripe",
-      image: "logos/stripe.png",
-      link: "https://www.stripe.com/"
     }
   ],
   learning: [
@@ -298,7 +298,7 @@ projects: [
     logo: "logos/littlelemon.svg",
     description: "The capstone project for my Meta Front-End Developer course. I met all the criteria, then went overboard adding further design changes and functionality. UseState hook used extensively to hold and update data. User, menu and cart data shared globally using the useContext and custom useShoppingCart hooks. Reservation data updated with the useReducer hook. Chakra UI useColorMode hook used to toggle light and dark theme. User data held in browser local storage across page visits. Stripe cart integration if user meets the required criteria for delivery or collection.",
     techStack: [
-      "HTML5", "CSS3", "Javascript", "Typescript", "React", "Chakra UI"
+      "HTML5", "CSS3", "Javascript", "Typescript", "React", "Chakra UI", "Stripe"
     ],
     link: "https://littlelemon.biz",
     image: "images/littlelemon.png"

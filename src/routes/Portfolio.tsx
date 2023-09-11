@@ -11,8 +11,6 @@ export const Portfolio = (props: any) => {
         to: { opacity: 1, scale: 1 },
     })
 
-    console.log(props)
-
     return (
         <animated.section id="portfolio" className="portfolio" style={{...springs}}>
             <article className="portfolio-section">
@@ -80,6 +78,7 @@ export const Portfolio = (props: any) => {
                                                             </Link>
                                                         )
                                                     }
+                                                    return null;
                                                 })
                                             } )
                                         }

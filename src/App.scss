@@ -576,6 +576,7 @@ body {
 
 .site-tech-stack {
   display: flex;
+  flex-wrap: wrap;
   color: var(--one);
   gap: 2rem;
 }
