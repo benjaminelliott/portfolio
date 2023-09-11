@@ -1,4 +1,15 @@
-* { 
+$bg-light :#DAF0FB;
+$bg-dark: #031926;
+
+$text-light: $bg-dark;
+$text-dark: $bg-light;
+
+$highlight: #2BF38B;
+
+$icon-light:$bg-dark;
+$icon-dark: #fff;
+
+* {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
@@ -8,7 +19,6 @@ html {
   max-height: 100%;
   padding: 0;
   margin: 0;
-
 }
 
 body {
@@ -35,6 +45,20 @@ body {
   --icon-l: 50px;
   --icon-s: 30px;
   --hero: clamp(100px, 200px, 300px)
+}
+
+.theme-light {
+  background-color: $bg-light;
+  p {
+    color: $text-light;
+  }
+}
+
+.theme-dark {
+  background-color: $bg-dark;
+  p {
+    color: $text-dark;
+  }
 }
 
 #error-page {
@@ -211,7 +235,7 @@ body {
 
 .intro::before {
   content: '👋🏽 \A';
-  font-size: clamp(10px, 20px, 50px);
+  font-size: clamp(10px, 30px, 50px);
   white-space: pre;
 }
 
@@ -432,6 +456,7 @@ body {
   flex-direction: column;
   justify-content: flex-start;
   row-gap: 2rem;
+  overflow-x: hidden;
 }
 
 .portfolio-section {
@@ -450,14 +475,15 @@ body {
   flex-direction: column;
   justify-content: space-evenly;
   align-items: stretch;
-  gap: 2rem;
+  gap: 3rem;
 }
 
-.site-images {
+.site-wrapper {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   justify-content: space-evenly;
   align-items: center;
+  gap: 2rem;
 }
 
 .site-name {
@@ -473,12 +499,21 @@ body {
   color: var(--six)
 }
 
-.site-links {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-evenly;
+.site-info {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 20% 80%;
+  justify-content: flex-start;
   gap: 2rem;
   align-items: center;
+}
+
+.site-links {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 1rem;
 }
 
 .site-link {
@@ -501,22 +536,37 @@ body {
   filter: drop-shadow(0px 0px 10px var(--six))
 }
 
+.site-image-wrapper {
+  width: 90%;
+  height: 200px;
+  overflow: auto;
+}
+
 .site-image {
-  height: clamp(100px, 125px, 200px);
-  width: clamp(150px, 200px, 250px);
-  object-fit: contain;
+
+  width: 100%;
+  object-fit: cover;
   border-radius: 16px;
   transition: all 0.5s;
+  opacity: 0.5;
 }
 
 .site-image:hover {
-  scale: 1.5;
+  opacity: 1;
 }
 
 .site-description {
   color: white;
   font-size: var(--text);
   text-align: left;
+}
+
+.site-text {
+  text-align: left;
+  display: flex;
+  justify-content: flex-start;
+  flex-direction: row;
+  width: 100%;
 }
 
 .site-iframe {
@@ -527,6 +577,16 @@ body {
         -o-transform-origin: 0 0;
         -webkit-transform: scale(0.75);
         -webkit-transform-origin: 0 0;
+}
+
+.site-tech-stack {
+  display: flex;
+  color: var(--one);
+  gap: 2rem;
+}
+
+.site-tech {
+  list-style-type: none;
 }
 
 .break {

@@ -3,7 +3,7 @@ import { Layout } from "./routes/Layout"
 import { Home } from "./routes/Home"
 import { About } from "./routes/About"
 import { Portfolio } from "./routes/Portfolio"
-import './App.css';
+import './App.scss';
 
 const Benjamin = {
   name: "Benjamin",
@@ -30,18 +30,18 @@ const Benjamin = {
       key: 4,
       name: "Football",
       icon: "⚽"
-  },
-  {
-      key: 5,
-      name: "Formula 1",
-      icon: "🏎️"
-  },
-  {
-      key: 6,
-      name: "Travel",
-      icon: "🌍"
-  }
-],
+    },
+    {
+        key: 5,
+        name: "Formula 1",
+        icon: "🏎️"
+    },
+    {
+        key: 6,
+        name: "Travel",
+        icon: "🌍"
+    }
+  ],
 coachingSkills: [
   {
     key: 0,
@@ -298,7 +298,7 @@ projects: [
       logo: "logos/epictweetus.png",
       description: "A single page app with philosophical quotes and pictures of statues. A respite for weary developers. Classical wisdom for the digital age.",
       techStack: [
-        "HTML5", "CSS3", "Javascript", "Typescript", "React", "Chakra UI"
+        "HTML5", "CSS3", "Javascript", "Typescript", "React"
       ],
       link: "https://sensational-bonbon-a021d7.netlify.app/",
       image: "images/epictweetus.png"
