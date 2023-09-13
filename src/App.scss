@@ -160,8 +160,8 @@ body {
   display: flex;
   align-items: center;
   flex-direction: column;
-  justify-content: space-between;
-  gap: 3rem;
+  justify-content: center;
+  gap: 4rem;
 }
 
 .home-lower {
@@ -192,8 +192,8 @@ body {
   width: var(--hero);
   border-radius: 50%;
   object-fit: cover;
-  border: 10px solid var(--six);
-  filter: drop-shadow(0px 0px 10px var(--six));
+  border: 5px solid var(--one);
+  filter: drop-shadow(0px 0px 5px var(--one));
 }
 
 .home-title-wrapper {
