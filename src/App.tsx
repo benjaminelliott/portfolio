@@ -8,7 +8,7 @@ import './App.scss';
 const Benjamin = {
   name: "Benjamin",
   images: {
-      hero:"images/Ben&Miles.jpg"
+      hero:"images/benjamin.jpg"
   },
   hobbies: [
     {
