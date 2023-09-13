@@ -106,6 +106,10 @@ body {
   flex-shrink: 0;
 }
 
+.benjamin {
+  height: 2rem;
+}
+
 .content {
   height: 75dvh;
   overflow: auto;
@@ -786,6 +790,7 @@ body {
   .home-upper, .about-content, .contact-upper {
     flex-direction: row;
   }
+
   .home-lower {
     row-gap: 5rem;
   }

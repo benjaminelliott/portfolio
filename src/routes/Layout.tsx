@@ -6,7 +6,7 @@ export const Layout = (props: any) => {
     return (
         <section className="layout">
             <article className="header">
-                <h1 className="header-title">benjaminelliott.dev</h1>
+                <LazyLoadImage src="images/logolong.png" className="benjamin"/>
                 <ul className="header-links">
                     {
                         props.links.map((link: {title: string, route: string}) =>
