@@ -19,6 +19,7 @@ html {
   max-height: 100%;
   padding: 0;
   margin: 0;
+  font-family: 'Lunasima', sans-serif;
 }
 
 body {
@@ -66,7 +67,6 @@ body {
   margin: 0;
   height: 100dvh;
   background-color: var(--four);
-  font-family: 'Reem Kufi Ink', sans-serif;
   display: flex;
   flex-direction: column;
   text-align: center;
@@ -131,7 +131,7 @@ body {
   align-items: center;
   justify-content: space-evenly;
   list-style: none;
-  font-family: 'Reem Kufi Ink', sans-serif;
+  font-family: 'Lunasima', sans-serif;
 }
 
 .header-links-link {
@@ -209,6 +209,7 @@ body {
   margin: 0;
   font-size: var(--h2);
   color: var(--six);
+  font-family: 'Lunasima', sans-serif;
 }
 
 .home-intro {
@@ -220,13 +221,6 @@ body {
   font-family: 'Lunasima', sans-serif;
 }
 
-.wave {
-  font-size: 4rem;
-  padding: 0;
-  margin: 0;
-  animation: wave 1s linear infinite alternate;
-}
-
 .text {
   margin: 0;
   font-size: var(--text);
@@ -235,6 +229,11 @@ body {
   font-weight: 400;
   text-align: left;
   line-height: 1.75;
+  font-family: 'Lunasima', sans-serif;
+}
+
+.intro {
+  font-family: 'Lunasima', sans-serif;
 }
 
 .intro::before {
@@ -475,6 +474,7 @@ body {
 .section-title {
   color: var(--six);
   text-align: left;
+  font-family: 'Lunasima', sans-serif;
 }
 
 .site {
