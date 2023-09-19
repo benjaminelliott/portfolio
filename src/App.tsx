@@ -146,6 +146,12 @@ coachingSkills: [
       name: "TailwindCSS",
       image: "logos/tailwind.svg",
       link: "https://tailwindcss.com/"
+    },
+    {
+      key: 10,
+      name: "ChatGPT",
+      image: "logos/ChatGPT_logo.svg.png",
+      link: "https://chat.openai.com/"
     }
   ],
   tools: [
@@ -216,7 +222,7 @@ coachingSkills: [
     {
       key: 0,
       name: "email",
-      link: "mailto:benjamin.elliott.be@gmail.com",
+      link: "mailto:hello@benjaminelliott.dev",
       icon: "icons/email.svg"
     },
     {
@@ -305,14 +311,14 @@ projects: [
 },
   {
       key: 2,
-      name: "Epictweetus",
-      logo: "logos/epictweetus.png",
-      description: "A single page app with philosophical quotes and pictures of statues. A respite for weary developers. Classical wisdom for the digital age.",
+      name: "CountyGPT",
+      logo: "logos/CountyGPT.svg",
+      description: "A single page app which fetches state and county data from the 2019 US Census, before asking ChatGPT for advice on stuff to do in the user's location.",
       techStack: [
-        "HTML5", "CSS3", "Javascript", "Typescript", "React"
+        "HTML5", "CSS3", "Javascript", "Typescript", "React", "TailwindCSS", "ChatGPT"
       ],
-      link: "https://sensational-bonbon-a021d7.netlify.app/",
-      image: "images/epictweetus.png"
+      link: "https://jolly-zuccutto-827f86.netlify.app/",
+      image: "images/CountyGPT.png"
   }
 ]
 }
