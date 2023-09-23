@@ -216,6 +216,12 @@ coachingSkills: [
       name: "MongoDB",
       image: "logos/mongodb.png",
       link: "https://www.mongodb.com/"
+    },
+    {
+      key: 5,
+      name: "Prisma",
+      image: "logos/prisma.svg",
+      link: "https://www.prisma.io/"
     }
   ],
   contacts: [
