@@ -121,7 +121,7 @@ coachingSkills: [
       key: 5,
       name: "Wordpress",
       image: "logos/wordpress.png",
-      link: "https://www.netlify.com/"
+      link: "https://www.wordpress.com/"
     },
     {
       key: 6,
@@ -295,14 +295,14 @@ certifications: [
 projects: [
   {
       key: 0,
-      name: "benjaminelliott.dev",
-      logo: "images/BenjaminLowC.jpg",
+      name: "stacyannelliott.com",
+      logo: "images/stacy.jpg",
       description: "My portfolio page, completed after all my online courses. Built to industry best practices using Typescript and React. Always adding new projects as they're built.",
       techStack: [
-        "HTML5", "CSS3", "Javascript", "Typescript", "React", "SASS"
+        "HTML5", "CSS3", "Javascript", "Wordpress"
       ],
       link: "https://benjaminelliott.dev",
-      image: "images/portfolio.png"
+      image: "images/stacyannelliott.png"
   },
   {
     key: 1,
@@ -325,6 +325,17 @@ projects: [
       ],
       link: "https://jolly-zuccutto-827f86.netlify.app/",
       image: "images/CountyGPT.png"
+  },
+  {
+    key: 3,
+    name: "benjaminelliott.dev",
+    logo: "images/BenjaminLowC.jpg",
+    description: "My portfolio page, completed after all my online courses. Built to industry best practices using Typescript and React. Always adding new projects as they're built.",
+    techStack: [
+      "HTML5", "CSS3", "Javascript", "Typescript", "React", "SASS"
+    ],
+    link: "https://benjaminelliott.dev",
+    image: "images/portfolio.png"
   }
 ]
 }
