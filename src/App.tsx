@@ -222,6 +222,18 @@ coachingSkills: [
       name: "Prisma",
       image: "logos/prisma.svg",
       link: "https://www.prisma.io/"
+    },
+    {
+      key: 6,
+      name: "React Native",
+      image: "logos/reactnative.svg",
+      link: "https://reactnative.dev/"
+    },
+    {
+      key: 7,
+      name: "Expo",
+      image: "logos/expo.png",
+      link: "https://expo.dev/"
     }
   ],
   contacts: [
