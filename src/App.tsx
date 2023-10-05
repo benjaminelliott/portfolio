@@ -240,7 +240,7 @@ coachingSkills: [
     {
       key: 0,
       name: "email",
-      link: "mailto:hello@benjaminelliott.dev",
+      link: "mailto:hello@benjamin.dev",
       icon: "icons/email.svg"
     },
     {
