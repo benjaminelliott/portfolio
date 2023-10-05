@@ -17,7 +17,7 @@ export const Layout = (props: any) => {
                                 style={({ isActive }) => {
                                     return {
                                         fontWeight: isActive ? "" : "",
-                                        color: isActive ? "#2BF38B" : "",
+                                        color: isActive ? "#fff" : "",
                                         transform: isActive ? "scale(1.2" : "",
                                         transitionDuration: isActive ? "500ms ease-in-out" : ""
                                     };

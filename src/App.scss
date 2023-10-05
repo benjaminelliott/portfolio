@@ -106,10 +106,7 @@ body {
   flex-shrink: 0;
 }
 
-.benjamin {
-  font-size: 10rem;
-  font-family: "Pecita", sans-serif;
-}
+
 
 .benjamin-logo {
   height: 4rem;
@@ -140,17 +137,17 @@ body {
 }
 
 .header-links-link {
-  color: var(--four);
+  color: var(--six);
   text-decoration: none;
   font-size: var(--h3);
 }
 
 .header-links-link:hover {
-  color: var(--one);
+  color: var(--four);
 }
 
 .header-links-link:active {
-  color: var(--five);
+  color: var(--four);
 }
 
 .home {
@@ -217,6 +214,10 @@ body {
   font-family: 'Lunasima', sans-serif;
 }
 
+.home-title-strong {
+  color: var(--one)
+}
+
 .home-intro {
   height: 100%;
   display: flex;
@@ -254,11 +255,11 @@ body {
 
 .benjamin {
   color: var(--six);
-  font-size: x-large;
+
 }
 
 .strong {
-  font-size: var(--h3);
+  font-size: var(--h2);
 }
 
 .tech-stack {

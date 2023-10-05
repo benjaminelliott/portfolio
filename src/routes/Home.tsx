@@ -13,9 +13,9 @@ export const Home = (props: any) => {
         <animated.section id="home" className="home" style={{...springs}}>
             <article className="home-upper">
                 <div className="home-title-wrapper">
-                    <h2 className="home-title">Front-End</h2>
-                    <h2 className="home-title">Web</h2>
-                    <h2 className="home-title">Developer</h2>
+                    <h2 className="home-title"><strong className="home-title-strong">Mostly </strong>Front-End,</h2>
+                    <h2 className="home-title"><strong className="home-title-strong">Sometimes </strong>Full-Stack,</h2>
+                    <h2 className="home-title"><strong className="home-title-strong">Always a </strong>Developer</h2>
                 </div>
                 <img className="hero-image" src={props.image} alt="whoops" />
             </article>
