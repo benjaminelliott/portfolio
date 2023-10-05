@@ -175,12 +175,18 @@ coachingSkills: [
     },
     {
       key: 4,
-      name: "gitHub",
+      name: "GitHub",
       image: "logos/github.svg",
-      link: "https://github.com/benjaminelliott"
+      link: "https://github.com/benjamindotdev"
     },
     {
       key: 5,
+      name: "GitHub Copilot",
+      image: "logos/copilot.png",
+      link: "https://github.com/features/copilot"
+    },
+    {
+      key: 6,
       name: "netlify",
       image: "logos/netlify.png",
       link: "https://www.netlify.com/"
@@ -219,18 +225,24 @@ coachingSkills: [
     },
     {
       key: 5,
+      name: "mongoose",
+      image: "logos/mongoose.png",
+      link: "https://www.mongoosejs.com/"
+    },
+    {
+      key: 6,
       name: "Prisma",
       image: "logos/prisma.svg",
       link: "https://www.prisma.io/"
     },
     {
-      key: 6,
+      key: 7,
       name: "React Native",
       image: "logos/reactnative.svg",
       link: "https://reactnative.dev/"
     },
     {
-      key: 7,
+      key: 8,
       name: "Expo",
       image: "logos/expo.png",
       link: "https://expo.dev/"
