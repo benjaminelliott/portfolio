@@ -313,7 +313,7 @@ projects: [
       techStack: [
         "HTML5", "CSS3", "Javascript", "Wordpress"
       ],
-      link: "https://benjaminelliott.dev",
+      link: "https://www.stacyannelliott.com",
       image: "images/stacyannelliott.png"
   },
   {
