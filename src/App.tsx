@@ -309,7 +309,7 @@ projects: [
       key: 0,
       name: "stacyannelliott.com",
       logo: "images/stacy.jpg",
-      description: "My portfolio page, completed after all my online courses. Built to industry best practices using Typescript and React. Always adding new projects as they're built.",
+      description: "Stacy is the Markets Editor at Decrypt, a cryptocurrency, AI, culture and gaming news site. She wanted a simple portfolio page that reflected her personality. I built her a striking page with Wordpress.",
       techStack: [
         "HTML5", "CSS3", "Javascript", "Wordpress"
       ],
