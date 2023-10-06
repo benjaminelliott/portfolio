@@ -1,6 +1,7 @@
 import { Link } from "react-router-dom";
 import { useSpring, animated } from '@react-spring/web'
 import { LazyLoadImage } from "react-lazy-load-image-component";
+import { useEffect, useRef, useState } from "react";
 
 export const Home = (props: any) => {
 
@@ -15,7 +16,7 @@ export const Home = (props: any) => {
                 <div className="home-title-wrapper">
                     <h2 className="home-title"><strong className="home-title-strong">Mostly </strong>Front-End,</h2>
                     <h2 className="home-title"><strong className="home-title-strong">Sometimes </strong>Full-Stack,</h2>
-                    <h2 className="home-title"><strong className="home-title-strong">Always a </strong>Developer</h2>
+                    <h2 className="home-title"><strong className="home-title-strong">Always </strong><span className=" home-title-name">Benjamin</span></h2>
                 </div>
                 <img className="hero-image" src={props.image} alt="whoops" />
             </article>
