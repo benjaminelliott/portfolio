@@ -14,32 +14,23 @@ const Benjamin = {
     {
         key: 0,
         name: "PC Building",
-        icon: "🧑🏽‍🏭️"
+        icon: "🧑🏽‍🏭️",
+        image: "images/pc.jpg",
+        text: "I joined the PC master race during the pandemic, and I'm never going back to console gaming"
     },
     {
         key: 1,
         name: "Mechanical keyboards",
-        icon: "⌨️"
+        icon: "⌨️",
+        image: "images/keyboards.jpg",
+        text: "Another pandemic hobby gone haywire. Lubing switches and soldering motherboards since 2020"
     },
     {
         key: 2,
         name: "Indoor cycling",
-        icon: "🚵🏽"
-    },
-    {
-      key: 4,
-      name: "Football",
-      icon: "⚽"
-    },
-    {
-        key: 5,
-        name: "Formula 1",
-        icon: "🏎️"
-    },
-    {
-        key: 6,
-        name: "Travel",
-        icon: "🌍"
+        icon: "🚵🏽",
+        image: "images/cycling.png",
+        text: "When not at my desk, you can find me climbing the mountains of Watopia with my fellow Zwifters"
     }
   ],
 coachingSkills: [
