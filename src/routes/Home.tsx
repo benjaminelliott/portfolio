@@ -1,7 +1,6 @@
 import { Link } from "react-router-dom";
 import { useSpring, animated } from '@react-spring/web'
 import { LazyLoadImage } from "react-lazy-load-image-component";
-import { useEffect, useRef, useState } from "react";
 
 export const Home = (props: any) => {
 
