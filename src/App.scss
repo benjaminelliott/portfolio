@@ -87,10 +87,10 @@ body {
   box-sizing: border-box;
   display: flex;
   flex-direction: column;
-  justify-content: space-evenly;
+  justify-content: start;
   padding: 0;
   margin: 0;
-  gap: 5dvh;
+  gap: 2dvh;
 }
 
 .header {
@@ -106,8 +106,6 @@ body {
   flex-shrink: 0;
 }
 
-
-
 .benjamin-logo {
   height: 4rem;
 }
@@ -117,6 +115,7 @@ body {
   overflow: auto;
   flex-grow: 1;
   display: flex;
+  justify-content: start;
   scrollbar-color: var(--six) var(--five);
   scrollbar-width:auto;
 }
@@ -429,7 +428,7 @@ body {
 }
 
 .hobbies-wrapper {
-
+  padding: 0rem rem;
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -445,7 +444,7 @@ body {
   justify-content: space-evenly;
   gap: 1rem;
   align-items: start;
-  width: 300px;
+  width: 290px;
   border-radius: 16px;
   box-shadow: 0px 0px 20px black;
   overflow: hidden;
@@ -511,7 +510,8 @@ body {
 .portfolio-section {
   display:flex;
   flex-direction: column;
-  gap: 2.5rem;
+  justify-content: flex-start;
+  gap: 6rem;
 }
 
 .section-title {
@@ -523,7 +523,7 @@ body {
 .site {
   display: flex;
   flex-direction: column;
-  justify-content: space-evenly;
+  justify-content: start;
   align-items: stretch;
   gap: 3rem;
 }
