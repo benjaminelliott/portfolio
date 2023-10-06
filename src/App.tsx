@@ -273,7 +273,7 @@ coachingSkills: [
       key: 1,
       name: "gitHub",
       image: "logos/github.svg",
-      link: "https://github.com/benjaminelliott"
+      link: "https://github.com/benjamindotdev"
     }
   ],
   links: [
