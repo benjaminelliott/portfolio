@@ -245,14 +245,12 @@ body {
 }
 
 .intro {
-  font-family: 'Lunasima', sans-serif;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
 }
 
-.intro::before {
-  content: '👋🏽 \A';
-  font-size: clamp(10px, 30px, 50px);
-  white-space: pre;
-}
+
 
 .react {
   color: var(--four);
