@@ -23,7 +23,7 @@ const Benjamin = {
         name: "Mechanical keyboards",
         icon: "⌨️",
         image: "images/keyboards.jpg",
-        text: "Another pandemic hobby gone haywire. Lubing switches and soldering motherboards since 2020"
+        text: "Another fiddly pandemic hobby. Lubing switches and soldering motherboards since 2020"
     },
     {
         key: 2,
