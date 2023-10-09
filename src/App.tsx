@@ -16,14 +16,14 @@ const Benjamin = {
         name: "PC Building",
         icon: "🧑🏽‍🏭️",
         image: "images/pc.jpg",
-        text: "I joined the PC master race during the pandemic, and I'm never going back to console gaming"
+        text: "PC master race, rise up. 7900XT + 5800x3d. Cities Skylines, Titanfall 2, Starsector"
     },
     {
         key: 1,
         name: "Mechanical keyboards",
         icon: "⌨️",
         image: "images/keyboards.jpg",
-        text: "Another fiddly pandemic hobby. Lubing switches and soldering motherboards since 2020"
+        text: "Needed a fiddly pandemic hobby. Lubing switches and soldering motherboards since 2020"
     },
     {
         key: 2,
