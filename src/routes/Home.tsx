@@ -21,7 +21,7 @@ export const Home = (props: any) => {
             </article>
             <article className="home-lower">
                 <div className="intro">
-                    <p className="text intro">I used my curiosity and creativity to creating this space to showcase my work and share my journey in the world of React development. In my corner of the web, you'll find a collection of projects that represent not only my technical skills but also my dedication to creating user-friendly and visually stunning web experiences. </p>
+                    <p className="text intro">I used my curiosity and creativity to create this space to showcase my work and share my journey in the world of React development. In my corner of the web, you'll find a collection of projects that represent not only my technical skills but also my dedication to creating user-friendly and visually stunning web experiences. </p>
                     <p className="text intro">From Front-End to Full-Stack applications, I'm constantly pushing the boundaries of what I can achieve and keeping up with the latest industry standards. I make daily commits to GitHub and I'm always working on something in the background. Stay tuned for the next stage in my coding evolution.</p>
                     <p className="text intro"> So, I invite you to explore my work, read about my coding adventures, and get a glimpse into my coding style and philosophy. Whether you're looking to collaborate on a project, discuss a potential opportunity, or simply want to connect, I'm just a click away. 👊🏽</p>
                 </div>
