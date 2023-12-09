@@ -4,6 +4,7 @@
   "private": true,
   "homepage": "https://benjaminelliott.dev",
   "dependencies": {
+    "@babel/traverse": "^7.23.4",
     "@ramonak/react-progress-bar": "^5.0.3",
     "@react-spring/web": "^9.7.3",
     "@testing-library/jest-dom": "^5.17.0",
