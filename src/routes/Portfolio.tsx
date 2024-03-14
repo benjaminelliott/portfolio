@@ -39,23 +39,23 @@ export const Portfolio = ({ certifications, projects, techStack } : {
                     className='certs'
                     showThumbs={false}
                     infiniteLoop={false}
-                    renderArrowPrev={(clickHandler, hasPrev) => (
+                    renderArrowPrev={(clickHandler, hasPrev) =>
                         <button
                             className={ hasPrev ? "carousel-button" : "carousel-button-hidden" }
                             onClick={clickHandler}
                         >
                             👈🏽
                         </button>
-                    )}
-                    renderArrowNext={(clickHandler, hasNext) => (
+                    }
+                    renderArrowNext={(clickHandler, hasNext) =>
                         <button
                             className={ hasNext ? "carousel-button" : "carousel-button-hidden" }
                             onClick={clickHandler}
                         >
                             👉🏽
                         </button>
-                    )}
-                    renderIndicator={(clickHandler, isSelected, index) => (
+                    }
+                    renderIndicator={(clickHandler, isSelected, index) =>
                         <li
                             key={index}
                             className={ isSelected ? "selected-dot control-dot" : "control-dot"}
@@ -63,11 +63,11 @@ export const Portfolio = ({ certifications, projects, techStack } : {
                         >
                             <button className='control-dot-button'>{isSelected ? "⚪" : "⚫"}</button>
                         </li>
-                    )}
+                    }
                 >
                     {
                         certifications &&
-                            certifications.map((cert: any) => (
+                            certifications.map(cert =>
                                 <div
                                     key={cert.key}
                                     className='cert'
@@ -84,7 +84,7 @@ export const Portfolio = ({ certifications, projects, techStack } : {
                                         />
                                     </Link>
                                 </div>
-                            ))
+                            )
                     }
                 </Carousel>
             </article>
@@ -92,7 +92,7 @@ export const Portfolio = ({ certifications, projects, techStack } : {
                 <h4 className='section-title'>Projects</h4>
                 {
                     projects &&
-                        projects.map((site) => (
+                        projects.map(site =>
                             <div key={site.key} className='site'>
                                 <div className='site-wrapper'>
                                     <div className='site-info'>
@@ -120,7 +120,7 @@ export const Portfolio = ({ certifications, projects, techStack } : {
                                         </div>
                                         <ul className='site-tech-stack'>
                                             {
-                                                site.techStack.map((tech) =>
+                                                site.techStack.map(tech =>
                                                     techStack &&
                                                         techStack.map((t) => {
                                                             if (t.name === tech)
@@ -159,7 +159,7 @@ export const Portfolio = ({ certifications, projects, techStack } : {
                                     </div>
                                 </div>
                             </div>
-                        ))
+                        )
                 }
             </article>
         </animated.section>

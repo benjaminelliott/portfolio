@@ -29,7 +29,7 @@ export const Layout = ({ links, socials, contacts } : {
                 />
                 <ul className="header-links">
                     {
-                        links.map((link) =>
+                        links.map(link =>
                             <NavLink
                                 key={link.title}
                                 className="header-links-link"
@@ -54,7 +54,7 @@ export const Layout = ({ links, socials, contacts } : {
             <article className="footer">
                 <div className="footer-links">
                 {
-                    socials.map((social) =>
+                    socials.map(social =>
                         <Link
                             to={social.link}
                             target='_blank'
@@ -73,7 +73,7 @@ export const Layout = ({ links, socials, contacts } : {
                 <h3 className="footer-text">© Benjamin Elliott 2023</h3>
                 <div className="footer-links">
                 {
-                    contacts.map((contact) =>
+                    contacts.map(contact =>
                         <Link
                             to={contact.link}
                             target='_blank'

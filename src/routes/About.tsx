@@ -28,14 +28,21 @@ export const About = ({ coachingSkills, codingSkills, hobbies } : {
     })
 
     return (
-        <animated.section id="about" className="about" style={{...springs}}>
+        <animated.section
+            id="about"
+            className="about"
+            style={{...springs}}
+        >
             <article className="about-coaching">
             <h4 className='section-title'>From coaching...</h4>
                 <div className='coaching-skills' style={{backgroundImage: "url(images/coachBenLowC.jpg)"}}>
                     {
                         coachingSkills &&
-                            coachingSkills.map((skill) =>
-                                <div key={skill.key} className='skill'>
+                            coachingSkills.map(skill =>
+                                <div
+                                    key={skill.key}
+                                    className='skill'
+                                >
                                     <p className='skill-icon' >{skill.image}</p>
                                     <p className='skill-text'>{skill.name}</p>
                                 </div>
@@ -44,11 +51,19 @@ export const About = ({ coachingSkills, codingSkills, hobbies } : {
                 </div>
             </article>
             <article className="about-coding">
-                <h4 className='section-title' style={{textAlign: "right"}}>...to coding.</h4>
-                <div className='coaching-skills' style={{backgroundImage: "url(images/Ben&ColbyLowC.jpg)"}}>
+                <h4
+                    className='section-title'
+                    style={{textAlign: "right"}}
+                >
+                    ...to coding.
+                </h4>
+                <div
+                    className='coaching-skills'
+                    style={{backgroundImage: "url(images/Ben&ColbyLowC.jpg)"}}
+                >
                     {
                         codingSkills &&
-                            codingSkills.map((skill) =>
+                            codingSkills.map(skill =>
                                 <div key={skill.key}>
                                     <p className='skill-icon' >{skill.image}</p>
                                     <p className='skill-text'>{skill.name}</p>
@@ -68,7 +83,7 @@ export const About = ({ coachingSkills, codingSkills, hobbies } : {
                 <div className='hobbies-wrapper'>
                     {
                         hobbies &&
-                            hobbies.map((hobby) =>
+                            hobbies.map(hobby =>
                                 <div className='hobby-wrapper' key={hobby.key}>
                                     <div className='hobby-header'>
                                         <h1 className='hobbies-title'>{hobby.name}</h1>

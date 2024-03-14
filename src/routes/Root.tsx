@@ -1,7 +1,6 @@
 import { App } from '../App';
 
-export const Root = () => (
+export const Root = () =>
   <div className="root">
     <App />
   </div>
-);

@@ -370,55 +370,52 @@ const Benjamin = {
 	],
 };
 
-export const App = () => {
-	return (
-		<div className="App">
-			<Routes>
-				<Route
-					path="*"
-					element={
-						<Layout
-							links={Benjamin.links}
-							socials={Benjamin.socials}
-							contacts={Benjamin.contacts}
-						/>
-					}
-				>
-					<Route
-						index
-						element={
-							<Home
-								name={Benjamin.name}
-								image={Benjamin.images.hero}
-								techStack={Benjamin.techStack}
-								tools={Benjamin.tools}
-								learning={Benjamin.learning}
-							/>
-						}
-					/>
-					<Route
-						path="about"
-						element={
-							<About
-								coachingSkills={Benjamin.coachingSkills}
-								codingSkills={Benjamin.codingSkills}
-								hobbies={Benjamin.hobbies}
-							/>
-						}
-					/>
-					<Route
-						path="portfolio"
-						element={
-							<Portfolio
-								techStack={Benjamin.techStack}
-								certifications={Benjamin.certifications}
-								projects={Benjamin.projects}
-							/>
-						}
-					/>
-					<Route path="*" element={<Navigate to="../public/index.html" />} />
-				</Route>
-			</Routes>
-		</div>
-	);
-};
+export const App = () =>
+  <div className="App">
+    <Routes>
+      <Route
+        path="*"
+        element={
+          <Layout
+            links={Benjamin.links}
+            socials={Benjamin.socials}
+            contacts={Benjamin.contacts}
+          />
+        }
+      >
+        <Route
+          index
+          element={
+            <Home
+              name={Benjamin.name}
+              image={Benjamin.images.hero}
+              techStack={Benjamin.techStack}
+              tools={Benjamin.tools}
+              learning={Benjamin.learning}
+            />
+          }
+        />
+        <Route
+          path="about"
+          element={
+            <About
+              coachingSkills={Benjamin.coachingSkills}
+              codingSkills={Benjamin.codingSkills}
+              hobbies={Benjamin.hobbies}
+            />
+          }
+        />
+        <Route
+          path="portfolio"
+          element={
+            <Portfolio
+              techStack={Benjamin.techStack}
+              certifications={Benjamin.certifications}
+              projects={Benjamin.projects}
+            />
+          }
+        />
+        <Route path="*" element={<Navigate to="../public/index.html" />} />
+      </Route>
+    </Routes>
+  </div>;
