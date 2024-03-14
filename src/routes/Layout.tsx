@@ -53,20 +53,18 @@ export const Layout = ({ links, socials, contacts } : {
                 <div className="footer-links">
                 {
                     socials.map((social) =>
-                        (
-                            <Link
-                                to={social.link}
-                                target='_blank'
-                                rel="noreferrer"
-                                key={social.key}
-                            >
-                                <LazyLoadImage
-                                    className="tech-stack-logo"
-                                    src={social.image}
-                                    alt={social.name}
-                                />
-                            </Link>
-                        )
+                        <Link
+                            to={social.link}
+                            target='_blank'
+                            rel="noreferrer"
+                            key={social.key}
+                        >
+                            <LazyLoadImage
+                                className="tech-stack-logo"
+                                src={social.image}
+                                alt={social.name}
+                            />
+                        </Link>
                     )
                 }
                 </div>

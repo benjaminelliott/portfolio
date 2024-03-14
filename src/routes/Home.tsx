@@ -2,7 +2,7 @@ import { Link } from "react-router-dom";
 import { useSpring, animated } from '@react-spring/web'
 import { LazyLoadImage } from "react-lazy-load-image-component";
 
-export const Home = ({ techStack, tools, learning, image } : {
+export const Home = ({ techStack, tools, learning, image, name } : {
     techStack: {
         image: string,
         key: number,
@@ -21,7 +21,8 @@ export const Home = ({ techStack, tools, learning, image } : {
         name: string,
         link: string
     }[],
-    image: string
+    image: string,
+    name: string
 }) => {
 
     const springs = useSpring({

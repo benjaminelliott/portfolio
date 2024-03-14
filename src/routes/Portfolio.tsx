@@ -7,11 +7,11 @@ import { Carousel } from 'react-responsive-carousel';
 export const Portfolio = ({ certifications, projects, techStack } : {
     certifications: {
         image: string,
-        key: string,
+        key: number,
         link: string
     }[];
     projects: {
-        key: string,
+        key: number,
         link: string,
         logo: string,
         name: string,
@@ -89,7 +89,7 @@ export const Portfolio = ({ certifications, projects, techStack } : {
             </article>
             <article className="portfolio-section">
                 <h4 className='section-title'>Projects</h4>
-                {   projects.map((site: any) => (
+                {   projects.map((site) => (
                         <div key={site.key} className='site'>
                             <div className='site-wrapper'>
                                 <div className='site-info'>
@@ -117,8 +117,8 @@ export const Portfolio = ({ certifications, projects, techStack } : {
                                     </div>
                                     <ul className='site-tech-stack'>
                                         {
-                                            site.techStack.map((tech:any) => {
-                                                return techStack.map((t: any) => {
+                                            site.techStack.map((tech) => {
+                                                return techStack.map((t) => {
                                                     if (t.name === tech) {
                                                         return (
                                                             <Link
