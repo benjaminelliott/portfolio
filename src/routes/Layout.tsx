@@ -20,11 +20,13 @@ export const Layout = ({ links, socials, contacts } : {
         key: Key
     }[];
 
-}) => {
-    return (
+}) =>
         <section className="layout">
             <article className="header">
-                <LazyLoadImage src="images/B.png" className="benjamin-logo"/>
+                <LazyLoadImage
+                    src="images/B.png"
+                    className="benjamin-logo"
+                />
                 <ul className="header-links">
                     {
                         links.map((link) =>
@@ -89,5 +91,3 @@ export const Layout = ({ links, socials, contacts } : {
                 </div>
             </article>
         </section>
-    );
-}

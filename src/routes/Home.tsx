@@ -3,26 +3,26 @@ import { useSpring, animated } from '@react-spring/web'
 import { LazyLoadImage } from "react-lazy-load-image-component";
 
 export const Home = ({ techStack, tools, learning, image, name } : {
-    techStack: {
+    techStack?: {
         image: string,
         key: number,
         name: string,
         link: string
     }[],
-    tools: {
+    tools?: {
         image: string,
         key: number,
         name: string,
         link: string
     }[],
-    learning: {
+    learning?: {
         image: string,
         key: number,
         name: string,
         link: string
     }[],
-    image: string,
-    name: string
+    image?: string,
+    name?: string
 }) => {
 
     const springs = useSpring({
@@ -31,7 +31,11 @@ export const Home = ({ techStack, tools, learning, image, name } : {
     })
 
     return (
-        <animated.section id="home" className="home" style={{...springs}}>
+        <animated.section
+            id="home"
+            className="home"
+            style={{...springs}}
+        >
             <article className="home-upper">
                 <div className="home-title-wrapper">
                     <h2 className="home-title"><strong className="home-title-strong">Mostly </strong>Front-End,</h2>
@@ -50,20 +54,21 @@ export const Home = ({ techStack, tools, learning, image, name } : {
                     <h4 className="section-title">Tech Stack</h4>
                     <div className="tech-logos">
                         {
-                            techStack.map((tech) =>
-                                <Link
-                                    to={tech.link}
-                                    target='_blank'
-                                    rel="noreferrer"
-                                    key={tech.key}
-                                >
-                                    <LazyLoadImage
-                                        className="tech-stack-logo"
-                                        src={tech.image}
-                                        alt={tech.name}
-                                    />
-                                </Link>
-                            )
+                            techStack &&
+                                techStack.map(tech =>
+                                    <Link
+                                        to={tech.link}
+                                        target='_blank'
+                                        rel="noreferrer"
+                                        key={tech.key}
+                                    >
+                                        <LazyLoadImage
+                                            className="tech-stack-logo"
+                                            src={tech.image}
+                                            alt={tech.name}
+                                        />
+                                    </Link>
+                                )
                         }
                     </div>
                 </div>
@@ -71,20 +76,21 @@ export const Home = ({ techStack, tools, learning, image, name } : {
                     <h4 className="section-title">Tools</h4>
                     <div className="tech-logos">
                         {
-                            tools.map((tech) =>
-                                <Link
-                                    to={tech.link}
-                                    target='_blank'
-                                    rel="noreferrer"
-                                    key={tech.key}
-                                >
-                                    <LazyLoadImage
-                                        className="tech-stack-logo"
-                                        src={tech.image}
-                                        alt={tech.name}
-                                    />
-                                </Link>
-                            )
+                            tools &&
+                                tools.map(tech =>
+                                    <Link
+                                        to={tech.link}
+                                        target='_blank'
+                                        rel="noreferrer"
+                                        key={tech.key}
+                                    >
+                                        <LazyLoadImage
+                                            className="tech-stack-logo"
+                                            src={tech.image}
+                                            alt={tech.name}
+                                        />
+                                    </Link>
+                                )
                         }
                     </div>
                 </div>
@@ -92,20 +98,21 @@ export const Home = ({ techStack, tools, learning, image, name } : {
                     <h4 className="section-title">Learning</h4>
                     <div className="tech-logos">
                         {
-                            learning.map((tech) =>
-                                <Link
-                                    to={tech.link}
-                                    target='_blank'
-                                    rel="noreferrer"
-                                    key={tech.key}
-                                >
-                                    <LazyLoadImage
-                                        className="tech-stack-logo"
-                                        src={tech.image}
-                                        alt={tech.name}
-                                    />
-                                </Link>
-                            )
+                            learning &&
+                                learning.map(tech =>
+                                    <Link
+                                        to={tech.link}
+                                        target='_blank'
+                                        rel="noreferrer"
+                                        key={tech.key}
+                                    >
+                                        <LazyLoadImage
+                                            className="tech-stack-logo"
+                                            src={tech.image}
+                                            alt={tech.name}
+                                        />
+                                    </Link>
+                                )
                         }
                     </div>
                 </div>

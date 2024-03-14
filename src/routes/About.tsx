@@ -2,17 +2,17 @@ import { useSpring, animated } from '@react-spring/web'
 import { LazyLoadImage } from 'react-lazy-load-image-component';
 
 export const About = ({ coachingSkills, codingSkills, hobbies } : {
-    coachingSkills: {
+    coachingSkills?: {
         image: string,
         key: number,
         name: string
     }[];
-    codingSkills: {
+    codingSkills?: {
         image: string,
         key: number,
         name: string
     }[];
-    hobbies: {
+    hobbies?: {
         text: string,
         image: string,
         key: number,
@@ -33,12 +33,13 @@ export const About = ({ coachingSkills, codingSkills, hobbies } : {
             <h4 className='section-title'>From coaching...</h4>
                 <div className='coaching-skills' style={{backgroundImage: "url(images/coachBenLowC.jpg)"}}>
                     {
-                        coachingSkills.map((skill) => (
-                            <div key={skill.key} className='skill'>
-                                <p className='skill-icon' >{skill.image}</p>
-                                <p className='skill-text'>{skill.name}</p>
-                            </div>
-                        ))
+                        coachingSkills &&
+                            coachingSkills.map((skill) =>
+                                <div key={skill.key} className='skill'>
+                                    <p className='skill-icon' >{skill.image}</p>
+                                    <p className='skill-text'>{skill.name}</p>
+                                </div>
+                            )
                     }
                 </div>
             </article>
@@ -46,12 +47,13 @@ export const About = ({ coachingSkills, codingSkills, hobbies } : {
                 <h4 className='section-title' style={{textAlign: "right"}}>...to coding.</h4>
                 <div className='coaching-skills' style={{backgroundImage: "url(images/Ben&ColbyLowC.jpg)"}}>
                     {
-                        codingSkills.map((skill) => (
-                            <div key={skill.key}>
-                                <p className='skill-icon' >{skill.image}</p>
-                                <p className='skill-text'>{skill.name}</p>
-                            </div>
-                        ))
+                        codingSkills &&
+                            codingSkills.map((skill) =>
+                                <div key={skill.key}>
+                                    <p className='skill-icon' >{skill.image}</p>
+                                    <p className='skill-text'>{skill.name}</p>
+                                </div>
+                            )
                     }
                 </div>
             </article>
@@ -65,16 +67,16 @@ export const About = ({ coachingSkills, codingSkills, hobbies } : {
                 <h4 className="section-title">Other passions</h4>
                 <div className='hobbies-wrapper'>
                     {
-                        hobbies.map((hobby) => (
-                            <div className='hobby-wrapper' key={hobby.key}>
-                                <div className='hobby-header'>
-                                    <h1 className='hobbies-title'>{hobby.name}</h1>
-                                    <p className="hobbies-emoji">{hobby.icon}</p>
+                        hobbies &&
+                            hobbies.map((hobby) =>
+                                <div className='hobby-wrapper' key={hobby.key}>
+                                    <div className='hobby-header'>
+                                        <h1 className='hobbies-title'>{hobby.name}</h1>
+                                        <p className="hobbies-emoji">{hobby.icon}</p>
+                                    </div>
+                                    <p className='hobbies-text'>{hobby.text}</p>
+                                    <LazyLoadImage src={hobby.image} className='hobbies-image'/>
                                 </div>
-                                <p className='hobbies-text'>{hobby.text}</p>
-                                <LazyLoadImage src={hobby.image} className='hobbies-image'/>
-                            </div>
-                        )
                     )}
                 </div>
             </article>

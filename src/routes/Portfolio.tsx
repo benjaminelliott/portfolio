@@ -5,12 +5,12 @@ import "react-responsive-carousel/lib/styles/carousel.min.css";
 import { Carousel } from 'react-responsive-carousel';
 
 export const Portfolio = ({ certifications, projects, techStack } : {
-    certifications: {
+    certifications?: {
         image: string,
         key: number,
         link: string
     }[];
-    projects: {
+    projects?: {
         key: number,
         link: string,
         logo: string,
@@ -19,7 +19,7 @@ export const Portfolio = ({ certifications, projects, techStack } : {
         description: string,
         image: string
     }[];
-    techStack: {
+    techStack?: {
         image: string,
         link: string,
         name: string
@@ -66,99 +66,100 @@ export const Portfolio = ({ certifications, projects, techStack } : {
                     )}
                 >
                     {
-                        certifications.map((cert: any) => (
-                            <div
-                                key={cert.key}
-                                className='cert'
-                            >
-                                <Link
-                                    to={cert.link}
-                                    target="_blank"
-                                    rel="noopener noreferrer"
-                                    className='cert-link'
+                        certifications &&
+                            certifications.map((cert: any) => (
+                                <div
+                                    key={cert.key}
+                                    className='cert'
                                 >
-                                    <LazyLoadImage
-                                        src={cert.image}
-                                        className='cert-image'
-                                    />
-                                </Link>
-                            </div>
-                        ))
+                                    <Link
+                                        to={cert.link}
+                                        target="_blank"
+                                        rel="noopener noreferrer"
+                                        className='cert-link'
+                                    >
+                                        <LazyLoadImage
+                                            src={cert.image}
+                                            className='cert-image'
+                                        />
+                                    </Link>
+                                </div>
+                            ))
                     }
                 </Carousel>
             </article>
             <article className="portfolio-section">
                 <h4 className='section-title'>Projects</h4>
-                {   projects.map((site) => (
-                        <div key={site.key} className='site'>
-                            <div className='site-wrapper'>
-                                <div className='site-info'>
-                                    <div className='site-links'>
+                {
+                    projects &&
+                        projects.map((site) => (
+                            <div key={site.key} className='site'>
+                                <div className='site-wrapper'>
+                                    <div className='site-info'>
+                                        <div className='site-links'>
+                                            <Link
+                                                to={site.link}
+                                                target="_blank"
+                                                rel="noopener noreferrer"
+                                                className='site-link'
+                                            >
+                                                <img
+                                                    className="site-logo"
+                                                    src={site.logo}
+                                                    alt={site.name}
+                                                />
+                                            </Link>
+                                            <Link
+                                                to={site.link}
+                                                target="_blank"
+                                                rel="noopener noreferrer"
+                                                className='site-link'
+                                            >
+                                                <h3 className='site-name'>{site.name}</h3>
+                                            </Link>
+                                        </div>
+                                        <ul className='site-tech-stack'>
+                                            {
+                                                site.techStack.map((tech) =>
+                                                    techStack &&
+                                                        techStack.map((t) => {
+                                                            if (t.name === tech)
+                                                                    <Link
+                                                                    to={t.link}
+                                                                    key={tech}
+                                                                    >
+                                                                        <LazyLoadImage
+                                                                            className="tech-stack-logo"
+                                                                            src={t.image}
+                                                                            alt={tech}
+                                                                        />
+                                                                    </Link>
+                                                            return null;
+                                                    })
+                                                )
+                                            }
+                                        </ul>
+                                    </div>
+                                    <div className='site-text'>
+                                        <p className='text'>{site.description}</p>
+                                    </div>
+                                    <div className='site-image-wrapper'>
                                         <Link
                                             to={site.link}
                                             target="_blank"
                                             rel="noopener noreferrer"
                                             className='site-link'
                                         >
-                                            <img
-                                                className="site-logo"
-                                                src={site.logo}
+                                            <LazyLoadImage
+                                                className="site-image"
+                                                src={site.image}
                                                 alt={site.name}
                                             />
                                         </Link>
-                                        <Link
-                                            to={site.link}
-                                            target="_blank"
-                                            rel="noopener noreferrer"
-                                            className='site-link'
-                                        >
-                                            <h3 className='site-name'>{site.name}</h3>
-                                        </Link>
                                     </div>
-                                    <ul className='site-tech-stack'>
-                                        {
-                                            site.techStack.map((tech) => {
-                                                return techStack.map((t) => {
-                                                    if (t.name === tech) {
-                                                        return (
-                                                            <Link
-                                                            to={t.link}
-                                                            key={tech}
-                                                            >
-                                                                <LazyLoadImage
-                                                                    className="tech-stack-logo"
-                                                                    src={t.image}
-                                                                    alt={tech}
-                                                                />
-                                                            </Link>
-                                                        )
-                                                    }
-                                                    return null;
-                                                })
-                                            } )
-                                        }
-                                    </ul>
-                                </div>
-                                <div className='site-text'>
-                                    <p className='text'>{site.description}</p>
-                                </div>
-                                <div className='site-image-wrapper'>
-                                    <Link
-                                        to={site.link}
-                                        target="_blank"
-                                        rel="noopener noreferrer"
-                                        className='site-link'
-                                    >
-                                        <LazyLoadImage
-                                            className="site-image"
-                                            src={site.image}
-                                            alt={site.name}
-                                        />
-                                    </Link>
                                 </div>
                             </div>
-                        </div>
-                    ))
+                        ))
                 }
             </article>
         </animated.section>
