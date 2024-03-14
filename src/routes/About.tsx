@@ -1,8 +1,26 @@
 import { useSpring, animated } from '@react-spring/web'
-import { Key, ReactElement, JSXElementConstructor, ReactNode, ReactPortal } from 'react';
 import { LazyLoadImage } from 'react-lazy-load-image-component';
 
-export const About = (props: any) => {
+export const About = ({ coachingSkills, codingSkills, hobbies } : {
+    coachingSkills: {
+        image: string,
+        key: number,
+        name: string
+    }[];
+    codingSkills: {
+        image: string,
+        key: number,
+        name: string
+    }[];
+    hobbies: {
+        text: string,
+        image: string,
+        key: number,
+        icon: string,
+        name: string
+    }[];
+
+}) => {
 
     const springs = useSpring({
         from: { opacity: 0, scale: 0.75 },
@@ -15,15 +33,12 @@ export const About = (props: any) => {
             <h4 className='section-title'>From coaching...</h4>
                 <div className='coaching-skills' style={{backgroundImage: "url(images/coachBenLowC.jpg)"}}>
                     {
-                        props.coachingSkills.map((skill: {
-                            [x: string]: ReactNode; image: string | undefined; key: Key | null | undefined;}) => {
-                            return (
-                                <div key={skill.key} className='skill'>
-                                    <p className='skill-icon' >{skill.image}</p>
-                                    <p className='skill-text'>{skill.name}</p>
-                                </div>
-                            )
-                        })
+                        coachingSkills.map((skill) => (
+                            <div key={skill.key} className='skill'>
+                                <p className='skill-icon' >{skill.image}</p>
+                                <p className='skill-text'>{skill.name}</p>
+                            </div>
+                        ))
                     }
                 </div>
             </article>
@@ -31,15 +46,12 @@ export const About = (props: any) => {
                 <h4 className='section-title' style={{textAlign: "right"}}>...to coding.</h4>
                 <div className='coaching-skills' style={{backgroundImage: "url(images/Ben&ColbyLowC.jpg)"}}>
                     {
-                        props.codingSkills.map((skill: {
-                            [x: string]: ReactNode; image: string | undefined; key: Key | null | undefined;}) => {
-                            return (
-                                <div key={skill.key}>
-                                    <p className='skill-icon' >{skill.image}</p>
-                                    <p className='skill-text'>{skill.name}</p>
-                                </div>
-                            )
-                        })
+                        codingSkills.map((skill) => (
+                            <div key={skill.key}>
+                                <p className='skill-icon' >{skill.image}</p>
+                                <p className='skill-text'>{skill.name}</p>
+                            </div>
+                        ))
                     }
                 </div>
             </article>
@@ -53,10 +65,7 @@ export const About = (props: any) => {
                 <h4 className="section-title">Other passions</h4>
                 <div className='hobbies-wrapper'>
                     {
-                        props.hobbies.map((hobby: {
-                            text: ReactNode;
-                            image: string | undefined; key: Key | null | undefined; icon: string | number | boolean | ReactElement<any, string | JSXElementConstructor<any>> | Iterable<ReactNode> | ReactPortal | null | undefined; name: string | number | boolean | ReactElement<any, string | JSXElementConstructor<any>> | Iterable<ReactNode> | ReactPortal | null | undefined; 
-}) => (
+                        hobbies.map((hobby) => (
                             <div className='hobby-wrapper' key={hobby.key}>
                                 <div className='hobby-header'>
                                     <h1 className='hobbies-title'>{hobby.name}</h1>

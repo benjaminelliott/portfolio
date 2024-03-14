@@ -2,14 +2,32 @@ import { Key } from "react";
 import { LazyLoadImage } from "react-lazy-load-image-component";
 import { Outlet, NavLink, Link, To } from "react-router-dom";
 
-export const Layout = (props: any) => {
+export const Layout = ({ links, socials, contacts } : {
+    links: {
+        title: string,
+        route: string
+    }[],
+    socials: {
+        link: To,
+        image: string,
+        name: string,
+        key: Key
+    }[],
+    contacts: {
+        link: To,
+        icon: string,
+        name: string,
+        key: Key
+    }[];
+
+}) => {
     return (
         <section className="layout">
             <article className="header">
                 <LazyLoadImage src="images/B.png" className="benjamin-logo"/>
                 <ul className="header-links">
                     {
-                        props.links.map((link: {title: string, route: string}) =>
+                        links.map((link) =>
                             <NavLink
                                 key={link.title}
                                 className="header-links-link"
@@ -22,7 +40,9 @@ export const Layout = (props: any) => {
                                         transitionDuration: isActive ? "500ms ease-in-out" : ""
                                     };
                                 }}
-                            >{link.title}</NavLink>)
+                            >
+                                {link.title}
+                            </NavLink>)
                     }
                 </ul>
             </article>
@@ -32,44 +52,42 @@ export const Layout = (props: any) => {
             <article className="footer">
                 <div className="footer-links">
                 {
-                        props.socials.map((social: { link: To; image: string | undefined; name: string | undefined; key: Key | null | undefined; }) => {
-                            return (
-                                <Link
-                                    to={social.link}
-                                    target='_blank'
-                                    rel="noreferrer"
-                                    key={social.key}
-                                >
-                                    <LazyLoadImage
-                                        className="tech-stack-logo"
-                                        src={social.image}
-                                        alt={social.name}
-                                    />
-                                </Link>
-                            )
-                        })
-                    }
+                    socials.map((social) =>
+                        (
+                            <Link
+                                to={social.link}
+                                target='_blank'
+                                rel="noreferrer"
+                                key={social.key}
+                            >
+                                <LazyLoadImage
+                                    className="tech-stack-logo"
+                                    src={social.image}
+                                    alt={social.name}
+                                />
+                            </Link>
+                        )
+                    )
+                }
                 </div>
                 <h3 className="footer-text">© Benjamin Elliott 2023</h3>
                 <div className="footer-links">
                 {
-                        props.contacts.map((contact: { link: To; icon: string | undefined; name: string | undefined; key: Key | null | undefined; }) => {
-                            return (
-                                <Link
-                                    to={contact.link}
-                                    target='_blank'
-                                    rel="noreferrer"
-                                    key={contact.key}
-                                >
-                                    <LazyLoadImage
-                                        className="tech-stack-logo"
-                                        src={contact.icon}
-                                        alt={contact.name}
-                                    />
-                                </Link>
-                            )
-                        })
-                    }
+                    contacts.map((contact) =>
+                        <Link
+                            to={contact.link}
+                            target='_blank'
+                            rel="noreferrer"
+                            key={contact.key}
+                        >
+                            <LazyLoadImage
+                                className="tech-stack-logo"
+                                src={contact.icon}
+                                alt={contact.name}
+                            />
+                        </Link>
+                    )
+                }
                 </div>
             </article>
         </section>
