@@ -26,6 +26,7 @@ export const Layout = ({ links, socials, contacts } : {
             <LazyLoadImage
                 src="images/B.png"
                 className="benjamin-logo"
+                alt="benjamin-logo"
             />
             <ul className="header-links">
                 {
