@@ -77,7 +77,7 @@ const Benjamin = {
       image: "🧑🏽‍🎓️",
     },
   ],
-  techStack: [
+  frontEnd: [
     {
       key: 0,
       name: "HTML5",
@@ -110,39 +110,113 @@ const Benjamin = {
     },
     {
       key: 5,
-      name: "Wordpress",
-      image: "logos/wordpress.png",
-      link: "https://www.wordpress.com/",
+      name: "Next.js",
+      image: "logos/nextjs.svg",
+      link: "https://nextjs.org/",
     },
     {
       key: 6,
-      name: "Stripe",
-      image: "logos/stripe.png",
-      link: "https://www.stripe.com/",
-    },
-    {
-      key: 7,
       name: "SASS",
       image: "logos/sass.svg",
       link: "https://sass-lang.com/",
     },
     {
-      key: 8,
+      key: 7,
       name: "Chakra UI",
       image: "logos/chakra.svg",
       link: "https://chakra-ui.com",
     },
     {
-      key: 9,
+      key: 8,
       name: "TailwindCSS",
       image: "logos/tailwind.svg",
       link: "https://tailwindcss.com/",
     },
     {
+      key: 9,
+      name: "Bootstrap",
+      image: "logos/bootstrap.png",
+      link: "https://getbootstrap.com/",
+    },
+    {
       key: 10,
-      name: "ChatGPT",
-      image: "logos/ChatGPT_logo.svg.png",
-      link: "https://chat.openai.com/",
+      name: "Material-UI",
+      image: "logos/materialui.svg",
+      link: "https://material-ui.com/",
+    },
+    {
+      key: 11,
+      name: "shadcn",
+      image: "logos/shadcn.png",
+      link: "https://ui.shadcn.com/",
+    },
+  ],
+  backEnd: [
+    {
+      key: 0,
+      name: "Node.js",
+      image: "logos/nodejs.png",
+      link: "https://nodejs.org/",
+    },
+    {
+      key: 1,
+      name: "Express",
+      image: "logos/expressjs.png",
+      link: "https://expressjs.com/",
+    },
+    {
+      key: 2,
+      name: "MongoDB",
+      image: "logos/mongodb.svg",
+      link: "https://www.mongodb.com/",
+    },
+    {
+      key: 3,
+      name: "mongoose",
+      image: "logos/mongoose.png",
+      link: "https://www.mongoosejs.com/",
+    },
+    {
+      key: 4,
+      name: "Prisma",
+      image: "logos/prisma.svg",
+      link: "https://www.prisma.io/",
+    },
+    {
+      key: 5,
+      name: "PostgreSQL",
+      image: "logos/postgresql.svg",
+      link: "https://www.postgresql.org/",
+    },
+    {
+      key: 6,
+      name: "Docker",
+      image: "logos/docker.svg",
+      link: "https://www.docker.com/",
+    },
+    {
+      key: 7,
+      name: "Vercel",
+      image: "logos/vercel.svg",
+      link: "https://vercel.com/",
+    },
+    {
+      key: 8,
+      name: "netlify",
+      image: "logos/netlify.png",
+      link: "https://www.netlify.com/",
+    },
+    {
+      key: 9,
+      name: "railway",
+      image: "logos/railway.svg",
+      link: "https://www.railway.app/",
+    },
+    {
+      key: 10,
+      name: "Wordpress",
+      image: "logos/wordpress.png",
+      link: "https://www.wordpress.com/",
     },
   ],
   tools: [
@@ -178,9 +252,15 @@ const Benjamin = {
     },
     {
       key: 6,
-      name: "netlify",
-      image: "logos/netlify.png",
-      link: "https://www.netlify.com/",
+      name: "ChatGPT",
+      image: "logos/ChatGPT_logo.svg.png",
+      link: "https://chat.openai.com/",
+    },
+    {
+      key: 7,
+      name: "Stripe",
+      image: "logos/stripe.png",
+      link: "https://www.stripe.com/",
     },
   ],
   learning: [
@@ -204,38 +284,14 @@ const Benjamin = {
     },
     {
       key: 3,
-      name: "Next.js",
-      image: "logos/nextjs.svg",
-      link: "https://nextjs.org/",
-    },
-    {
-      key: 4,
-      name: "MongoDB",
-      image: "logos/mongodb.png",
-      link: "https://www.mongodb.com/",
-    },
-    {
-      key: 5,
-      name: "mongoose",
-      image: "logos/mongoose.png",
-      link: "https://www.mongoosejs.com/",
-    },
-    {
-      key: 6,
-      name: "Prisma",
-      image: "logos/prisma.svg",
-      link: "https://www.prisma.io/",
-    },
-    {
-      key: 7,
       name: "React Native",
       image: "logos/reactnative.svg",
       link: "https://reactnative.dev/",
     },
     {
-      key: 8,
+      key: 4,
       name: "Expo",
-      image: "logos/expo.png",
+      image: "logos/expo.svg",
       link: "https://expo.dev/",
     },
   ],
@@ -398,7 +454,8 @@ export const App = () => (
             <Home
               name={Benjamin.name}
               image={Benjamin.images.hero}
-              techStack={Benjamin.techStack}
+              frontEnd={Benjamin.frontEnd}
+              backEnd={Benjamin.backEnd}
               tools={Benjamin.tools}
               learning={Benjamin.learning}
             />
@@ -418,7 +475,6 @@ export const App = () => (
           path="portfolio"
           element={
             <Portfolio
-              techStack={Benjamin.techStack}
               certifications={Benjamin.certifications}
               projects={Benjamin.projects}
             />

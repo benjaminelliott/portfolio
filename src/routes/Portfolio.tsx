@@ -7,7 +7,6 @@ import { Carousel } from "react-responsive-carousel";
 export const Portfolio = ({
   certifications,
   projects,
-  techStack,
 }: {
   certifications?: {
     image: string;
@@ -22,11 +21,6 @@ export const Portfolio = ({
     techStack: string[];
     description: string;
     image: string;
-  }[];
-  techStack?: {
-    image: string;
-    link: string;
-    name: string;
   }[];
 }) => {
   const springs = useSpring({
@@ -123,8 +117,8 @@ export const Portfolio = ({
                   <ul className="site-tech-stack">
                     {site.techStack.map(
                       (tech) =>
-                        techStack &&
-                        techStack.map((t) => {
+                        site.techStack &&
+                        site.techStack.map((t: any) => {
                           if (t.name === tech)
                             <Link to={t.link} key={tech}>
                               <LazyLoadImage
