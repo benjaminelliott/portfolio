@@ -275,6 +275,13 @@ body {
   gap: 1rem;
 }
 
+.tech-stack-combined {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 100%;
+}
+
 .tech-logos {
   display: flex;
   flex-wrap: wrap;
@@ -873,15 +880,25 @@ body {
     width: 50%;
   }
 
+  .tech-stack-combined {
+    flex-direction: row;
+  }
+
   @media (min-width: 1400px) {
     .App {
       max-width: 85dvw;
+    }
+    .tech-stack-combined {
+      flex-direction: row;
     }
   }
 
   @media (min-width: 1700px) {
     .App {
       max-width: 80dvw;
+    }
+    .tech-stack-combined {
+      flex-direction: row;
     }
   }
 }

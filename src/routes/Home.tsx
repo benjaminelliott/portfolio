@@ -101,44 +101,46 @@ export const Home = ({
               ))}
           </div>
         </div>
-        <div className="tech-stack">
-          <h4 className="section-title">Tools</h4>
-          <div className="tech-logos">
-            {tools &&
-              tools.map((tech) => (
-                <Link
-                  to={tech.link}
-                  target="_blank"
-                  rel="noreferrer"
-                  key={tech.key}
-                >
-                  <LazyLoadImage
-                    className="tech-stack-logo"
-                    src={tech.image}
-                    alt={tech.name}
-                  />
-                </Link>
-              ))}
+        <div className="tech-stack-combined">
+          <div className="tech-stack">
+            <h4 className="section-title">Tools</h4>
+            <div className="tech-logos">
+              {tools &&
+                tools.map((tech) => (
+                  <Link
+                    to={tech.link}
+                    target="_blank"
+                    rel="noreferrer"
+                    key={tech.key}
+                  >
+                    <LazyLoadImage
+                      className="tech-stack-logo"
+                      src={tech.image}
+                      alt={tech.name}
+                    />
+                  </Link>
+                ))}
+            </div>
           </div>
-        </div>
-        <div className="tech-stack">
-          <h4 className="section-title">Learning</h4>
-          <div className="tech-logos">
-            {learning &&
-              learning.map((tech) => (
-                <Link
-                  to={tech.link}
-                  target="_blank"
-                  rel="noreferrer"
-                  key={tech.key}
-                >
-                  <LazyLoadImage
-                    className="tech-stack-logo"
-                    src={tech.image}
-                    alt={tech.name}
-                  />
-                </Link>
-              ))}
+          <div className="tech-stack">
+            <h4 className="section-title">Learning</h4>
+            <div className="tech-logos">
+              {learning &&
+                learning.map((tech) => (
+                  <Link
+                    to={tech.link}
+                    target="_blank"
+                    rel="noreferrer"
+                    key={tech.key}
+                  >
+                    <LazyLoadImage
+                      className="tech-stack-logo"
+                      src={tech.image}
+                      alt={tech.name}
+                    />
+                  </Link>
+                ))}
+            </div>
           </div>
         </div>
       </article>
