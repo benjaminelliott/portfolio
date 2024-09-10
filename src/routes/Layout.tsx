@@ -73,7 +73,7 @@ export const Layout = ({
           </Link>
         ))}
       </div>
-      <h3 className="footer-text">© Benjamin Elliott {year}</h3>
+      <h3 className="footer-text">benjamin.dev {year}</h3>
       <div className="footer-links">
         {contacts.map((contact) => (
           <Link
