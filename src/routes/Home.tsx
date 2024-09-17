@@ -55,7 +55,7 @@ export const Home = ({
             web developer
           </h2>
           <h2 className="home-title">
-            <strong className="home-title-strong">Ironhack </strong>alum 🚀
+            <strong className="home-title-strong">Ironhack </strong>TA 🚀
           </h2>
         </div>
         <img className="hero-image" src={image} alt="whoops" />
