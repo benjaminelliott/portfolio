@@ -26,8 +26,8 @@ export const Layout = ({
     key: Key;
   }[];
 }) => (
-  <section className="layout">
-    <article className="header">
+  <div className="layout">
+    <nav className="header">
       <LazyLoadImage
         src="images/B.png"
         className="benjamin-logo"
@@ -52,11 +52,11 @@ export const Layout = ({
           </NavLink>
         ))}
       </ul>
-    </article>
-    <article className="content">
+    </nav>
+    <section className="content">
       <Outlet />
-    </article>
-    <article className="footer">
+    </section>
+    <footer className="footer">
       <div className="footer-links">
         {socials.map((social) => (
           <Link
@@ -90,6 +90,6 @@ export const Layout = ({
           </Link>
         ))}
       </div>
-    </article>
-  </section>
+    </footer>
+  </div>
 );

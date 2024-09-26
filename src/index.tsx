@@ -1,12 +1,16 @@
-import React from 'react';
-import ReactDOM from 'react-dom/client';
-import { createBrowserRouter, RouterProvider, Navigate } from "react-router-dom";
-import { Root } from './routes/Root'
-import { ErrorPage } from "./components/ErrorPage"
-import { Home } from "./routes/Home"
-import { About } from "./routes/About"
-import { Portfolio } from "./routes/Portfolio"
-import './index.css';
+import React from "react";
+import ReactDOM from "react-dom/client";
+import {
+  createBrowserRouter,
+  RouterProvider,
+  Navigate,
+} from "react-router-dom";
+import { Root } from "./routes/Root";
+import { ErrorPage } from "./components/ErrorPage";
+import { Home } from "./routes/Home";
+import { About } from "./routes/About";
+import { Projects } from "./routes/Projects";
+import "./index.css";
 
 const router = createBrowserRouter([
   {
@@ -16,25 +20,25 @@ const router = createBrowserRouter([
     children: [
       {
         path: "*",
-        element: <Home />
+        element: <Home />,
       },
       {
         path: "*about",
-        element: <About />
+        element: <About />,
       },
       {
-        path: "*portfolio",
-        element: <Portfolio />
+        path: "*projects",
+        element: <Projects />,
       },
       {
         path: "*",
-        element: <Navigate to="*" />
+        element: <Navigate to="*" />,
       },
     ],
   },
 ]);
 
-const root = ReactDOM.createRoot(document.getElementById('root')!);
+const root = ReactDOM.createRoot(document.getElementById("root")!);
 root.render(
   <React.StrictMode>
     <RouterProvider router={router} />

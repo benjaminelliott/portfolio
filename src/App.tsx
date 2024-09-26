@@ -2,9 +2,10 @@ import { Routes, Route, Navigate } from "react-router-dom";
 import { Layout } from "./routes/Layout";
 import { Home } from "./routes/Home";
 import { About } from "./routes/About";
-import { Portfolio } from "./routes/Portfolio";
+import { Certifications } from "./routes/Certifications";
+import { Projects } from "./routes/Projects";
 import "./App.scss";
-import Benjamin from "./constants";
+import { benjamin } from "./constants";
 
 export const App = () => (
   <div className="App">
@@ -13,9 +14,9 @@ export const App = () => (
         path="*"
         element={
           <Layout
-            links={Benjamin.links}
-            socials={Benjamin.socials}
-            contacts={Benjamin.contacts}
+            links={benjamin.links}
+            socials={benjamin.socials}
+            contacts={benjamin.contacts}
           />
         }
       >
@@ -23,12 +24,9 @@ export const App = () => (
           index
           element={
             <Home
-              name={Benjamin.name}
-              image={Benjamin.images.hero}
-              frontEnd={Benjamin.frontEnd}
-              backEnd={Benjamin.backEnd}
-              tools={Benjamin.tools}
-              learning={Benjamin.learning}
+              name={benjamin.name}
+              image={benjamin.images.hero}
+              technologies={benjamin.technologies}
             />
           }
         />
@@ -36,20 +34,20 @@ export const App = () => (
           path="about"
           element={
             <About
-              coachingSkills={Benjamin.coachingSkills}
-              codingSkills={Benjamin.codingSkills}
-              hobbies={Benjamin.hobbies}
+              softSkills={benjamin.softSkills}
+              hardSkills={benjamin.hardSkills}
+              hobbies={benjamin.hobbies}
+              aboutItems={benjamin.about}
             />
           }
         />
         <Route
-          path="portfolio"
-          element={
-            <Portfolio
-              certifications={Benjamin.certifications}
-              projects={Benjamin.projects}
-            />
-          }
+          path="certifications"
+          element={<Certifications certifications={benjamin.certifications} />}
+        />
+        <Route
+          path="projects"
+          element={<Projects projects={benjamin.projects} />}
         />
         <Route path="*" element={<Navigate to="../public/index.html" />} />
       </Route>
