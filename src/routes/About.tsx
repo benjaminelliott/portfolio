@@ -1,21 +1,11 @@
 import { PageContainer } from "../components/PageContainer";
 import { PageHeader } from "../components/PageHeader";
 import { PageContent } from "../components/PageContent";
-import type { Skill, Hobby, AboutItem } from "../global";
+import type { AboutItem } from "../global";
 import { PageTitle } from "../components/PageTitle";
 import { AboutList } from "../components/AboutList";
 
-export const About = ({
-  softSkills,
-  hardSkills,
-  hobbies,
-  aboutItems,
-}: {
-  softSkills?: Skill[];
-  hardSkills?: Skill[];
-  hobbies?: Hobby[];
-  aboutItems?: AboutItem[];
-}) => {
+export const About = ({ aboutItems }: { aboutItems?: AboutItem[] }) => {
   return (
     <PageContainer id="about">
       <PageHeader>

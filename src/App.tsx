@@ -30,17 +30,7 @@ export const App = () => (
             />
           }
         />
-        <Route
-          path="about"
-          element={
-            <About
-              softSkills={benjamin.softSkills}
-              hardSkills={benjamin.hardSkills}
-              hobbies={benjamin.hobbies}
-              aboutItems={benjamin.about}
-            />
-          }
-        />
+        <Route path="about" element={<About aboutItems={benjamin.about} />} />
         <Route
           path="certifications"
           element={<Certifications certifications={benjamin.certifications} />}
