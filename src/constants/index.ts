@@ -359,7 +359,7 @@ const projects = [
     image: "logos/Frosch.gif",
     description: "A web-game where you help a frog cross different terrain.",
     techStack: ["HTML5", "CSS3", "Javascript"],
-    deployedLink: "https://benjamindotdev.github.io/Frosch/",
+    deployedLink: "https://playfrosch.netlify.app",
     repoLink: "https://github.com/benjamindotdev/frosch",
   },
   {
