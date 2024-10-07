@@ -395,7 +395,7 @@ const projects = [
     description:
       "My professional portfolio site, showcasing my skills and projects.",
     techStack: ["HTML5", "CSS3", "Typescript", "React", "SASS"],
-    deployedLink: "https://benjaminelliott.dev",
+    deployedLink: "https://benjamin.dev",
     repoLink: "https://github.com/benjamindotdev/portfolio",
   },
   {
