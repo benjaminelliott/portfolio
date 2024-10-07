@@ -404,7 +404,7 @@ const projects = [
     image: "images/stacy.jpg",
     description: "A professional portfolio site for a journalist.",
     techStack: ["HTML5", "CSS3", "Javascript", "Wordpress"],
-    deployedLink: "https://www.stacyannelliott.com",
+    deployedLink: "https://stacyannelliott.wordpress.com/",
   },
 ] as Project[];
 
