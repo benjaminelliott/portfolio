@@ -330,11 +330,11 @@ const projects = [
   },
   {
     key: 1,
-    name: "littlelemon.biz",
+    name: "littlelemon",
     image: "logos/littlelemon.svg",
     description: "A small business site for a Mediterranean restaurant.",
     techStack: ["HTML5", "CSS3", "Typescript", "React", "Chakra UI", "Stripe"],
-    deployedLink: "https://littlelemon.biz",
+    deployedLink: "https://littlelemonbybenjamin.netlify.app/",
     repoLink: "https://github.com/benjamindotdev/LittleLemon",
   },
   {
