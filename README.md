@@ -1,4 +1,4 @@
-# 🚀 Full-Stack Developer | Ironhacker| asozial founder
+# 🚀 Full-Stack Developer | TA @ Ironhack | asozial founder
 
 - 🙌🏽 Full-stack developer, creative problem solver & team player who encourages positive vibes only
 - 🙌🏽 Ironhacker, known for my passion, kindness and calm demeanor. Hackshow winner with asozial.dev

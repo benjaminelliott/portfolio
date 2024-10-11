@@ -330,11 +330,11 @@ const projects = [
   },
   {
     key: 1,
-    name: "littlelemon.biz",
+    name: "littlelemon",
     image: "logos/littlelemon.svg",
     description: "A small business site for a Mediterranean restaurant.",
     techStack: ["HTML5", "CSS3", "Typescript", "React", "Chakra UI", "Stripe"],
-    deployedLink: "https://littlelemon.biz",
+    deployedLink: "https://littlelemonbybenjamin.netlify.app/",
     repoLink: "https://github.com/benjamindotdev/LittleLemon",
   },
   {
@@ -359,7 +359,7 @@ const projects = [
     image: "logos/Frosch.gif",
     description: "A web-game where you help a frog cross different terrain.",
     techStack: ["HTML5", "CSS3", "Javascript"],
-    deployedLink: "https://benjamindotdev.github.io/Frosch/",
+    deployedLink: "https://playfrosch.netlify.app",
     repoLink: "https://github.com/benjamindotdev/frosch",
   },
   {
@@ -395,7 +395,7 @@ const projects = [
     description:
       "My professional portfolio site, showcasing my skills and projects.",
     techStack: ["HTML5", "CSS3", "Typescript", "React", "SASS"],
-    deployedLink: "https://benjaminelliott.dev",
+    deployedLink: "https://benjamin.dev",
     repoLink: "https://github.com/benjamindotdev/portfolio",
   },
   {
@@ -404,7 +404,7 @@ const projects = [
     image: "images/stacy.jpg",
     description: "A professional portfolio site for a journalist.",
     techStack: ["HTML5", "CSS3", "Javascript", "Wordpress"],
-    deployedLink: "https://www.stacyannelliott.com",
+    deployedLink: "https://stacyannelliott.wordpress.com/",
   },
 ] as Project[];
 
