@@ -410,9 +410,7 @@ const projects = [
 
 const benjamin = {
   name: "Benjamin",
-  images: {
-    hero: "images/benjamin.jpg",
-  },
+  hero: "images/benjamin.jpg",
   about: [
     {
       key: 0,

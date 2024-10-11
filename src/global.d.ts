@@ -1,8 +1,6 @@
 type Benjamin = {
   name: string;
-  images: {
-    hero: string;
-  };
+  hero: string;
   about: AboutItem[];
   hobbies: Hobby[];
   softSkills: Skill[];

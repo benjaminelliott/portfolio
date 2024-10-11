@@ -25,7 +25,7 @@ export const App = () => (
           element={
             <Home
               name={benjamin.name}
-              image={benjamin.images.hero}
+              image={benjamin.hero}
               technologies={benjamin.technologies}
             />
           }
