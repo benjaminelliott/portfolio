@@ -275,7 +275,7 @@ const technologies = [
     isLearning: false,
   },
   {
-    key: 51,
+    key: 52,
     name: "Wordpress",
     image: "logos/wordpress.png",
     link: "https://www.wordpress.com/",
@@ -283,7 +283,15 @@ const technologies = [
     isLearning: false,
   },
   {
-    key: 52,
+    key: 53,
+    name: "Heroku",
+    image: "logos/heroku.svg",
+    link: "https://www.heroku.com/",
+    type: "Tool",
+    isLearning: false,
+  },
+  {
+    key: 60,
     name: "Notion",
     image: "logos/notion.svg",
     link: "https://www.notion.so/",
@@ -291,7 +299,7 @@ const technologies = [
     isLearning: false,
   },
   {
-    key: 53,
+    key: 61,
     name: "Trello",
     image: "logos/trello.svg",
     link: "https://www.trello.com/",
@@ -299,7 +307,7 @@ const technologies = [
     isLearning: false,
   },
   {
-    key: 54,
+    key: 62,
     name: "Slack",
     image: "logos/slack.svg",
     link: "https://www.slack.com/",
