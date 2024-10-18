@@ -8,7 +8,7 @@ import "./App.scss";
 import { benjamin } from "./constants";
 
 export const App = () => (
-  <div className="App">
+  <main className="App">
     <Routes>
       <Route
         path="*"
@@ -42,5 +42,5 @@ export const App = () => (
         <Route path="*" element={<Navigate to="../public/index.html" />} />
       </Route>
     </Routes>
-  </div>
+  </main>
 );
