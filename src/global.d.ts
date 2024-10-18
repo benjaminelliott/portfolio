@@ -67,7 +67,14 @@ type Technology = {
   key: number;
   name: string;
   image: string;
-  type: "Frontend" | "Backend" | "Tool" | "Mobile" | "";
+  type:
+    | "Frontend"
+    | "Backend"
+    | "Tool"
+    | "Mobile"
+    | "CI/CD"
+    | "Project Management"
+    | "";
   isLearning: boolean;
   link: string;
 };
