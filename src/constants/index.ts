@@ -176,7 +176,7 @@ const technologies = [
     image: "logos/postgresql.svg",
     link: "https://www.postgresql.org/",
     type: "Backend",
-    isLearning: true,
+    isLearning: false,
   },
   {
     key: 26,

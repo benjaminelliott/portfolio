@@ -20,22 +20,22 @@ describe("Home Component", () => {
     );
 
     expect(
-      screen.getByText((content, element) => content.includes("Hey, I'm"))
+      screen.getByText((content) => content.includes("Hey, I'm"))
     ).toBeInTheDocument();
     expect(
-      screen.getByText((content, element) => content.includes("Benjamin"))
+      screen.getByText((content) => content.includes("Benjamin"))
     ).toBeInTheDocument();
     expect(
-      screen.getByText((content, element) => content.includes("Full-stack"))
+      screen.getByText((content) => content.includes("Full-stack"))
     ).toBeInTheDocument();
     expect(
-      screen.getByText((content, element) => content.includes("web developer"))
+      screen.getByText((content) => content.includes("web developer"))
     ).toBeInTheDocument();
     expect(
-      screen.getByText((content, element) => content.includes("Ironhack"))
+      screen.getByText((content) => content.includes("Ironhack"))
     ).toBeInTheDocument();
     expect(
-      screen.getByText((content, element) => content.includes("TA"))
+      screen.getByText((content) => content.includes("TA"))
     ).toBeInTheDocument();
     expect(screen.getByAltText("Benjamin")).toHaveAttribute(
       "src",
@@ -56,7 +56,7 @@ describe("Home Component", () => {
     expect(screen.getByText("Node.js")).toBeInTheDocument();
     expect(screen.getByText("Tools")).toBeInTheDocument();
     expect(screen.getByText("Docker")).toBeInTheDocument();
-    expect(screen.getByText("Learning")).toBeInTheDocument();
+    expect(screen.getByText("Currently learning")).toBeInTheDocument();
   });
 
   it("renders default image when no image is provided", () => {
