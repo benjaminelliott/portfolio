@@ -314,6 +314,38 @@ const technologies = [
     type: "Tool",
     isLearning: false,
   },
+  {
+    key: 63,
+    name: "Jest",
+    image: "logos/jest.svg",
+    link: "https://jestjs.io/",
+    type: "Tool",
+    isLearning: false,
+  },
+  {
+    key: 64,
+    name: "React Testing Library",
+    image: "logos/rtl.png",
+    link: "https://testing-library.com/docs/react-testing-library/intro/",
+    type: "Tool",
+    isLearning: false,
+  },
+  {
+    key: 65,
+    name: "Playwright",
+    image: "logos/playwright.svg",
+    link: "https://playwright.dev/",
+    type: "Tool",
+    isLearning: true,
+  },
+  {
+    key: 66,
+    name: "Cypress",
+    image: "logos/cypress.svg",
+    link: "https://www.cypress.io/",
+    type: "Tool",
+    isLearning: true,
+  },
 ] as Technology[];
 
 const projects = [

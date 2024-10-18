@@ -51,6 +51,7 @@ export const Projects = ({ projects }: { projects?: Project[] }) => {
           {filteredProjects &&
             filteredProjects.map((project) => (
               <ProjectCard
+                key={project.key}
                 project={project}
                 techs={transformTechStack(project.techStack)}
               />

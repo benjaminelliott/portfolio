@@ -10,7 +10,10 @@ export const CertificationList = ({
     <div className="certification-list">
       {certifications &&
         certifications.map((certification) => (
-          <CertificationCard certification={certification} />
+          <CertificationCard
+            key={certification.key}
+            certification={certification}
+          />
         ))}
     </div>
   );

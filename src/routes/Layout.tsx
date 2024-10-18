@@ -1,7 +1,7 @@
+import { Header } from "../components/Header";
 import { Outlet } from "react-router-dom";
 import { Footer } from "../components/Footer";
 import type { Link, Social, Contact } from "../global";
-import { Header } from "../components/Header";
 
 export const Layout = ({
   links,
