@@ -1,5 +1,5 @@
 import { FolderGit } from "lucide-react";
-import { IconButton } from "./IconButton";
+import { IconButton } from "../IconButton/IconButton";
 import { Link } from "react-router-dom";
 
 export const GitButton = ({

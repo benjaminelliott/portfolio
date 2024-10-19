@@ -1,9 +1,9 @@
-import { PageContainer } from "../components/PageContainer";
-import { PageTitle } from "../components/PageTitle";
-import { PageHeader } from "../components/PageHeader";
-import { PageContent } from "../components/PageContent";
+import { PageContainer } from "../components/PageContainer/PageContainer";
+import { PageTitle } from "../components/PageTitle/PageTitle";
+import { PageHeader } from "../components/PageHeader/PageHeader";
+import { PageContent } from "../components/PageContent/PageContent";
 import type { Certification } from "../global";
-import { CertificationList } from "../components/CertificationList";
+import { CertificationList } from "../components/CertificationList/CertificationList";
 
 export const Certifications = ({
   certifications,

@@ -1,5 +1,5 @@
-import type { Certification } from "../global";
-import { CertificationCard } from "./CertificationCard";
+import type { Certification } from "../../global";
+import { CertificationCard } from "../CertificationCard/CertificationCard";
 
 export const CertificationList = ({
   certifications,

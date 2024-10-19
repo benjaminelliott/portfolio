@@ -2,7 +2,7 @@ import { render, screen } from "@testing-library/react";
 import "@testing-library/jest-dom";
 import { Footer } from "./Footer";
 import { BrowserRouter } from "react-router-dom";
-import type { Social, Contact } from "../global";
+import type { Social, Contact } from "../../global";
 
 const mockSocials: Social[] = [
   {

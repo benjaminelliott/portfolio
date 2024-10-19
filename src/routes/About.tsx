@@ -1,9 +1,9 @@
-import { PageContainer } from "../components/PageContainer";
-import { PageHeader } from "../components/PageHeader";
-import { PageContent } from "../components/PageContent";
+import { PageContainer } from "../components/PageContainer/PageContainer";
+import { PageHeader } from "../components/PageHeader/PageHeader";
+import { PageContent } from "../components/PageContent/PageContent";
 import type { AboutItem } from "../global";
-import { PageTitle } from "../components/PageTitle";
-import { AboutList } from "../components/AboutList";
+import { PageTitle } from "../components/PageTitle/PageTitle";
+import { AboutList } from "../components/AboutList/AboutList";
 
 export const About = ({ aboutItems }: { aboutItems?: AboutItem[] }) => {
   return (

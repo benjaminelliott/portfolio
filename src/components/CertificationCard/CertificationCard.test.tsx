@@ -1,7 +1,7 @@
 import { render, screen } from "@testing-library/react";
 import "@testing-library/jest-dom";
 import { CertificationCard } from "./CertificationCard";
-import type { Certification } from "../global";
+import type { Certification } from "../../global";
 import { BrowserRouter } from "react-router-dom";
 
 const mockCertification: Certification = {

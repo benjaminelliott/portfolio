@@ -1,4 +1,4 @@
-import { IconButton } from "./IconButton";
+import { IconButton } from "../IconButton/IconButton";
 import { Link } from "react-router-dom";
 import { ExternalLink } from "lucide-react";
 

@@ -1,4 +1,4 @@
-import { SubHeading } from "./SubHeading";
+import { SubHeading } from "./SubHeading/SubHeading";
 import { TechLogoImage } from "./TechLogoImage";
 
 export const TechList = ({

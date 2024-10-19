@@ -1,7 +1,7 @@
-import { Project, Technology } from "../global";
-import { ProjectInfo } from "./ProjectInfo";
-import { ProjectLinks } from "./ProjectLinks";
-import { TechList } from "./TechList";
+import { Project, Technology } from "../../global";
+import { ProjectInfo } from "../ProjectInfo";
+import { ProjectLinks } from "../ProjectLinks";
+import { TechList } from "../TechList";
 
 export const ProjectCard = ({
   project,

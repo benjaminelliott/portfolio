@@ -1,5 +1,5 @@
-import { PageText } from "./PageText";
-import { CircleImage } from "./CircleImage";
+import { PageText } from "../PageText/PageText";
+import { CircleImage } from "../CircleImage/CircleImage";
 
 export const AboutCard = ({ image, text }: { image: string; text: string }) => {
   return (

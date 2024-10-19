@@ -1,7 +1,7 @@
 import { LazyLoadImage } from "react-lazy-load-image-component";
-import { Certification } from "../global";
-import { LinkButton } from "./LinkButton";
-import { SubHeading } from "./SubHeading";
+import { Certification } from "../../global";
+import { LinkButton } from "../LinkButton/LinkButton";
+import { SubHeading } from "../SubHeading/SubHeading";
 
 export const CertificationCard = ({
   certification,

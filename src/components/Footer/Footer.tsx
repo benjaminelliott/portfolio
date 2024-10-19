@@ -1,5 +1,5 @@
-import { TechLogoImage } from "./TechLogoImage";
-import type { Social, Contact } from "../global";
+import { TechLogoImage } from "../TechLogoImage";
+import type { Social, Contact } from "../../global";
 
 export const Footer = ({
   socials,
