@@ -1,10 +1,10 @@
-import { PageContainer } from "../components/PageContainer/PageContainer";
-import { PageTitle } from "../components/PageTitle/PageTitle";
-import { PageHeader } from "../components/PageHeader/PageHeader";
-import { PageContent } from "../components/PageContent/PageContent";
-import { TechList } from "../components/TechList";
-import type { Technology } from "../global";
-import { CircleImage } from "../components/CircleImage/CircleImage";
+import { PageContainer } from "../../components/PageContainer/PageContainer";
+import { PageTitle } from "../../components/PageTitle/PageTitle";
+import { PageHeader } from "../../components/PageHeader/PageHeader";
+import { PageContent } from "../../components/PageContent/PageContent";
+import { TechList } from "../../components/TechList/TechList";
+import type { Technology } from "../../global";
+import { CircleImage } from "../../components/CircleImage/CircleImage";
 
 export const Home = ({
   technologies,

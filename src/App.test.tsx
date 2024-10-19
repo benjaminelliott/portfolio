@@ -2,11 +2,11 @@ import { render } from "@testing-library/react";
 import { MemoryRouter } from "react-router-dom";
 import { App } from "./App";
 import { Routes, Route, Navigate } from "react-router-dom";
-import { Layout } from "./routes/Layout";
-import { Home } from "./routes/Home";
-import { About } from "./routes/About";
-import { Certifications } from "./routes/Certifications";
-import { Projects } from "./routes/Projects";
+import { Layout } from "./routes/Layout/Layout";
+import { Home } from "./routes/Home/Home";
+import { About } from "./routes/About/About";
+import { Certifications } from "./routes/Certifications/Certifications";
+import { Projects } from "./routes/Projects/Projects";
 import { benjamin } from "./constants";
 
 jest.mock("./App", () => ({

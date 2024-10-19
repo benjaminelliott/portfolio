@@ -1,5 +1,5 @@
 import { LazyLoadImage } from "react-lazy-load-image-component";
-import { SubHeading } from "./SubHeading/SubHeading";
+import { SubHeading } from "../SubHeading/SubHeading";
 
 export const ProjectInfo = ({
   image,

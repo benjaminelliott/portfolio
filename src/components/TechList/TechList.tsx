@@ -1,16 +1,12 @@
-import { SubHeading } from "./SubHeading/SubHeading";
-import { TechLogoImage } from "./TechLogoImage";
+import { SubHeading } from "../SubHeading/SubHeading";
+import { TechLogoImage } from "../TechLogoImage/TechLogoImage";
+import type { Tech } from "../../global";
 
 export const TechList = ({
   techs,
   subHeading,
 }: {
-  techs?: {
-    image: string;
-    key: number;
-    name: string;
-    link: string;
-  }[];
+  techs: Tech[];
   subHeading?: string;
 }) => {
   return (

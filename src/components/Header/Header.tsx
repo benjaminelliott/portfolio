@@ -1,6 +1,6 @@
 import { NavLink } from "react-router-dom";
 import { Link } from "../../global";
-import { TechLogoImage } from "../TechLogoImage";
+import { TechLogoImage } from "../TechLogoImage/TechLogoImage";
 
 export const Header = ({ links }: { links: Link[] }) => {
   return (

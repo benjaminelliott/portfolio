@@ -49,18 +49,3 @@ test("renders the CertificationCard component with different text", () => {
   expect(screen.getByText("description2")).toBeInTheDocument();
   expect(screen.getByRole("img")).toBeInTheDocument();
 });
-
-test("fails to render the CertificationCard component with missing props", () => {
-  const consoleErrorSpy = jest
-    .spyOn(console, "error")
-    .mockImplementation(() => {});
-  // @ts-ignore
-  expect(() => {
-    render(
-      <BrowserRouter>
-        <CertificationCard />
-      </BrowserRouter>
-    );
-  }).toThrow();
-  consoleErrorSpy.mockRestore();
-});

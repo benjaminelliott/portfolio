@@ -1,7 +1,7 @@
 import { render, screen } from "@testing-library/react";
 import "@testing-library/jest-dom";
 import { Projects } from "./Projects";
-import { Project } from "../global";
+import { Project } from "../../global";
 import { BrowserRouter } from "react-router-dom";
 
 test("loads and displays project items", async () => {

@@ -1,12 +1,12 @@
 import { render } from "@testing-library/react";
-import { App } from "../App";
+import { App } from "../../App";
 
-jest.mock("../App", () => ({
+jest.mock("../../App", () => ({
   App: () => <div>App</div>,
 }));
 
 describe("Root Component", () => {
-  it("should render a div witht the className root", () => {
+  it("should render a div with the className root", () => {
     render(<div className="root">"App"</div>);
   });
 

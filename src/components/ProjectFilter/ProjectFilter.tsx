@@ -1,17 +1,15 @@
 import { useState, useEffect } from "react";
 import { RotateCcw } from "lucide-react";
-import type { Project } from "../global";
-import { TechLogoImage } from "./TechLogoImage";
-import { technologies } from "../constants";
+import type { Project } from "../../global";
+import { TechLogoImage } from "../TechLogoImage/TechLogoImage";
+import { technologies } from "../../constants";
 
-type ProjectFilterProps = {
-  projects: Project[];
-  setFilteredProjects: React.Dispatch<React.SetStateAction<Project[]>>;
-};
-
-export const ProjectFilter: React.FC<ProjectFilterProps> = ({
+export const ProjectFilter = ({
   projects,
   setFilteredProjects,
+}: {
+  projects: Project[];
+  setFilteredProjects: React.Dispatch<React.SetStateAction<Project[]>>;
 }) => {
   const techs = [
     ...new Set(

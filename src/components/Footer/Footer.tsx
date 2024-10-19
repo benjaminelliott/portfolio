@@ -1,4 +1,4 @@
-import { TechLogoImage } from "../TechLogoImage";
+import { TechLogoImage } from "../TechLogoImage/TechLogoImage";
 import type { Social, Contact } from "../../global";
 
 export const Footer = ({

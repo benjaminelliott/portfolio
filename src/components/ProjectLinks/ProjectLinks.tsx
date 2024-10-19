@@ -1,5 +1,5 @@
-import { GitButton } from "./GitButton/GitButton";
-import { LinkButton } from "./LinkButton/LinkButton";
+import { GitButton } from "../GitButton/GitButton";
+import { LinkButton } from "../LinkButton/LinkButton";
 
 export const ProjectLinks = ({
   repoLink,

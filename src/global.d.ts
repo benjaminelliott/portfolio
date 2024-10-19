@@ -79,6 +79,13 @@ type Technology = {
   link: string;
 };
 
+type Tech = {
+  key: number;
+  name: string;
+  image: string;
+  link: string;
+};
+
 type Project = {
   key: number;
   name: string;
@@ -100,5 +107,6 @@ export type {
   Social,
   Certification,
   Technology,
+  Tech,
   Project,
 };
