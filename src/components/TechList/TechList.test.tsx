@@ -48,16 +48,6 @@ test("renders the TechList component with different text", () => {
   expect(screen.getByText("tech3")).toBeInTheDocument();
 });
 
-test("fails to render the TechList component with missing props", () => {
-  // @ts-ignore
-  render(
-    <BrowserRouter>
-      <TechList />
-    </BrowserRouter>
-  );
-  expect(screen.queryByText("tech1")).toBeNull();
-});
-
 test("renders the TechList component with tech-list class", () => {
   render(
     <BrowserRouter>

@@ -74,6 +74,7 @@ type Technology = {
     | "Mobile"
     | "CI/CD"
     | "Project Management"
+    | "Content Management"
     | "";
   isLearning: boolean;
   link: string;
