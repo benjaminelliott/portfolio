@@ -90,6 +90,14 @@ const technologies = [
     isLearning: true,
   },
   {
+    key: 11,
+    name: "Webpack",
+    image: "logos/webpack.png",
+    link: "https://webpack.js.org/",
+    type: "Frontend",
+    isLearning: true,
+  },
+  {
     key: 30,
     name: "CSS3",
     image: "logos/css3.svg",
@@ -283,6 +291,14 @@ const technologies = [
   },
   {
     key: 73,
+    name: "Vite",
+    image: "logos/vite.svg",
+    link: "https://vitejs.dev/",
+    type: "Tool",
+    isLearning: false,
+  },
+  {
+    key: 74,
     name: "GitHub Copilot",
     image: "logos/copilot.png",
     link: "https://github.com/features/copilot",
@@ -290,7 +306,7 @@ const technologies = [
     isLearning: false,
   },
   {
-    key: 74,
+    key: 75,
     name: "ChatGPT",
     image: "logos/ChatGPT_logo.svg.png",
     link: "https://chat.openai.com/",
@@ -298,7 +314,7 @@ const technologies = [
     isLearning: false,
   },
   {
-    key: 75,
+    key: 76,
     name: "Stripe",
     image: "logos/stripe.png",
     link: "https://www.stripe.com/",
