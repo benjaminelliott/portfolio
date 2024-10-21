@@ -29,6 +29,7 @@ export const Projects = ({ projects }: { projects?: Project[] }) => {
             projects={completedProjects}
           />
         )}
+        <hr className="section-hr" />
         {inProgressProjects && inProgressProjects.length > 0 && (
           <ProjectSection
             status="in progress"
@@ -36,6 +37,7 @@ export const Projects = ({ projects }: { projects?: Project[] }) => {
             projects={inProgressProjects}
           />
         )}
+        <hr className="section-hr" />
         {planningProjects && planningProjects.length > 0 && (
           <ProjectSection
             status="planning"

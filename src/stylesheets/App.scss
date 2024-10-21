@@ -434,6 +434,12 @@ body {
   text-align: left;
 }
 
+.section-hr {
+  width: 100%;
+  border: 1px solid var(--six);
+  box-shadow: 0px 0px 10px var(--six);
+}
+
 .sub-heading {
   color: var(--six);
   font-size: var(--h3);
