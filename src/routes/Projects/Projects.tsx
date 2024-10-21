@@ -30,6 +30,12 @@ export const Projects = ({ projects }: { projects?: Project[] }) => {
     });
   };
 
+  const statusOrder = {
+    completed: 1,
+    "in progress": 2,
+    planning: 3,
+  };
+
   return (
     <PageContainer id="projects">
       <PageHeader>
@@ -38,13 +44,15 @@ export const Projects = ({ projects }: { projects?: Project[] }) => {
       <PageContent>
         <ul className="project-list">
           {projects &&
-            projects.map((project) => (
-              <ProjectCard
-                key={project.key}
-                project={project}
-                techs={transformTechStack(project.techStack)}
-              />
-            ))}
+            projects
+              .sort((a, b) => statusOrder[a.status] - statusOrder[b.status])
+              .map((project) => (
+                <ProjectCard
+                  key={project.key}
+                  project={project}
+                  techs={transformTechStack(project.techStack)}
+                />
+              ))}
         </ul>
       </PageContent>
     </PageContainer>

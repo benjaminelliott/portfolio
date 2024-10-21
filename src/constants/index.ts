@@ -473,6 +473,7 @@ const projects = [
     name: "asozial.dev",
     image: "logos/asozial.png",
     description: "A social media platform for anti-social developers.",
+    status: "in progress",
     techStack: [
       "Next.js",
       "TailwindCSS",
@@ -495,6 +496,7 @@ const projects = [
     name: "littlelemon",
     image: "logos/littlelemon.svg",
     description: "A small business site for a Mediterranean restaurant.",
+    status: "completed",
     techStack: [
       "React",
       "CSS3",
@@ -513,6 +515,7 @@ const projects = [
     name: "seeO2",
     image: "logos/seeO2.png",
     description: "A tool to help make ethical travel decisions.",
+    status: "in progress",
     techStack: [
       "React",
       "TailwindCSS",
@@ -530,6 +533,7 @@ const projects = [
     name: "Frosch",
     image: "logos/Frosch.gif",
     description: "A web-game where you help a frog cross different terrain.",
+    status: "in progress",
     techStack: ["HTML5", "CSS3", "Javascript", "Webpack", "Netlify"],
     deployedLink: "https://playfrosch.netlify.app",
     repoLink: "https://github.com/benjamindotdev/frosch",
@@ -539,6 +543,7 @@ const projects = [
     name: "kenben",
     image: "logos/kenben.svg",
     description: "My own take on a traditional Kanban board.",
+    status: "in progress",
     techStack: ["React", "Typescript", "TailwindCSS", "shadcn", "Netlify"],
     deployedLink: "https://kenben.netlify.app",
     repoLink: "https://github.com/benjamindotdev/kenben",
@@ -549,6 +554,7 @@ const projects = [
     image: "logos/CountyGPT.svg",
     description:
       "A SPA which gives the user stuff to do in their neck of the woods.",
+    status: "in progress",
     techStack: ["Typescript", "React", "TailwindCSS", "ChatGPT", "Netlify"],
     deployedLink: "https://jolly-zuccutto-827f86.netlify.app/",
     repoLink: "https://github.com/benjamindotdev/CountyGPT",
@@ -559,6 +565,7 @@ const projects = [
     image: "images/B.png",
     description:
       "My professional portfolio site, showcasing my skills and projects.",
+    status: "completed",
     techStack: [
       "Typescript",
       "React",
@@ -575,6 +582,7 @@ const projects = [
     name: "stacyannelliott.com",
     image: "images/stacy.jpg",
     description: "A professional portfolio site for a journalist.",
+    status: "completed",
     techStack: ["Wordpress"],
     deployedLink: "https://stacyannelliott.wordpress.com/",
   },

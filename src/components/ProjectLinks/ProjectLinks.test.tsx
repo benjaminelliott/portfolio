@@ -6,7 +6,7 @@ import { BrowserRouter } from "react-router-dom";
 test("renders the ProjectLinks component with provided props", () => {
   render(
     <BrowserRouter>
-      <ProjectLinks repoLink="link1" deployedLink="link2" />
+      <ProjectLinks repoLink="link1" deployedLink="link2" status="completed" />
     </BrowserRouter>
   );
   expect(screen.getAllByRole("link")).toHaveLength(2);
@@ -15,7 +15,7 @@ test("renders the ProjectLinks component with provided props", () => {
 test("renders the ProjectLinks component with different text", () => {
   render(
     <BrowserRouter>
-      <ProjectLinks repoLink="link3" deployedLink="link4" />
+      <ProjectLinks repoLink="link3" deployedLink="link4" status="completed" />
     </BrowserRouter>
   );
   expect(screen.getAllByRole("link")).toHaveLength(2);
@@ -24,7 +24,7 @@ test("renders the ProjectLinks component with different text", () => {
 test("renders the ProjectLinks component with project-links class", () => {
   render(
     <BrowserRouter>
-      <ProjectLinks repoLink="link1" deployedLink="link2" />
+      <ProjectLinks repoLink="link1" deployedLink="link2" status="completed" />
     </BrowserRouter>
   );
   expect(screen.getByRole("article")).toHaveClass("project-links");

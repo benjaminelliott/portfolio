@@ -10,7 +10,7 @@ export const ProjectCard = ({
   project: Project;
   techs: Technology[];
 }) => {
-  const { image, name, repoLink, deployedLink } = project;
+  const { image, name, repoLink, deployedLink, status, description } = project;
   return (
     <div key={project.key} className="project-card">
       <div className="project-card-header">
@@ -18,10 +18,11 @@ export const ProjectCard = ({
         <ProjectLinks
           repoLink={repoLink || ""}
           deployedLink={deployedLink || ""}
+          status={status}
         />
       </div>
       <div className="project-card-content">
-        <p className="project-description">{project.description}</p>
+        <p className="project-description">{description}</p>
         <TechList techs={techs} />
       </div>
     </div>
