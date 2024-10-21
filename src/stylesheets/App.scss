@@ -427,6 +427,13 @@ body {
   gap: 6rem;
 }
 
+.section-heading {
+  color: var(--one);
+  font-size: var(--h2);
+  font-family: "Lunasima", sans-serif;
+  text-align: left;
+}
+
 .sub-heading {
   color: var(--six);
   font-size: var(--h3);
@@ -437,7 +444,7 @@ body {
   list-style-type: none;
   display: flex;
   flex-direction: row;
-  justify-content: space-evenly;
+  justify-content: space-between;
   flex-wrap: wrap;
   row-gap: 5rem;
   column-gap: 2rem;
@@ -449,6 +456,15 @@ body {
   flex-direction: column;
   justify-content: flex-start;
   gap: 1rem;
+  flex-grow: 1;
+  padding: 10px;
+  border-radius: 16px;
+  max-width: 39vw;
+  height: fit-content;
+}
+
+.project-card:hover {
+  box-shadow: #2bf38b 0px 0px 10px;
 }
 
 .project-card-header {
@@ -481,6 +497,14 @@ body {
 .project-status {
   font-size: var(--text);
   color: var(--one);
+}
+
+.project-status-wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 2rem;
 }
 
 .tech-checkbox-list {

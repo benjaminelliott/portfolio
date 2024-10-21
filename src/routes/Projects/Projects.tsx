@@ -2,39 +2,19 @@ import { PageContainer } from "../../components/PageContainer/PageContainer";
 import { PageHeader } from "../../components/PageHeader/PageHeader";
 import { PageContent } from "../../components/PageContent/PageContent";
 import { PageTitle } from "../../components/PageTitle/PageTitle";
-import { ProjectCard } from "../../components/ProjectCard/ProjectCard";
-import type { Project, Technology } from "../../global";
-import { technologies } from "../../constants";
+import { ProjectSection } from "../../components/ProjectSection/ProjectSection";
+import type { Project } from "../../global";
 
 export const Projects = ({ projects }: { projects?: Project[] }) => {
-  const transformTechStack = (
-    techStack: Technology[] | string[]
-  ): Technology[] => {
-    return techStack.map((tech, index) => {
-      if (typeof tech === "string") {
-        const foundTech = technologies.find(
-          (technology) => technology.name === tech
-        );
-        return (
-          foundTech || {
-            key: index,
-            name: tech,
-            image: "",
-            link: "",
-            isLearning: false,
-            type: "",
-          }
-        );
-      }
-      return tech;
-    });
-  };
-
-  const statusOrder = {
-    completed: 1,
-    "in progress": 2,
-    planning: 3,
-  };
+  const completedProjects = projects?.filter(
+    (project) => project.status === "completed"
+  );
+  const inProgressProjects = projects?.filter(
+    (project) => project.status === "in progress"
+  );
+  const planningProjects = projects?.filter(
+    (project) => project.status === "planning"
+  );
 
   return (
     <PageContainer id="projects">
@@ -42,18 +22,27 @@ export const Projects = ({ projects }: { projects?: Project[] }) => {
         <PageTitle text="Projects" strongText="& Sites" main icon="🚀" />
       </PageHeader>
       <PageContent>
-        <ul className="project-list">
-          {projects &&
-            projects
-              .sort((a, b) => statusOrder[a.status] - statusOrder[b.status])
-              .map((project) => (
-                <ProjectCard
-                  key={project.key}
-                  project={project}
-                  techs={transformTechStack(project.techStack)}
-                />
-              ))}
-        </ul>
+        {completedProjects && completedProjects.length > 0 && (
+          <ProjectSection
+            status="completed"
+            icon="🎉"
+            projects={completedProjects}
+          />
+        )}
+        {inProgressProjects && inProgressProjects.length > 0 && (
+          <ProjectSection
+            status="in progress"
+            icon="🚧"
+            projects={inProgressProjects}
+          />
+        )}
+        {planningProjects && planningProjects.length > 0 && (
+          <ProjectSection
+            status="planning"
+            icon="📝"
+            projects={planningProjects}
+          />
+        )}
       </PageContent>
     </PageContainer>
   );
