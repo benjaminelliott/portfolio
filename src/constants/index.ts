@@ -95,7 +95,7 @@ const technologies = [
     image: "logos/webpack.png",
     link: "https://webpack.js.org/",
     type: "Frontend",
-    isLearning: true,
+    isLearning: false,
   },
   {
     key: 30,

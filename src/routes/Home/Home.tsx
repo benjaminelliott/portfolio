@@ -31,6 +31,9 @@ export const Home = ({
   const projectManagement = technologies?.filter(
     (tech) => tech.type === "Project Management" && !tech.isLearning
   );
+  const contentManagement = technologies?.filter(
+    (tech) => tech.type === "Content Management" && !tech.isLearning
+  );
   const mobile = technologies?.filter(
     (tech) => tech.type === "Mobile" && !tech.isLearning
   );
@@ -59,6 +62,9 @@ export const Home = ({
         )}
         {projectManagement && projectManagement.length > 0 && (
           <TechList techs={projectManagement} subHeading="Project Management" />
+        )}
+        {contentManagement && contentManagement.length > 0 && (
+          <TechList techs={contentManagement} subHeading="CMS" />
         )}
         {tools && tools.length > 0 && (
           <TechList techs={tools} subHeading="Tools" />

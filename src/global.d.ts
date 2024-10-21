@@ -91,7 +91,7 @@ type Project = {
   key: number;
   name: string;
   image: string;
-  status: "completed" | "in progress";
+  status: "completed" | "in progress" | "planning";
   description: string;
   deployedLink?: string;
   repoLink?: string;
