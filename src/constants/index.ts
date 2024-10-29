@@ -821,7 +821,7 @@ const benjamin = {
     },
     {
       key: 3,
-      name: "Javascript Algorithms & Data Structures",
+      name: "Legacy Javascript Algorithms & Data Structures",
       logo: "logos/freecodecamp.svg",
       description:
         "Completed in August 2023. Javascript algorithms and data sctuctures, specializing in using different data types and structures in Javascript ES6",
