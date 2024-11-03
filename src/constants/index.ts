@@ -266,6 +266,14 @@ const technologies = [
     isLearning: true,
   },
   {
+    key: 63,
+    name: "Go",
+    image: "logos/go.svg",
+    link: "https://golang.org/",
+    type: "Backend",
+    isLearning: false,
+  },
+  {
     key: 70,
     name: "Storybook",
     image: "logos/storybook.png",
@@ -652,6 +660,16 @@ const projects = [
       "Playwright",
       "Netlify",
     ],
+  },
+  {
+    key: 12,
+    name: "TicTacGo",
+    image: "logos/tictacgo.png",
+    description:
+      "A multiplayer TicTacToe clone, built in Go, playable in the command line.",
+    status: "in progress",
+    techStack: ["Go"],
+    repoLink: "https://github.com/benjamindotdev/tictacgo",
   },
 ] as Project[];
 
