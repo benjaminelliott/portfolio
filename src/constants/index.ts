@@ -98,6 +98,14 @@ const technologies = [
     isLearning: false,
   },
   {
+    key: 12,
+    name: "Astro",
+    image: "logos/astro.svg",
+    link: "https://astro.build/",
+    type: "Frontend",
+    isLearning: true,
+  },
+  {
     key: 30,
     name: "CSS3",
     image: "logos/css3.svg",
