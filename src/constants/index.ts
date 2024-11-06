@@ -367,7 +367,7 @@ const technologies = [
     image: "logos/husky.svg",
     link: "https://typicode.github.io/husky/#/",
     type: "CI/CD",
-    isLearning: true,
+    isLearning: false,
   },
   {
     key: 85,
@@ -470,6 +470,14 @@ const technologies = [
     name: "Wordpress",
     image: "logos/wordpress.png",
     link: "https://www.wordpress.com/",
+    type: "Content Management",
+    isLearning: false,
+  },
+  {
+    key: 121,
+    name: "Shopify",
+    image: "logos/shopify.svg",
+    link: "https://www.shopify.com/",
     type: "Content Management",
     isLearning: false,
   },
