@@ -4,6 +4,7 @@ import { Home } from "./routes/Home/Home";
 import { About } from "./routes/About/About";
 import { Certifications } from "./routes/Certifications/Certifications";
 import { Projects } from "./routes/Projects/Projects";
+import { Events } from "./routes/Events/Events";
 import "./stylesheets/App.scss";
 import { benjamin } from "./constants";
 
@@ -39,6 +40,7 @@ export const App = () => (
           path="projects"
           element={<Projects projects={benjamin.projects} />}
         />
+        <Route path="events" element={<Events events={benjamin.events} />} />
         <Route path="*" element={<Navigate to="../public/index.html" />} />
       </Route>
     </Routes>

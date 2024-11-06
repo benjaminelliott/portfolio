@@ -11,6 +11,7 @@ type Benjamin = {
   links: Link[];
   certifications: Certification[];
   projects: Project[];
+  events: Event[];
 };
 
 type AboutItem = {

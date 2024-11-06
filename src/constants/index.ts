@@ -689,6 +689,33 @@ const projects = [
   },
 ] as Project[];
 
+const events = [
+  {
+    key: 0,
+    name: "IronHackshow",
+    image: "images/benjaminIronhack.jpg",
+    date: "September 2024",
+    location: "Ironhack, Berlin",
+    description:
+      "I won the Ironhack Berlin hackshow with my final project, asozial.dev. I was offered a position as a TA due to my helpful nature, coding knowledge and teamwork skills.",
+    link: "",
+    techStack: [
+      "Next.js",
+      "TailwindCSS",
+      "shadcn",
+      "Node.js",
+      "Express",
+      "Mongoose",
+      "MongoDB",
+      "Vercel",
+      "Railway",
+      "Jest",
+      "React Testing Library",
+      "Taiga",
+    ],
+  },
+];
+
 const benjamin = {
   name: "Benjamin",
   hero: "images/benjamin.jpg",
@@ -765,6 +792,11 @@ const benjamin = {
       title: "Projects",
       route: "/projects",
     },
+    {
+      key: 4,
+      title: "Events",
+      route: "/events",
+    },
   ],
   certifications: [
     {
@@ -810,6 +842,7 @@ const benjamin = {
   ],
   projects,
   technologies,
+  events,
 } as Benjamin;
 
-export { benjamin, technologies, projects };
+export { benjamin, technologies, projects, events };
