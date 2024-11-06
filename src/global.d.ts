@@ -98,6 +98,17 @@ type Project = {
   techStack: Technology[] | string[];
 };
 
+type Event = {
+  key: number;
+  name: string;
+  image: string;
+  date: string;
+  location: string;
+  description: string;
+  link: string;
+  techStack: Technology[] | string[];
+};
+
 export type {
   Benjamin,
   AboutItem,
@@ -110,4 +121,5 @@ export type {
   Technology,
   Tech,
   Project,
+  Event,
 };

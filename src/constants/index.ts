@@ -704,74 +704,6 @@ const benjamin = {
       text: "I honed these skills during the decade I spent as a youth football coach in NJ, USA, mentoring and guiding young athletes to success on the pitch and in life. I won some trophies along the way, but what stuck with me was the relationships I built with the players and their families.",
     },
   ],
-  hobbies: [
-    {
-      key: 0,
-      name: "PC Building",
-      icon: "🧑🏽‍🏭️",
-      image: "images/pc.jpg",
-      text: "PC master race, rise up. 7900XT + 5800x3d. Cities Skylines, Titanfall 2, Starsector",
-    },
-    {
-      key: 1,
-      name: "Mechanical keyboards",
-      icon: "⌨️",
-      image: "images/keyboards.jpg",
-      text: "Needed a fiddly pandemic hobby. Lubing switches and soldering motherboards since 2020",
-    },
-    {
-      key: 2,
-      name: "Indoor cycling",
-      icon: "🚵🏽",
-      image: "images/cycling.png",
-      text: "When not at my desk, you can find me climbing the mountains of Watopia with my fellow Zwifters",
-    },
-  ],
-  softSkills: [
-    {
-      key: 0,
-      name: "Communication",
-      icon: "💬",
-    },
-    {
-      key: 1,
-      name: "Teamwork",
-      icon: "🤝🏽",
-    },
-    {
-      key: 2,
-      name: "Leadership",
-      icon: "🧑🏽‍💼️",
-    },
-    {
-      key: 3,
-      name: "Resilience",
-      icon: "☮️",
-    },
-  ],
-  hardSkills: [
-    {
-      key: 0,
-      name: "Working remotely",
-      icon: "🧑🏽‍💻️",
-    },
-    {
-      key: 1,
-      name: "Attention to detail",
-      icon: "🔎",
-    },
-    {
-      key: 2,
-      name: "Problem solving",
-      icon: "🎓",
-    },
-    {
-      key: 3,
-      name: "Self-learning",
-      icon: "🧑🏽‍🎓️",
-    },
-  ],
-  technologies,
   contacts: [
     {
       key: 0,
@@ -789,15 +721,27 @@ const benjamin = {
   socials: [
     {
       key: 0,
-      name: "linkedin",
+      name: "LinkedIn",
       image: "logos/linkedin.svg",
       link: "https://www.linkedin.com/in/benjamin-elliott-163280280/",
     },
     {
       key: 1,
-      name: "gitHub",
+      name: "Github",
       image: "logos/github.svg",
       link: "https://github.com/benjamindotdev",
+    },
+    {
+      key: 2,
+      name: "X",
+      image: "logos/x.svg",
+      link: "https://x.com/benjamindotdev",
+    },
+    {
+      key: 3,
+      name: "Bluesky",
+      image: "logos/bluesky.png",
+      link: "https://bsky.app/profile/benjamindotdev.bsky.social",
     },
   ],
   links: [
@@ -865,6 +809,7 @@ const benjamin = {
     },
   ],
   projects,
+  technologies,
 } as Benjamin;
 
 export { benjamin, technologies, projects };
