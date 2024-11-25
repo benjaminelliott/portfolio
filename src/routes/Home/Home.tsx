@@ -5,9 +5,10 @@ import { PageContent } from "../../components/PageContent/PageContent";
 import { TechList } from "../../components/TechList/TechList";
 import type { Technology } from "../../global";
 import { CircleImage } from "../../components/CircleImage/CircleImage";
+import { GraduationCap } from "lucide-react";
 
 export const Home = ({
-  technologies,
+  technologies = [],
   image,
   name,
 }: {
@@ -15,28 +16,45 @@ export const Home = ({
   image?: string;
   name?: string;
 }) => {
-  const frontEnd = technologies?.filter(
-    (tech) => tech.type === "Frontend" && !tech.isLearning
+  const filterAndSortTechnologies = (
+    technologies: Technology[],
+    type: string
+  ): Technology[] => {
+    return technologies
+      ?.filter((tech) => tech.type === type)
+      .sort((a, b) => {
+        if (a.isLearning === b.isLearning) {
+          return a.isLearning ? a.key - b.key : a.name.localeCompare(b.name);
+        }
+        return a.isLearning ? 1 : -1;
+      });
+  };
+
+  const frontEnd = filterAndSortTechnologies(technologies, "Frontend");
+  const backEnd = filterAndSortTechnologies(technologies, "Backend");
+  const database = filterAndSortTechnologies(technologies, "Database");
+  const cicd = filterAndSortTechnologies(technologies, "CI/CD");
+  const projectManagement = filterAndSortTechnologies(
+    technologies,
+    "Project Management"
   );
-  const backEnd = technologies?.filter(
-    (tech) => tech.type === "Backend" && !tech.isLearning
+  const contentManagement = filterAndSortTechnologies(
+    technologies,
+    "Content Management"
   );
-  const tools = technologies?.filter(
-    (tech) => tech.type === "Tool" && !tech.isLearning
-  );
-  const learning = technologies?.filter((tech) => tech.isLearning);
-  const cicd = technologies?.filter(
-    (tech) => tech.type === "CI/CD" && !tech.isLearning
-  );
-  const projectManagement = technologies?.filter(
-    (tech) => tech.type === "Project Management" && !tech.isLearning
-  );
-  const contentManagement = technologies?.filter(
-    (tech) => tech.type === "Content Management" && !tech.isLearning
-  );
-  const mobile = technologies?.filter(
-    (tech) => tech.type === "Mobile" && !tech.isLearning
-  );
+  const tools = filterAndSortTechnologies(technologies, "Tool");
+  const mobile = filterAndSortTechnologies(technologies, "Mobile");
+
+  const pageContent = [
+    { techs: frontEnd, subHeading: "Front end" },
+    { techs: backEnd, subHeading: "Back end" },
+    { techs: database, subHeading: "Database" },
+    { techs: cicd, subHeading: "CI/CD" },
+    { techs: projectManagement, subHeading: "Project Management" },
+    { techs: contentManagement, subHeading: "CMS" },
+    { techs: tools, subHeading: "Tools" },
+    { techs: mobile, subHeading: "Mobile" },
+  ];
 
   return (
     <PageContainer id="home">
@@ -51,30 +69,14 @@ export const Home = ({
         </div>
       </PageHeader>
       <PageContent>
-        {frontEnd && frontEnd.length > 0 && (
-          <TechList techs={frontEnd} subHeading="Front end" />
-        )}
-        {backEnd && backEnd.length > 0 && (
-          <TechList techs={backEnd} subHeading="Back end" />
-        )}
-        {cicd && cicd.length > 0 && (
-          <TechList techs={cicd} subHeading="CI/CD" />
-        )}
-        {projectManagement && projectManagement.length > 0 && (
-          <TechList techs={projectManagement} subHeading="Project Management" />
-        )}
-        {contentManagement && contentManagement.length > 0 && (
-          <TechList techs={contentManagement} subHeading="CMS" />
-        )}
-        {tools && tools.length > 0 && (
-          <TechList techs={tools} subHeading="Tools" />
-        )}
-        {mobile && mobile.length > 0 && (
-          <TechList techs={mobile} subHeading="Mobile" />
-        )}
-
-        {learning && learning.length > 0 && (
-          <TechList techs={learning} subHeading="Currently learning" />
+        <p className="home-caption">
+          <GraduationCap /> = currently learning
+        </p>
+        {pageContent.map(
+          (content) =>
+            content.techs.length > 0 && (
+              <TechList key={content.subHeading} {...content} />
+            )
         )}
       </PageContent>
     </PageContainer>

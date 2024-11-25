@@ -1,6 +1,7 @@
 import type { Benjamin, Technology, Project } from "../global";
 
 const technologies = [
+  // Frontend Technologies
   {
     key: 0,
     name: "HTML5",
@@ -123,7 +124,7 @@ const technologies = [
   },
   {
     key: 32,
-    name: "TailwindCSS",
+    name: "tailwindcss",
     image: "logos/tailwind.svg",
     link: "https://tailwindcss.com/",
     type: "Frontend",
@@ -169,6 +170,8 @@ const technologies = [
     type: "Frontend",
     isLearning: false,
   },
+
+  // Backend Technologies
   {
     key: 50,
     name: "Node.js",
@@ -182,38 +185,6 @@ const technologies = [
     name: "Express",
     image: "logos/expressjs.png",
     link: "https://expressjs.com/",
-    type: "Backend",
-    isLearning: false,
-  },
-  {
-    key: 52,
-    name: "MongoDB",
-    image: "logos/mongodb.svg",
-    link: "https://www.mongodb.com/",
-    type: "Backend",
-    isLearning: false,
-  },
-  {
-    key: 53,
-    name: "Mongoose",
-    image: "logos/mongoose.png",
-    link: "https://www.mongoosejs.com/",
-    type: "Backend",
-    isLearning: false,
-  },
-  {
-    key: 54,
-    name: "Prisma",
-    image: "logos/prisma.svg",
-    link: "https://www.prisma.io/",
-    type: "Backend",
-    isLearning: false,
-  },
-  {
-    key: 55,
-    name: "PostgreSQL",
-    image: "logos/postgresql.svg",
-    link: "https://www.postgresql.org/",
     type: "Backend",
     isLearning: false,
   },
@@ -279,8 +250,84 @@ const technologies = [
     image: "logos/go.svg",
     link: "https://golang.org/",
     type: "Backend",
+    isLearning: true,
+  },
+  {
+    key: 64,
+    name: "PHP",
+    image: "logos/PHP.png",
+    link: "https://www.php.net/",
+    type: "Backend",
+    isLearning: true,
+  },
+  {
+    key: 65,
+    name: "Apache",
+    image: "logos/apache.png",
+    link: "https://httpd.apache.org/",
+    type: "Backend",
+    isLearning: true,
+  },
+  {
+    key: 66,
+    name: "XAMPP",
+    image: "logos/xampp.svg",
+    link: "https://www.apachefriends.org/index.html",
+    type: "Backend",
+    isLearning: true,
+  },
+  {
+    key: 67,
+    name: "Laravel",
+    image: "logos/laravel.svg",
+    link: "https://laravel.com/",
+    type: "Backend",
+    isLearning: true,
+  },
+
+  // Databases
+  {
+    key: 52,
+    name: "MongoDB",
+    image: "logos/mongodb.svg",
+    link: "https://www.mongodb.com/",
+    type: "Database",
     isLearning: false,
   },
+  {
+    key: 53,
+    name: "Mongoose",
+    image: "logos/mongoose.png",
+    link: "https://www.mongoosejs.com/",
+    type: "Database",
+    isLearning: false,
+  },
+  {
+    key: 54,
+    name: "Prisma",
+    image: "logos/prisma.svg",
+    link: "https://www.prisma.io/",
+    type: "Database",
+    isLearning: false,
+  },
+  {
+    key: 55,
+    name: "PostgreSQL",
+    image: "logos/postgresql.svg",
+    link: "https://www.postgresql.org/",
+    type: "Database",
+    isLearning: false,
+  },
+  {
+    key: 68,
+    name: "mySQL",
+    image: "logos/mysql.png",
+    link: "https://www.mysql.com/",
+    type: "Database",
+    isLearning: true,
+  },
+
+  // Tools
   {
     key: 70,
     name: "Storybook",
@@ -337,6 +384,8 @@ const technologies = [
     type: "Tool",
     isLearning: false,
   },
+
+  // CI/CD
   {
     key: 80,
     name: "Jest",
@@ -425,6 +474,8 @@ const technologies = [
     type: "CI/CD",
     isLearning: false,
   },
+
+  // Mobile Technologies
   {
     key: 100,
     name: "React Native",
@@ -441,6 +492,8 @@ const technologies = [
     type: "Mobile",
     isLearning: true,
   },
+
+  // Project Management
   {
     key: 110,
     name: "Notion",
@@ -473,6 +526,8 @@ const technologies = [
     type: "Project Management",
     isLearning: false,
   },
+
+  // Content Management
   {
     key: 120,
     name: "Wordpress",
@@ -500,7 +555,7 @@ const projects = [
     status: "in progress",
     techStack: [
       "Next.js",
-      "TailwindCSS",
+      "tailwindcss",
       "shadcn",
       "Node.js",
       "Express",
@@ -542,7 +597,7 @@ const projects = [
     status: "in progress",
     techStack: [
       "React",
-      "TailwindCSS",
+      "tailwindcss",
       "Node.js",
       "Express",
       "MongoDB",
@@ -568,7 +623,7 @@ const projects = [
     image: "logos/kenben.svg",
     description: "My own take on a traditional Kanban board.",
     status: "in progress",
-    techStack: ["React", "Typescript", "TailwindCSS", "shadcn", "Netlify"],
+    techStack: ["React", "Typescript", "tailwindcss", "shadcn", "Netlify"],
     deployedLink: "https://kenben.netlify.app",
     repoLink: "https://github.com/benjamindotdev/kenben",
   },
@@ -579,7 +634,7 @@ const projects = [
     description:
       "A SPA which gives the user stuff to do in their neck of the woods.",
     status: "in progress",
-    techStack: ["Typescript", "React", "TailwindCSS", "ChatGPT", "Netlify"],
+    techStack: ["Typescript", "React", "tailwindcss", "ChatGPT", "Netlify"],
     deployedLink: "https://countygpt.netlify.app/",
     repoLink: "https://github.com/benjamindotdev/CountyGPT",
   },
@@ -620,7 +675,7 @@ const projects = [
     techStack: [
       "Typescript",
       "Next.js",
-      "TailwindCSS",
+      "tailwindcss",
       "ChatGPT",
       "Prisma",
       "MongoDB",
@@ -648,7 +703,7 @@ const projects = [
     techStack: [
       "Typescript",
       "Next.js",
-      "TailwindCSS",
+      "tailwindcss",
       "DaisyUI",
       "Webpack",
       "Prisma",
@@ -668,7 +723,7 @@ const projects = [
       "Storybook",
       "Typescript",
       "RedwoodJS",
-      "TailwindCSS",
+      "tailwindcss",
       "Prisma",
       "PostgreSQL",
       "Jest",
@@ -692,8 +747,19 @@ const projects = [
 const events = [
   {
     key: 0,
+    name: "thegeekconf",
+    image: "logos/thegeekconf.png",
+    date: "August 2024",
+    location: "Villa Elisabeth, Berlin",
+    description:
+      "I attended thegeekconf, a conference for React Native development",
+    link: "https://www.thegeekconf.com/",
+    techStack: ["React Native", "Expo", "tailwindcss", "ChatGPT"],
+  },
+  {
+    key: 1,
     name: "IronHackshow",
-    image: "images/benjaminIronhack.jpg",
+    image: "logos/ironhack.png",
     date: "September 2024",
     location: "Ironhack, Berlin",
     description:
@@ -701,7 +767,7 @@ const events = [
     link: "",
     techStack: [
       "Next.js",
-      "TailwindCSS",
+      "tailwindcss",
       "shadcn",
       "Node.js",
       "Express",
@@ -791,11 +857,6 @@ const benjamin = {
       key: 3,
       title: "Projects",
       route: "/projects",
-    },
-    {
-      key: 4,
-      title: "Events",
-      route: "/events",
     },
   ],
   certifications: [

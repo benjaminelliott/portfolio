@@ -194,7 +194,7 @@ body {
   align-items: center;
   justify-content: space-between;
   flex-wrap: wrap;
-  gap: 4rem;
+  gap: 2rem;
 }
 
 .page-text {
@@ -344,12 +344,30 @@ body {
   transform: translateX(-50%); /* Adjust to center */
 }
 
+.tech-stack-isLearning {
+  position: absolute;
+  top: -20px;
+  color: var(--one);
+  font-size: var(--text);
+  text-align: center;
+  filter: drop-shadow(none);
+  white-space: nowrap;
+  left: 50%; /* Center horizontally */
+  transform: translateX(-50%); /* Adjust to center */
+}
+
 .tech-stack-item:hover .tech-stack-name {
   opacity: 1;
 }
 
 .tech-stack-item:hover .tech-stack-logo {
   scale: 1.25;
+}
+
+.home-caption {
+  color: var(--one);
+  text-align: right;
+  width: 100%;
 }
 
 .home-buttons {

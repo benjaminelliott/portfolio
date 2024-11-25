@@ -72,6 +72,7 @@ type Technology = {
     | "Frontend"
     | "Backend"
     | "Tool"
+    | "Database"
     | "Mobile"
     | "CI/CD"
     | "Project Management"
@@ -86,6 +87,7 @@ type Tech = {
   name: string;
   image: string;
   link: string;
+  isLearning?: boolean;
 };
 
 type Project = {

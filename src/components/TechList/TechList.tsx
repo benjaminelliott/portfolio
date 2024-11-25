@@ -20,6 +20,7 @@ export const TechList = ({
               name={tech.name}
               link={tech.link}
               key={tech.key}
+              isLearning={tech.isLearning}
             />
           ))}
       </ul>
