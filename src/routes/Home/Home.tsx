@@ -1,3 +1,4 @@
+import { useMemo } from "react";
 import { PageContainer } from "../../components/PageContainer/PageContainer";
 import { PageTitle } from "../../components/PageTitle/PageTitle";
 import { PageHeader } from "../../components/PageHeader/PageHeader";
@@ -44,17 +45,28 @@ export const Home = ({
   const tools = filterAndSortTechnologies(technologies, "Tool");
   const mobile = filterAndSortTechnologies(technologies, "Mobile");
 
-  const pageContent = [
-    { techs: frontEnd, subHeading: "Front end" },
-    { techs: backEnd, subHeading: "Back end" },
-    { techs: mobile, subHeading: "Mobile" },
-    { techs: database, subHeading: "Database" },
-
-    { techs: cicd, subHeading: "CI/CD" },
-    { techs: projectManagement, subHeading: "Project Management" },
-    { techs: contentManagement, subHeading: "CMS" },
-    { techs: tools, subHeading: "Tools" },
-  ];
+  const pageContent = useMemo(
+    () => [
+      { techs: frontEnd, subHeading: "Front end" },
+      { techs: backEnd, subHeading: "Back end" },
+      { techs: mobile, subHeading: "Mobile" },
+      { techs: database, subHeading: "Database" },
+      { techs: cicd, subHeading: "CI/CD" },
+      { techs: projectManagement, subHeading: "Project Management" },
+      { techs: contentManagement, subHeading: "CMS" },
+      { techs: tools, subHeading: "Tools" },
+    ],
+    [
+      frontEnd,
+      backEnd,
+      mobile,
+      database,
+      cicd,
+      projectManagement,
+      contentManagement,
+      tools,
+    ]
+  );
 
   return (
     <PageContainer id="home">
