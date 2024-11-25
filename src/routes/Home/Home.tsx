@@ -5,7 +5,6 @@ import { PageContent } from "../../components/PageContent/PageContent";
 import { TechList } from "../../components/TechList/TechList";
 import type { Technology } from "../../global";
 import { CircleImage } from "../../components/CircleImage/CircleImage";
-import { GraduationCap } from "lucide-react";
 
 export const Home = ({
   technologies = [],
@@ -48,12 +47,13 @@ export const Home = ({
   const pageContent = [
     { techs: frontEnd, subHeading: "Front end" },
     { techs: backEnd, subHeading: "Back end" },
+    { techs: mobile, subHeading: "Mobile" },
     { techs: database, subHeading: "Database" },
+
     { techs: cicd, subHeading: "CI/CD" },
     { techs: projectManagement, subHeading: "Project Management" },
     { techs: contentManagement, subHeading: "CMS" },
     { techs: tools, subHeading: "Tools" },
-    { techs: mobile, subHeading: "Mobile" },
   ];
 
   return (
@@ -69,9 +69,6 @@ export const Home = ({
         </div>
       </PageHeader>
       <PageContent>
-        <p className="home-caption">
-          <GraduationCap /> = currently learning
-        </p>
         {pageContent.map(
           (content) =>
             content.techs.length > 0 && (

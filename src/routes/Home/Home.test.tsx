@@ -56,7 +56,6 @@ describe("Home Component", () => {
     expect(screen.getByText("Node.js")).toBeInTheDocument();
     expect(screen.getByText("Tools")).toBeInTheDocument();
     expect(screen.getByText("Docker")).toBeInTheDocument();
-    expect(screen.getByText("Currently learning")).toBeInTheDocument();
   });
 
   it("renders default image when no image is provided", () => {

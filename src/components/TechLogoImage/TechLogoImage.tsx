@@ -18,7 +18,9 @@ export const TechLogoImage = ({
       to={link}
       target="_blank"
       rel="noreferrer"
-      className="tech-stack-item"
+      className={`tech-stack-item ${
+        isLearning ? "tech-stack-item-is-learning" : ""
+      }`}
     >
       {isLearning && (
         <GraduationCap size={20} className="tech-stack-isLearning" />
