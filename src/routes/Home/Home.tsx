@@ -24,7 +24,7 @@ export const Home = ({
       ?.filter((tech) => tech.type === type)
       .sort((a, b) => {
         if (a.isLearning === b.isLearning) {
-          return a.isLearning ? a.key - b.key : a.name.localeCompare(b.name);
+          return a.isLearning ? a.key - b.key : a.key - b.key;
         }
         return a.isLearning ? 1 : -1;
       });
