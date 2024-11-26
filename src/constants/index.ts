@@ -258,7 +258,7 @@ const technologies = [
     image: "logos/PHP.png",
     link: "https://www.php.net/",
     type: "Backend",
-    isLearning: true,
+    isLearning: false,
   },
   {
     key: 65,
@@ -266,7 +266,7 @@ const technologies = [
     image: "logos/apache.png",
     link: "https://httpd.apache.org/",
     type: "Backend",
-    isLearning: true,
+    isLearning: false,
   },
   {
     key: 66,
@@ -274,7 +274,7 @@ const technologies = [
     image: "logos/xampp.svg",
     link: "https://www.apachefriends.org/index.html",
     type: "Backend",
-    isLearning: true,
+    isLearning: false,
   },
   {
     key: 67,
@@ -324,7 +324,7 @@ const technologies = [
     image: "logos/mysql.png",
     link: "https://www.mysql.com/",
     type: "Database",
-    isLearning: true,
+    isLearning: false,
   },
 
   // Tools
