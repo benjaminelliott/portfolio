@@ -25,7 +25,12 @@ export const TechLogoImage = ({
       {isLearning && (
         <GraduationCap size={20} className="tech-stack-isLearning" />
       )}
-      <LazyLoadImage className="tech-stack-logo" src={image} alt={name} />
+      <LazyLoadImage
+        className="tech-stack-logo"
+        src={image}
+        alt={name}
+        loading="lazy"
+      />
       <p className="tech-stack-name">{name}</p>
     </Link>
   );
