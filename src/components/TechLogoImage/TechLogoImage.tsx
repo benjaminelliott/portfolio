@@ -14,24 +14,26 @@ export const TechLogoImage = ({
   isLearning?: boolean;
 }) => {
   return (
-    <Link
-      to={link}
-      target="_blank"
-      rel="noreferrer"
-      className={`tech-stack-item ${
-        isLearning ? "tech-stack-item-is-learning" : ""
-      }`}
-    >
-      {isLearning && (
-        <GraduationCap size={20} className="tech-stack-isLearning" />
-      )}
-      <LazyLoadImage
-        className="tech-stack-logo"
-        src={image}
-        alt={name}
-        loading="lazy"
-      />
-      <p className="tech-stack-name">{name}</p>
-    </Link>
+    <li>
+      <Link
+        to={link}
+        target="_blank"
+        rel="noreferrer"
+        className={`tech-stack-item ${
+          isLearning ? "tech-stack-item-is-learning" : ""
+        }`}
+      >
+        {isLearning && (
+          <GraduationCap size={20} className="tech-stack-isLearning" />
+        )}
+        <LazyLoadImage
+          className="tech-stack-logo"
+          src={image}
+          alt={name}
+          loading="lazy"
+        />
+        <p className="tech-stack-name">{name}</p>
+      </Link>
+    </li>
   );
 };
