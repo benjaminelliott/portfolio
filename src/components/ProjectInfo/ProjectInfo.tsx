@@ -10,7 +10,12 @@ export const ProjectInfo = ({
 }) => {
   return (
     <article className="project-info">
-      <LazyLoadImage className="project-logo" src={image} alt={name} />
+      <LazyLoadImage
+        className="project-logo"
+        src={image}
+        alt={name}
+        loading="lazy"
+      />
       <SubHeading text={name} />
     </article>
   );

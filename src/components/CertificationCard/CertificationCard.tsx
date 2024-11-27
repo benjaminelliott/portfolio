@@ -18,6 +18,7 @@ export const CertificationCard = ({
             src={logo}
             alt={name}
             effect="blur"
+            loading="lazy"
           />
           <SubHeading text={name}></SubHeading>
         </div>
