@@ -14,6 +14,7 @@ export const CircleImage = ({
         alt={text}
         effect="blur"
         className="circle-image__img"
+        loading="lazy"
       />
     </div>
   );
