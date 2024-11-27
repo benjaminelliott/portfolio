@@ -30,20 +30,38 @@ export const Home = ({
       });
   };
 
-  const frontEnd = filterAndSortTechnologies(technologies, "Frontend");
-  const backEnd = filterAndSortTechnologies(technologies, "Backend");
-  const database = filterAndSortTechnologies(technologies, "Database");
-  const cicd = filterAndSortTechnologies(technologies, "CI/CD");
-  const projectManagement = filterAndSortTechnologies(
-    technologies,
-    "Project Management"
+  const frontEnd = useMemo(
+    () => filterAndSortTechnologies(technologies, "Frontend"),
+    [technologies]
   );
-  const contentManagement = filterAndSortTechnologies(
-    technologies,
-    "Content Management"
+  const backEnd = useMemo(
+    () => filterAndSortTechnologies(technologies, "Backend"),
+    [technologies]
   );
-  const tools = filterAndSortTechnologies(technologies, "Tool");
-  const mobile = filterAndSortTechnologies(technologies, "Mobile");
+  const database = useMemo(
+    () => filterAndSortTechnologies(technologies, "Database"),
+    [technologies]
+  );
+  const cicd = useMemo(
+    () => filterAndSortTechnologies(technologies, "CI/CD"),
+    [technologies]
+  );
+  const projectManagement = useMemo(
+    () => filterAndSortTechnologies(technologies, "Project Management"),
+    [technologies]
+  );
+  const contentManagement = useMemo(
+    () => filterAndSortTechnologies(technologies, "Content Management"),
+    [technologies]
+  );
+  const tools = useMemo(
+    () => filterAndSortTechnologies(technologies, "Tool"),
+    [technologies]
+  );
+  const mobile = useMemo(
+    () => filterAndSortTechnologies(technologies, "Mobile"),
+    [technologies]
+  );
 
   const pageContent = useMemo(
     () => [
