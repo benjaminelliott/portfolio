@@ -68,7 +68,7 @@ export const Home = ({
       { techs: frontEnd, subHeading: "Front end" },
       { techs: backEnd, subHeading: "Back end" },
       { techs: mobile, subHeading: "Mobile" },
-      { techs: database, subHeading: "Database" },
+      { techs: database, subHeading: "Databases, ORMs & ODMs" },
       { techs: cicd, subHeading: "CI/CD" },
       { techs: projectManagement, subHeading: "Project Management" },
       { techs: contentManagement, subHeading: "CMS" },
