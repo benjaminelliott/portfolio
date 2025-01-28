@@ -826,12 +826,6 @@ const benjamin = {
     },
     {
       key: 2,
-      name: "X",
-      image: "logos/x.svg",
-      link: "https://x.com/benjamindotdev",
-    },
-    {
-      key: 3,
       name: "Bluesky",
       image: "logos/bluesky.png",
       link: "https://bsky.app/profile/benjamindotdev.bsky.social",
