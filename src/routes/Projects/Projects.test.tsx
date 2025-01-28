@@ -12,7 +12,7 @@ test("loads and displays project items", async () => {
       description: "Description 1",
       techStack: ["React", "TypeScript"],
       image: "",
-      status: "in progress",
+      status: "completed",
       deployedLink: "https://example.com",
     },
     {
@@ -21,7 +21,7 @@ test("loads and displays project items", async () => {
       description: "Description 2",
       techStack: ["React", "TypeScript"],
       image: "",
-      status: "in progress",
+      status: "completed",
       deployedLink: "https://example.com",
     },
   ];

@@ -697,6 +697,32 @@ li {
   width: 500px;
 }
 
+.tab-navigator {
+  display: flex;
+  width: 100%;
+  justify-content: flex-start;
+  gap: 2rem;
+}
+
+.tab-navigator-button {
+  background: none;
+  padding: 0;
+  border: none;
+  color: var(--one);
+  font-size: var(--h2);
+  font-family: "Lunasima", sans-serif;
+  text-align: left;
+  font-weight: bold;
+}
+
+.tab-navigator-button-active {
+  color: var(--six);
+}
+
+.tab-navigator-button:hover {
+  color: var(--four);
+}
+
 .certification-list {
   display: grid;
   grid-template-columns: 1fr 1fr;
