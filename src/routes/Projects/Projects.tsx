@@ -8,13 +8,13 @@ import type { Project } from "../../global";
 export const Projects = ({ projects }: { projects?: Project[] }) => {
   const completedProjects = projects?.filter(
     (project) => project.status === "completed"
-  );
+  ).sort((a, b) => b.techStack.length - a.techStack.length);
   const inProgressProjects = projects?.filter(
     (project) => project.status === "in progress"
-  );
+  ).sort((a, b) => b.techStack.length - a.techStack.length);
   const planningProjects = projects?.filter(
     (project) => project.status === "planning"
-  );
+  ).sort((a, b) => b.techStack.length - a.techStack.length);
 
   return (
     <PageContainer id="projects">

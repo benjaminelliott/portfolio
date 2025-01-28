@@ -612,7 +612,7 @@ const projects = [
     name: "Frosch",
     image: "logos/Frosch.gif",
     description: "A web-game where you help a frog cross different terrain.",
-    status: "in progress",
+    status: "completed",
     techStack: ["HTML5", "CSS3", "Javascript", "Webpack", "Netlify"],
     deployedLink: "https://playfrosch.netlify.app",
     repoLink: "https://github.com/benjamindotdev/frosch",
@@ -671,7 +671,7 @@ const projects = [
     name: "Storytime",
     image: "logos/storytime.png",
     description: "AI generated bedtime stories for kids.",
-    status: "in progress",
+    status: "completed",
     techStack: [
       "Typescript",
       "Next.js",
